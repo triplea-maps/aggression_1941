@@ -932,7 +932,7 @@
                 </productionRule>
 
                 <productionRule name="buyKamikaze">
-                        <cost resource="PUs" quantity="4" />
+                        <cost resource="PUs" quantity="3" />
                         <result resourceOrUnit="kamikaze" quantity="1"/>
                 </productionRule>
 
@@ -982,7 +982,7 @@
                 </productionRule>
   
                 <productionRule name="buyCruiser">
-                        <cost resource="PUs" quantity="8" />
+                        <cost resource="PUs" quantity="9" />
                         <result resourceOrUnit="cruiser" quantity="1"/>
                 </productionRule>
 
@@ -1205,7 +1205,7 @@
                 </attachment>
                 
                 <attachment name="unitAttachment" attachTo="kamikaze" javaClass="UnitAttachment" type="unitType">
-                          <option name="attack" value="4"/>
+                          <option name="attack" value="3"/>
                           <option name="defense" value="0"/>
                           <option name="movement" value="3"/>
                           <option name="carrierCost" value="1"/>
@@ -2710,7 +2710,7 @@ Siberian	2-3-1--2---3  artillery supportable, Soviet Union only, can be purchase
 Artillery	2-2-1--3---4  artillery&lt;br&gt;
 Armour		3-3-2--3---5  can blitz&lt;br&gt;
 Tiger		4-4-1--5---9  2HP, Germany only&lt;br&gt;
-Kamikaze        4-0-3--1---3  suicide, destroyed when captured, ignores trench, strategic bomber, Japan only&lt;br&gt;
+Kamikaze        3-0-3--1---3  suicide, destroyed when captured, ignores trench, strategic bomber, Japan only&lt;br&gt;
 Biplane		1-2-4--1---3  2 air at, 3 air def, can intercept, China only&lt;br&gt;
 Fighter		2-3-4--1---5  2 air at, 3 air def, can intercept&lt;br&gt;
 Bomber		2-1-6--/---6  2 air at, strategic Bomber&lt;br&gt;
@@ -2718,7 +2718,7 @@ Transport	0-0-2--5---6  can not be taken as casualty&lt;br&gt;
 Submarine	2-2-2--/---4  first strike, Germany only&lt;br&gt;
 Boat		1-2-1--/---6  destroyer, transport, Soviet Union only&lt;br&gt;
 Destroyer	2-2-2--/---6  destroyer&lt;br&gt;
-Cruiser		3-3-2--/---8  can bombard&lt;br&gt;
+Cruiser		3-3-2--/---9  can bombard&lt;br&gt;
 L.cruier	2-2-2--/---4  Japan only&lt;br&gt;
 Carrier		1-2-2--/---12 carrier (2)&lt;br&gt;
 Battleship	4-4-2--/---16 2HP, can bombard&lt;br&gt;
