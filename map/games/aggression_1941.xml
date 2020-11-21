@@ -1289,7 +1289,6 @@
                 <attachment name="unitAttachment" attachTo="trench" javaClass="UnitAttachment" type="unitType">
                         <option name="defense" value="3"/>
                         <option name="hitPoints" value="1"/>
-                        <option name="isSuicide" value="true"/>
                         <option name="isConstruction" value="true"/>
                         <option name="constructionType" value="bunker"/>
                         <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
@@ -1543,6 +1542,7 @@
 
                     <attachment name="territoryAttachment" attachTo="Cairo" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
+                        <option name="unitProduction" value="1"/>
                     </attachment>
 
                     <attachment name="territoryAttachment" attachTo="Middle East" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
