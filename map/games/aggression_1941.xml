@@ -528,6 +528,7 @@
                 <connection t1="Sea Zone 61" t2="E.Guinea"/>
                 <connection t1="Sea Zone 61" t2="Solomon"/>
                 <connection t1="Sea Zone 61" t2="Queensland"/>
+                <connection t1="Sea Zone 55" t2="Queensland"/>
                 <connection t1="Java" t2="Sea Zone 54"/>
                 <connection t1="S.Guinea" t2="Sea Zone 55"/>
                 <connection t1="W.Australia" t2="Sea Zone 54"/>
@@ -1188,6 +1189,7 @@
                          <option name="movement" value="6"/>
                          <option name="isAir" value="true"/>
                          <option name="attack" value="2"/>
+                         <option name="defense" value="1"/>
                          <option name="isStrategicBomber" value="true"/>
                          <option name="canEscort" value="true"/>
                          <option name="airDefense" value="1"/>
