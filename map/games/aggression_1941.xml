@@ -2605,7 +2605,7 @@
 		<br>
                 <br><img src="map.png"/>
 		<br>
-		<br>Two-sided, turn-based WWII game which loosely based on year of 1941. Axis needs more than 1500 production power at the beginning of the 21.th round for victory whereas Allies have to exceed 2000 production power to win within the same timeline. If no side achieves its objective until the end of 20.th round, it is considered stalemate (draw) although players can still agree with the one of these options without achieving their objectives in any round.  
+		<br>Two-sided, turn-based WWII game which loosely based on year of 1941. Axis needs more than 1500 production power at the beginning of the 21.th for victory whereas Allies have to exceed 2000 production power to win. If no side achieves its objective until the end of 20.th round, it is considered stalemate (draw) although players can still agree with the one of these options without achieving their objectives in any round.  
 		<br>
                 <br>Draw option currently is not supported by the engine.
                 <br>
