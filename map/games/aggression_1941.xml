@@ -3199,10 +3199,10 @@
       </table>
       <br>	  
 		<div style="text-align: left;" bgcolor="DADADA">        	   	
-					<ul><li>The Game is composed with land and sea territories. Every present unit must be on a territory and they cannot be on more than one territory</li>
+					<ul><li>The Game is composed with land and sea territories. Every present unit must be on a territory and they cannot be on more than one territory.</li>
 					<li>Units can move between adjacent spaces during their turns.</li>
 					<li>Territories and sea zones on the left edge are connected with the territories on the right edge.</li>
-                                        <li>Rivers show adjacency between sea zones</li>
+                                        <li>Rivers show adjacency between sea zones.</li>
 <br>
 <div style="text-align: center;">
 <br>==========================================================
@@ -3242,8 +3242,8 @@
 <br>
       <h1 style="text-align: center;font-size:120%;000000"><em>Screen</em></h1>
 <div style="text-align: left;" bgcolor="DADADA">        	   	
-					<ul><li>Playing with the default zoom is recommended</li>
-					<li>The main screen cannot display the whole World at once , and instead only shows part of the map. The part that is displayed can be rapidly moved or changed via using the main screen or the minimap attached to top-right corner</li>
+					<ul><li>Playing with the default zoom is recommended.</li>
+					<li>The main screen cannot display the whole World at once, only shows part of the map. The part that is displayed can be rapidly moved or changed via using the main screen or the minimap attached to top-right corner.</li>
 <br>
 <br><img src="screen.png"/>
 <br>
@@ -3281,22 +3281,22 @@
 <br>Each round is composed with 7 turns and each turn is composed with 6 stages.
 <h1 style="text-align: center;font-size:120%;000000"><em>Rules</em></h1>
 <div style="text-align: left;" bgcolor="DADADA">        	   	
-					<ul><li>The current player may move any or all of his units to the full limit of their movement allowance, with certain exceptions.</li>
+					<ul><li>The current player may move any or all of his units to the full limit of their movement allowance with certain exceptions.</li>
 					<li>Factories and trenches cannot move.</li>
                                         <li>Land units can not move on sea territories unless they are carried by transports. They lost all combat abilities when they are on a sea territory.</li>
                                         <li>Sea units cannot move on land territories.</li>
-                                        <li>Land and sea units stop moving as soon as they enter an area occupied by an enemy unit except enemy transport. Armour may move through empty territories (Blitz) controlled by an opposing player without being required to stop capturing that territory as they go</li>
-                                        <li>Air units can not not move so far that their remaining movement allowance is insufficient for them to return to an eligible landing area, but players conduct suicidal attacks by not moving carriers to rescue them. Whatever engine allows about it is legal.</li>
-<li>Air units can fly and attack over enemy units as long as they retain sufficient movement power to safely return</li>
-<li>Only in this stage units may enter into any form of combat situation. If a player moves units into a territory or sea zone owned by the enemy, or containing enemy units, then the units must stop and participate in a battle</li>
-<li>At the end of this stage, combat will be resolved for each territory and sea zone which the player and any opposite alliance member has at least one combatant unit</li>
+                                        <li>Land and sea units stop moving as soon as they enter an area occupied by an enemy unit except enemy transport. Armour may move through empty territories (Blitz) controlled by an opposing player without being required to stop capturing that territory as they go.</li>
+                                        <li>Air units can not move so far that their remaining movement allowance is insufficient for them to return to an eligible landing area, but players can conduct suicidal attacks by not moving carriers to rescue them. Whatever engine allows about it is legal.</li>
+<li>Air units can fly and attack over enemy units as long as they retain sufficient movement power to safely return.</li>
+<li>Only in this stage units may enter into any form of combat situation. If a player moves units into a territory or sea zone owned by the enemy, or containing enemy units, then the units must stop and participate in the battle.</li>
+<li>At the end of this stage, combat will be resolved for each territory and sea zone which the player and any opposite alliance member has at least one combatant unit.</li>
 <li>Units that do not use up their full movement allowance in this stage retain the remainder for the Non-Combat Movement stage except the land and sea units that engage in combat. They lose their remaining movement points.</li>
 <br>
 <b>Transports</b>
 <br>
 <li>They can carry one foot infantry and one more land unit.</li>
 <li>The procedure is that a land unit moves onto a transport in an adjacent sea zone and later moves onto a territory adjacent to the transport. The transport may move at any point in this process. The land unit may unload on the same turn or later, and may remain on the transport indefinitely.</li>
-<li>Land units may load onto one transport from different territories and at different times, but a transport may only unload to one territory per player turn, and if it unloads, it may not move any more in that player turn. Land units may not move before they load onto a transport.</li>
+<li>Land units may load onto one transport from different territories and at different times but a transport may only unload to one territory per player turn, and if it unloads, it may not move any more in that player turn. Land units may not move before they load onto a transport.</li>
 <li>Transportation may also occur with units of allied players, although the process is not as seamless as when the transported units belong to the same player as the transport.</li>
 <li>They have no effect at sea battles.</li>
 <br>
@@ -3378,7 +3378,7 @@
             <td bgcolor="CCCC99" style="text-align: center">1</td>
             <td bgcolor="CCCC99" style="text-align: center">2 (7%)</td>
             <td bgcolor="CCCC99" style="text-align: center">30</td>
-            <td bgcolor="CCCC99">Soviet unit, supportable by artillery, can only be bought from Siberia</td>
+            <td bgcolor="CCCC99">Russian unit, supportable by artillery, can only be bought from Siberia</td>
          </tr>
         <tr>
             <td bgcolor="CCAA77"><img src="l.cavalry.png"/></td>
@@ -3463,7 +3463,7 @@
             <td bgcolor="CCAA77" style="text-align: center">2</td>
             <td bgcolor="CCAA77" style="text-align: center">1</td>
             <td bgcolor="CCAA77" style="text-align: center">2 (4%)</td>
-            <td bgcolor="CCAA77" style="text-align: center">45</td>
+            <td bgcolor="CCAA77" style="text-align: center">50</td>
             <td bgcolor="CCAA77">Carries two fighters</td>
          </tr>
          <tr>
@@ -3497,7 +3497,7 @@
             <td bgcolor="CCCC99" style="text-align: center">1</td>
             <td bgcolor="CCCC99" style="text-align: center">2 (6%)</td>
             <td bgcolor="CCCC99" style="text-align: center">35</td>
-            <td bgcolor="CCCC99">Soviet unit, carries 1 infantry unit</td>
+            <td bgcolor="CCCC99">Russian unit, carries 1 infantry unit</td>
          </tr>
   </table>
 
