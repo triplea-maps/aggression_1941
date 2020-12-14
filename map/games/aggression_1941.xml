@@ -2053,6 +2053,7 @@
  
                     <attachment name="territoryAttachment" attachTo="W.Australia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
+                        <option name="unitProduction" value="2"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
@@ -2062,6 +2063,7 @@
 
                     <attachment name="territoryAttachment" attachTo="Queensland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
+                        <option name="unitProduction" value="2"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
