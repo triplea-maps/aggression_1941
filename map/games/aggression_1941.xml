@@ -1,14 +1,10 @@
 <?xml version="1.0" ?>
-
 <!DOCTYPE game SYSTEM "game.dtd">
-
 <game>
-        <info name="Aggression 1941" version="0.1"/>     
+        <info name="Aggression 1941" version="1.1"/>     
         <loader javaClass="games.strategy.triplea.TripleA"/>
-	<triplea minimumVersion="1.9"/>
-               
-                 <map>
-               
+	<triplea minimumVersion="1.9"/> 
+                 <map>  
                 <!-- Territory Name Definitions -->
                 <territory name="Sea Zone 12" water="true"/>
                 <territory name="Sea Zone 1" water="true"/>
@@ -207,7 +203,6 @@
                 <territory name="Mozambique"/>
                 <territory name="Arabia"/>
                 <territory name="Afghanistan"/>
-              
                 <!-- Territory Connections -->
                 <connection t1="Sea Zone 12" t2="Sea Zone 11"/>
                 <connection t1="Sea Zone 12" t2="Iceland"/>
@@ -743,14 +738,11 @@
                 <connection t1="W.Australia" t2="Queensland"/>
                 <connection t1="W.Australia" t2="Victoria"/>
                 <connection t1="Victoria" t2="Queensland"/>
-        </map>
-        
+        </map> 
         <resourceList>
                 <resource name="PUs"/>
         </resourceList>
-
         <playerList>
-                <!-- Player Turn Order -->
                 <player name="Germany" optional="false"/>
                 <player name="Russia" optional="false"/>
                 <player name="Japan" optional="false"/>
@@ -758,19 +750,14 @@
                 <player name="Italy" optional="false"/>
                 <player name="America" optional="false"/>
                 <player name="China" optional="false"/>
-                      		                   
-                <!-- Axis Alliance -->
                 <alliance player="Germany" alliance="Axis"/>
 		<alliance player="Italy" alliance="Axis"/>
                 <alliance player="Japan" alliance="Axis"/>
-                
-                <!-- Allies Alliance -->
                 <alliance player="England" alliance="Allies"/>
                 <alliance player="Russia" alliance="Allies"/>
                 <alliance player="America" alliance="Allies"/>
                 <alliance player="China" alliance="Allies"/>
         </playerList>
-  
         <unitList>
                 <unit name="infantry"/>
                 <unit name="siberian"/>
@@ -792,12 +779,10 @@
                 <unit name="suppressed_factory"/>              
                 <unit name="trench"/>
         </unitList>
-
       <territoryEffectList>
         <territoryEffect name="Capital1"/>
         <territoryEffect name="Capital2"/>
-     </territoryEffectList>
-
+      </territoryEffectList>
         <gamePlay>
                 <delegate name="initDelegate" javaClass="games.strategy.triplea.delegate.InitializationDelegate" display="Initializing Delegates"/>
                 <delegate name="battle" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Combat"/>
@@ -809,12 +794,9 @@
 		<delegate name="endTurnNoPU" javaClass="games.strategy.triplea.delegate.NoPUEndTurnDelegate" display="Turn Complete"/>
                 <delegate name="endRound" javaClass="games.strategy.triplea.delegate.EndRoundDelegate" display="Round Complete"/>
                 <delegate name="placeBid" javaClass="games.strategy.triplea.delegate.BidPlaceDelegate" display="Bid Placement"/>
-                <delegate name="bid" javaClass="games.strategy.triplea.delegate.BidPurchaseDelegate" display="Bid Purchase"/>
-                          
+                <delegate name="bid" javaClass="games.strategy.triplea.delegate.BidPurchaseDelegate" display="Bid Purchase"/>             
                 <sequence>
-                        <step name="gameInitDelegate" delegate="initDelegate" maxRunCount="1"/>
-                     
-                        <!-- Bidding Phase -->
+                <step name="gameInitDelegate" delegate="initDelegate" maxRunCount="1"/>
                         <step name="germanBid" delegate="bid" player="Germany" maxRunCount="1"/>
                         <step name="germanBidPlace" delegate="placeBid" player="Germany" maxRunCount="1"/>   
                         <step name="russianBid" delegate="bid" player="Russia" maxRunCount="1"/>
@@ -829,176 +811,135 @@
                         <step name="americanBidPlace" delegate="placeBid" player="America" maxRunCount="1"/>
                         <step name="chineseBid" delegate="bid" player="China" maxRunCount="1"/>
                         <step name="chineseBidPlace" delegate="placeBid" player="China" maxRunCount="1"/>
- 
-                                                <!-- Germany Game Sequence -->
                         <step name="germanCombatMove" delegate="move" player="Germany"/>
                         <step name="germanPurchase" delegate="purchase" player="Germany"/> 
                         <step name="germanBattle" delegate="battle" player="Germany"/>
                         <step name="germanNonCombatMove" delegate="move" player="Germany" display="Non Combat Move"/>
                         <step name="germanPlace" delegate="place" player="Germany"/>
                         <step name="germanEndTurn" delegate="endTurn" player="Germany"/>
-
-                                                <!-- Russia Game Sequence -->
                         <step name="russianCombatMove" delegate="move" player="Russia"/>
                         <step name="russianPurchase" delegate="purchase" player="Russia"/>
                         <step name="russianBattle" delegate="battle" player="Russia"/>
                         <step name="russianNonCombatMove" delegate="move" player="Russia" display="Non Combat Move"/>
                         <step name="russianPlace" delegate="place" player="Russia"/>
-                        <step name="russianEndTurn" delegate="endTurn" player="Russia"/>
-                                             	
-                                                 <!-- Japan Game Sequence -->
+                        <step name="russianEndTurn" delegate="endTurn" player="Russia"/>                  
                         <step name="japaneseCombatMove" delegate="move" player="Japan"/>
                         <step name="japanesePurchase" delegate="purchase" player="Japan"/>
                         <step name="japaneseBattle" delegate="battle" player="Japan"/>
                         <step name="japaneseNonCombatMove" delegate="move" player="Japan" display="Non Combat Move"/>
                         <step name="japanesePlace" delegate="place" player="Japan"/>
                         <step name="japaneseEndTurn" delegate="endTurn" player="Japan"/>
-
-                                                 <!-- England Game Sequence -->
                         <step name="britishCombatMove" delegate="move" player="England"/>
                         <step name="britishPurchase" delegate="purchase" player="England"/> 
                         <step name="britishBattle" delegate="battle" player="England"/>
                         <step name="britishNonCombatMove" delegate="move" player="England" display="Non Combat Move"/>
                         <step name="britishPlace" delegate="place" player="England"/>
                         <step name="britishEndTurn" delegate="endTurn" player="England"/>
-                      
-                                                <!-- Italy Game Sequence -->
                         <step name="italianCombatMove" delegate="move" player="Italy"/>
                         <step name="italianPurchase" delegate="purchase" player="Italy"/>
                         <step name="italianBattle" delegate="battle" player="Italy"/>
                         <step name="italianNonCombatMove" delegate="move" player="Italy" display="Non Combat Move"/>
                         <step name="italianPlace" delegate="place" player="Italy"/>
                         <step name="italianEndTurn" delegate="endTurn" player="Italy"/>
-
-                                              <!-- America Game Sequence -->
                         <step name="americanCombatMove" delegate="move" player="America"/>
                         <step name="americanPurchase" delegate="purchase" player="America"/>
                         <step name="americanBattle" delegate="battle" player="America"/>
                         <step name="americanNonCombatMove" delegate="move" player="America" display="Non Combat Move"/>
                         <step name="americanPlace" delegate="place" player="America"/>
                         <step name="americanEndTurn" delegate="endTurn" player="America"/>
-
-                                                 <!-- China Game Sequence -->
                         <step name="chineseCombatMove" delegate="move" player="China"/>
                         <step name="chinesePurchase" delegate="purchase" player="China"/>
                         <step name="chineseBattle" delegate="battle" player="China"/>
                         <step name="chineseNonCombatMove" delegate="move" player="China" display="Non Combat Move"/>
                         <step name="chinesePlace" delegate="place" player="China"/>
                         <step name="chineseEndTurn" delegate="endTurn" player="China"/>
-                                                                  			                               
-						<!-- End Round -->
         <step name="endRoundStep" delegate="endRound"/>
              </sequence>
         </gamePlay>
-
         <production>
-                <!-- Unit Production Cost -->
                 <productionRule name="buyInfantry">
                         <cost resource="PUs" quantity="30" />
                         <result resourceOrUnit="infantry" quantity="1"/>
-                </productionRule>
-              
+                </productionRule> 
                 <productionRule name="buySiberian">
                         <cost resource="PUs" quantity="30" />
                         <result resourceOrUnit="siberian" quantity="1"/>
                 </productionRule>
-
                 <productionRule name="buyL.cavalry">
-                        <cost resource="PUs" quantity="30" />
+                        <cost resource="PUs" quantity="20" />
                         <result resourceOrUnit="l.cavalry" quantity="1"/>
                 </productionRule>
-
                 <productionRule name="buyH.cavalry">
-                        <cost resource="PUs" quantity="40" />
+                        <cost resource="PUs" quantity="30" />
                         <result resourceOrUnit="h.cavalry" quantity="1"/>
                 </productionRule>              
-
                 <productionRule name="buyTankette">
-                        <cost resource="PUs" quantity="35" />
+                        <cost resource="PUs" quantity="40" />
                         <result resourceOrUnit="tankette" quantity="1"/>
                 </productionRule>
-
                 <productionRule name="buyArtillery">
                         <cost resource="PUs" quantity="40" />
                         <result resourceOrUnit="artillery" quantity="1"/>
                 </productionRule>       
-    
                 <productionRule name="buyArmour">
                         <cost resource="PUs" quantity="50" />
                         <result resourceOrUnit="armour" quantity="1"/>
                 </productionRule>
-
                 <productionRule name="buyFighter">
                         <cost resource="PUs" quantity="30" />
                         <result resourceOrUnit="fighter" quantity="1"/>
                 </productionRule>
-                
                 <productionRule name="buyBomber">
                         <cost resource="PUs" quantity="40" />
                         <result resourceOrUnit="bomber" quantity="1"/>
                 </productionRule>
-                
                 <productionRule name="buyTransport">
                         <cost resource="PUs" quantity="40" />
                         <result resourceOrUnit="transport" quantity="1"/>
                 </productionRule>
-
                 <productionRule name="buyBoat">
                         <cost resource="PUs" quantity="35" />
                         <result resourceOrUnit="boat" quantity="1"/>
                 </productionRule>
-
                 <productionRule name="buySubmarine">
                         <cost resource="PUs" quantity="35" />
                         <result resourceOrUnit="submarine" quantity="1"/>
                 </productionRule>
-  
                  <productionRule name="buyDestroyer">
                         <cost resource="PUs" quantity="35" />
                         <result resourceOrUnit="destroyer" quantity="1"/>
                 </productionRule>
-
                 <productionRule name="buyL.cruiser">
                         <cost resource="PUs" quantity="30" />
                         <result resourceOrUnit="l.cruiser" quantity="1"/>
                 </productionRule>
-  
                 <productionRule name="buyCruiser">
                         <cost resource="PUs" quantity="50" />
                         <result resourceOrUnit="cruiser" quantity="1"/>
                 </productionRule>
-
                 <productionRule name="buyCarrier">
                         <cost resource="PUs" quantity="50" />
                         <result resourceOrUnit="carrier" quantity="1"/>
                 </productionRule>
-
                 <productionRule name="buyFactory">
                         <cost resource="PUs" quantity="1" />
                         <result resourceOrUnit="factory" quantity="1"/>
                 </productionRule>
-                
                 <productionRule name="buySuppressed_factory">
                         <cost resource="PUs" quantity="1" />
                         <result resourceOrUnit="suppressed_factory" quantity="1"/>
                 </productionRule>           
- 
                 <productionRule name="buyTrench">
                         <cost resource="PUs" quantity="35" />
                         <result resourceOrUnit="trench" quantity="1"/>
-                </productionRule>
-
-                     <!-- Repair rules -->                
-        
+                </productionRule>              
                 <repairRule name="repairFactory">
                         <cost resource="PUs" quantity="10" />
                         <result resourceOrUnit="factory" quantity="1"/>
-                </repairRule>
-                
+                </repairRule> 
                 <repairFrontier name="repair">
                 	<repairRules name="repairFactory"/>
                 </repairFrontier>
-                
                 <productionFrontier name="productionGermany">
                         <frontierRules name="buyInfantry"/>
                         <frontierRules name="buyArtillery"/>
@@ -1011,7 +952,6 @@
                         <frontierRules name="buyCarrier"/>
                         <frontierRules name="buyTrench"/>
                  </productionFrontier>
-
                 <productionFrontier name="productionRussia">
                         <frontierRules name="buyInfantry"/>
                         <frontierRules name="buySiberian"/>
@@ -1022,7 +962,6 @@
                         <frontierRules name="buyBoat"/> 
                         <frontierRules name="buyTrench"/>
                 </productionFrontier>                  
-     
                 <productionFrontier name="productionJapan">
                         <frontierRules name="buyInfantry"/>
                         <frontierRules name="buyArtillery"/>
@@ -1034,8 +973,7 @@
                         <frontierRules name="buyCruiser"/>
                         <frontierRules name="buyCarrier"/>
                         <frontierRules name="buyTrench"/>
-                </productionFrontier>
-                               
+                </productionFrontier>                  
                 <productionFrontier name="productionEngland">
                         <frontierRules name="buyInfantry"/>
                         <frontierRules name="buyArtillery"/>
@@ -1048,7 +986,6 @@
                         <frontierRules name="buyCarrier"/> 
                         <frontierRules name="buyTrench"/>
                 </productionFrontier>
-
                 <productionFrontier name="productionItaly">
                         <frontierRules name="buyInfantry"/>
                         <frontierRules name="buyArtillery"/>
@@ -1061,7 +998,6 @@
                         <frontierRules name="buyCarrier"/> 
                         <frontierRules name="buyTrench"/>
                 </productionFrontier>
- 
                 <productionFrontier name="productionAmerica">
                         <frontierRules name="buyInfantry"/>
                         <frontierRules name="buyArtillery"/>
@@ -1074,13 +1010,11 @@
                         <frontierRules name="buyCarrier"/>
                         <frontierRules name="buyTrench"/>
                  </productionFrontier>
-
                 <productionFrontier name="productionChina">
                         <frontierRules name="buyL.cavalry"/>
                         <frontierRules name="buyH.cavalry"/>
                         <frontierRules name="buyTrench"/>
                 </productionFrontier>
-
                 <playerProduction player="Germany" frontier="productionGermany"/>
                 <playerProduction player="Russia" frontier="productionRussia"/>
                 <playerProduction player="Japan" frontier="productionJapan"/>
@@ -1088,7 +1022,6 @@
 		<playerProduction player="Italy" frontier="productionItaly"/>
                 <playerProduction player="America" frontier="productionAmerica"/>
                 <playerProduction player="China" frontier="productionChina"/>
-                 
                 <playerRepair player="Germany" frontier="repair"/>        
                 <playerRepair player="Russia" frontier="repair"/>
                 <playerRepair player="Japan" frontier="repair"/>
@@ -1097,9 +1030,7 @@
 		<playerRepair player="America" frontier="repair"/>
                 <playerRepair player="China" frontier="repair"/>                                                                                     
         </production> 
-        
         <attachmentList>            
-    
                 <attachment name="unitAttachment" attachTo="infantry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="1"/>
                          <option name="transportCost" value="2"/>
@@ -1110,7 +1041,6 @@
                          <option name="isAAforCombatOnly" value="true"/> 
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
-
                 <attachment name="unitAttachment" attachTo="siberian" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="1"/>
                          <option name="transportCost" value="2"/>
@@ -1121,8 +1051,7 @@
                          <option name="unitPlacementOnlyAllowedIn" value="Omsk:Krasnoyarsk:Irkutsk"/>
                          <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
-                </attachment>
-		 
+                </attachment>	 
                 <attachment name="unitAttachment" attachTo="l.cavalry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
                          <option name="transportCost" value="3"/>
@@ -1132,7 +1061,6 @@
                          <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
-
                 <attachment name="unitAttachment" attachTo="h.cavalry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
                          <option name="transportCost" value="3"/>
@@ -1142,7 +1070,6 @@
                          <option name="isAAforCombatOnly" value="true"/> 
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
-
                 <attachment name="unitAttachment" attachTo="tankette" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
                          <option name="transportCost" value="3"/>
@@ -1152,7 +1079,6 @@
                          <option name="isAAforCombatOnly" value="true"/> 
                          <option name="createsResourcesList" value="-3:PUs"/>
                 </attachment>
-
                 <attachment name="unitAttachment" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="1"/>
                          <option name="transportCost" value="3"/>
@@ -1162,7 +1088,6 @@
                          <option name="isAAforCombatOnly" value="true"/> 
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
-
                 <attachment name="unitAttachment" attachTo="armour" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
                          <option name="transportCost" value="3"/>
@@ -1170,9 +1095,8 @@
                          <option name="attack" value="4"/>
                          <option name="defense" value="4"/>
                          <option name="isAAforCombatOnly" value="true"/> 
-                         <option name="createsResourcesList" value="-3:PUs"/>
-                </attachment>
-                    
+                         <option name="createsResourcesList" value="-4:PUs"/>
+                </attachment>                  
                 <attachment name="unitAttachment" attachTo="fighter" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="4"/>
                          <option name="carrierCost" value="1"/>
@@ -1186,8 +1110,7 @@
                          <option name="blockade" value="10"/>
                          <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-3:PUs"/>
-                </attachment>
-                
+                </attachment>                
                 <attachment name="unitAttachment" attachTo="bomber" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="6"/>
                          <option name="isAir" value="true"/>
@@ -1201,7 +1124,6 @@
                          <option name="createsResourcesList" value="-3:PUs"/>
                          <option name="bombingMaxDieSides" value="2"/>
                 </attachment>
-
                 <attachment name="unitAttachment" attachTo="transport" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
                          <option name="isSea" value="true"/>   
@@ -1209,8 +1131,7 @@
                          <option name="attack" value="0"/>
                          <option name="defense" value="0"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
-                </attachment>
-            
+                </attachment>          
                 <attachment name="unitAttachment" attachTo="boat" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
                          <option name="isSea" value="true"/>
@@ -1222,7 +1143,6 @@
                          <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
                   </attachment>
- 
                   <attachment name="unitAttachment" attachTo="submarine" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
                          <option name="isSea" value="true"/>   
@@ -1232,7 +1152,6 @@
                          <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
                   </attachment>
-
                   <attachment name="unitAttachment" attachTo="destroyer" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
                          <option name="isSea" value="true"/>   
@@ -1242,7 +1161,6 @@
                          <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
-
                 <attachment name="unitAttachment" attachTo="l.cruiser" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
                          <option name="isSea" value="true"/>
@@ -1252,7 +1170,6 @@
                          <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
                  </attachment>
-
                  <attachment name="unitAttachment" attachTo="cruiser" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
                          <option name="isSea" value="true"/>
@@ -1261,8 +1178,7 @@
                          <option name="blockade" value="20"/>
                          <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
-                </attachment>
-                
+                </attachment>             
                 <attachment name="unitAttachment" attachTo="carrier" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="carrierCapacity" value="2"/>
                          <option name="movement" value="2"/>
@@ -1272,23 +1188,20 @@
                          <option name="blockade" value="10"/>
                          <option name="isAAforCombatOnly" value="true"/> 
                          <option name="createsResourcesList" value="-2:PUs"/>
-                </attachment>
-				 
+                </attachment>				 
                 <attachment name="unitAttachment" attachTo="factory" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="isFactory" value="true"/>
                          <option name="whenCapturedChangesInto" value="any:any:true:suppressed_factory:1"/>  
                          <option name="isAA" value="true"/>
                          <option name="maxDamage" value="1"/>
-                </attachment>
-            
+                </attachment>           
                 <attachment name="unitAttachment" attachTo="suppressed_factory" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="isInfrastructure" value="true"/>
                          <option name="canBeDamaged" value="true"/>
                          <option name="whenCapturedChangesInto" value="any:any:true:factory:1"/>   
                          <option name="isAA" value="true"/>
                          <option name="maxDamage" value="1"/>
-                </attachment>
-	
+                </attachment>	
                 <attachment name="unitAttachment" attachTo="trench" javaClass="UnitAttachment" type="unitType">
                         <option name="defense" value="3"/>
                         <option name="hitPoints" value="1"/>
@@ -1297,10 +1210,8 @@
                         <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
                         <option name="maxConstructionsPerTypePerTerr" value="1000"/>
                         <option name="isAAforCombatOnly" value="true"/> 
-                        <option name="createsResourcesList" value="-2:PUs"/>
+                        <option name="createsResourcesList" value="-1:PUs"/>
                  </attachment>
-           
-				<!-- Territory Attachments -->
                     <attachment name="territoryAttachment" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="250"/>
                         <option name="unitProduction" value="25"/>
@@ -1312,7 +1223,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Denmark" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1321,7 +1231,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="S.Norway" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
@@ -1330,7 +1239,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="N.Norway" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
@@ -1339,7 +1247,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                    <attachment name="territoryAttachment" attachTo="Low Countries" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
@@ -1347,8 +1254,7 @@
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                   </attachment>
-          
+                   </attachment>        
                     <attachment name="territoryAttachment" attachTo="Normandy" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
@@ -1357,7 +1263,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Bordeaux" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -1367,7 +1272,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Marseille" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
@@ -1376,7 +1280,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
- 
                     <attachment name="territoryAttachment" attachTo="Lorraine" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
@@ -1385,7 +1288,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Algeria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
@@ -1394,7 +1296,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
- 
                     <attachment name="territoryAttachment" attachTo="W.Africa" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
@@ -1403,7 +1304,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Hungary" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1412,7 +1312,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Romania" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="unitProduction" value="3"/>
@@ -1422,7 +1321,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Finland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -1432,7 +1330,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Vyborg" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1441,7 +1338,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Baltics" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1450,7 +1346,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                    </attachment>
-
                     <attachment name="territoryAttachment" attachTo="W.Ukraine" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1459,7 +1354,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="E.Ukraine" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1468,7 +1362,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Kursk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1477,7 +1370,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Belarus" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1486,7 +1378,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Novgorod" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1495,7 +1386,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                    <attachment name="territoryAttachment" attachTo="Moscow" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="unitProduction" value="3"/>
@@ -1507,7 +1397,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                      </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Karelia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1516,7 +1405,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Arkhangelsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="unitProduction" value="1"/>
@@ -1526,7 +1414,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Bereznik" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1535,7 +1422,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                      </attachment>
-
                       <attachment name="territoryAttachment" attachTo="Leningrad" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -1545,7 +1431,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                       </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Vyazma" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1553,8 +1438,7 @@
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                     </attachment>
-  
+                     </attachment>  
                       <attachment name="territoryAttachment" attachTo="Ryazan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1563,7 +1447,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                       </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Kaluga" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1572,7 +1455,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Tambov" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1581,7 +1463,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                      </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Rostov" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1590,7 +1471,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Stalingrad" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="unitProduction" value="1"/>
@@ -1599,8 +1479,7 @@
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                    </attachment>
-                 
+                    </attachment>                
                     <attachment name="territoryAttachment" attachTo="Caucasus" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1609,7 +1488,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Baku" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -1619,7 +1497,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Samara" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1628,7 +1505,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sevastopol" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="unitProduction" value="1"/>
@@ -1638,7 +1514,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
- 
                     <attachment name="territoryAttachment" attachTo="Central Asia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1647,7 +1522,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                    <attachment name="territoryAttachment" attachTo="Yekaterinburg" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1656,7 +1530,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                    </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Omsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -1665,8 +1538,7 @@
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                    </attachment>
- 
+                    </attachment> 
                     <attachment name="territoryAttachment" attachTo="Novosibirsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1674,8 +1546,7 @@
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                    </attachment>
- 
+                    </attachment> 
                     <attachment name="territoryAttachment" attachTo="Krasnoyarsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -1685,7 +1556,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="W.Mongolia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1693,8 +1563,7 @@
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
-                    </attachment>
-  
+                    </attachment>  
                     <attachment name="territoryAttachment" attachTo="M.Mongolia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1703,7 +1572,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="E.Mongolia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1712,7 +1580,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Bratsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1721,7 +1588,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Buryatia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1730,7 +1596,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Amur" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1739,7 +1604,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                    </attachment>
- 
                     <attachment name="territoryAttachment" attachTo="Irkutsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -1749,7 +1613,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                     </attachment>
-
                    <attachment name="territoryAttachment" attachTo="Novaya Zemlya" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1758,7 +1621,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                    </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="100"/>
                         <option name="unitProduction" value="10"/>
@@ -1770,7 +1632,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                      <attachment name="territoryAttachment" attachTo="N.Manchuria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="England:China"/>
@@ -1779,7 +1640,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="S.Manchuria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="unitProduction" value="3"/>
@@ -1788,8 +1648,7 @@
                         <option name="whenCapturedByGoesTo" value="America:China"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>
-         
+                     </attachment>        
                      <attachment name="territoryAttachment" attachTo="Indochina" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -1799,7 +1658,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Kwangtung" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:China"/>
@@ -1808,7 +1666,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Shanghai" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:China"/>
@@ -1817,7 +1674,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="E.Burma" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1826,7 +1682,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Sumatra" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1835,7 +1690,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Borneo" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1844,7 +1698,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Celebes" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1853,7 +1706,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Java" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1862,7 +1714,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="W.Guinea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1871,7 +1722,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="E.Guinea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1880,7 +1730,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Solomon" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1889,7 +1738,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                      </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="100"/>
                         <option name="unitProduction" value="10"/>
@@ -1900,8 +1748,7 @@
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                    </attachment>
-               
+                    </attachment>              
                     <attachment name="territoryAttachment" attachTo="E.Canada" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="unitProduction" value="1"/>
@@ -1911,7 +1758,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="W.Canada" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1920,7 +1766,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Svalbard" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1929,7 +1774,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Gibraltar" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1938,7 +1782,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Malta" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1947,7 +1790,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="S.Africa" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -1957,7 +1799,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Rhodesia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1966,7 +1807,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Congo" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1974,8 +1814,7 @@
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
-                    </attachment>
-     
+                    </attachment>    
                     <attachment name="territoryAttachment" attachTo="Sudan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1984,7 +1823,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="El Alamein" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1993,7 +1831,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Cairo" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="unitProduction" value="1"/>
@@ -2003,7 +1840,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Middle East" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -2012,7 +1848,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Iran" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -2020,8 +1855,7 @@
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                    </attachment>
- 
+                    </attachment> 
                     <attachment name="territoryAttachment" attachTo="W.India" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="unitProduction" value="3"/>
@@ -2031,7 +1865,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="E.India" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -2041,7 +1874,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="W.Burma" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -2049,8 +1881,7 @@
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                    </attachment>
- 
+                    </attachment> 
                     <attachment name="territoryAttachment" attachTo="W.Australia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -2060,7 +1891,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Queensland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -2070,7 +1900,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Victoria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -2079,8 +1908,7 @@
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                    </attachment>
-         
+                    </attachment>        
                     <attachment name="territoryAttachment" attachTo="S.Guinea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -2088,8 +1916,7 @@
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                    </attachment>
- 
+                    </attachment> 
                     <attachment name="territoryAttachment" attachTo="Guadalcanal" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -2098,7 +1925,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Ceylon" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -2107,7 +1933,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                      <attachment name="territoryAttachment" attachTo="N.Italy" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="60"/>
                         <option name="unitProduction" value="6"/>
@@ -2119,7 +1944,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="S.Italy" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -2128,7 +1952,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-
                      <attachment name="territoryAttachment" attachTo="Sicily" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -2137,7 +1960,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                      </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Yugoslavia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -2146,7 +1968,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Greece" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -2154,8 +1975,7 @@
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
-                    </attachment>
- 
+                    </attachment> 
                     <attachment name="territoryAttachment" attachTo="Crete" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
@@ -2164,7 +1984,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-
                    <attachment name="territoryAttachment" attachTo="Libya" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -2172,8 +1991,7 @@
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
-                   </attachment>
-                  
+                   </attachment>                 
                     <attachment name="territoryAttachment" attachTo="Ethiopia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="unitProduction" value="1"/>
@@ -2183,7 +2001,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Somali" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -2192,7 +2009,6 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="E.USA" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="250"/>
                         <option name="unitProduction" value="25"/>
@@ -2204,7 +2020,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="W.USA" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="250"/>
                         <option name="unitProduction" value="25"/>
@@ -2214,7 +2029,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Greenland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:America"/>
@@ -2223,7 +2037,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Iceland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:America"/>
@@ -2232,7 +2045,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="E.Mexico" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:America"/>
@@ -2241,7 +2053,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="W.Mexico" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:America"/>
@@ -2250,7 +2061,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Alaska" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:America"/>
@@ -2258,13 +2068,16 @@
                         <option name="whenCapturedByGoesTo" value="England:America"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                    </attachment>
-    
+                    </attachment>    
                     <attachment name="territoryAttachment" attachTo="Hawaii" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
+                        <option name="whenCapturedByGoesTo" value="China:America"/>
+                        <option name="whenCapturedByGoesTo" value="Russia:America"/>
+                        <option name="whenCapturedByGoesTo" value="England:America"/>
+                        <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
+                        <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Midway" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:America"/>
@@ -2272,8 +2085,7 @@
                         <option name="whenCapturedByGoesTo" value="England:America"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                    </attachment>
-                    
+                    </attachment>            
                     <attachment name="territoryAttachment" attachTo="Philippines" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="China:America"/>
@@ -2282,7 +2094,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sinkiang" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="unitProduction" value="3"/>
@@ -2294,7 +2105,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Suiyuan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="America:China"/>
@@ -2303,7 +2113,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Hsining" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="America:China"/>
@@ -2312,7 +2121,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Szechwan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="America:China"/>
@@ -2321,7 +2129,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Hupeh" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="whenCapturedByGoesTo" value="America:China"/>
@@ -2330,7 +2137,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Chahar" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="America:China"/>
@@ -2339,7 +2145,6 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Kweichow" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="America:China"/>
@@ -2347,8 +2152,7 @@
                         <option name="whenCapturedByGoesTo" value="England:China"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                    </attachment>
- 
+                    </attachment> 
                     <attachment name="territoryAttachment" attachTo="Yunnan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="whenCapturedByGoesTo" value="America:China"/>
@@ -2357,217 +2161,173 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="S.America" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Angola" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                     </attachment>        
-
                     <attachment name="territoryAttachment" attachTo="Afghanistan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                      </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Mozambique" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sahara" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Siberia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="W.Sahara" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Turkey" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
-                    </attachment>
- 
+                    </attachment> 
                     <attachment name="territoryAttachment" attachTo="Iberia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Switzerland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sweden" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Arabia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
-                    </attachment>
-            
+                    </attachment>            
                     <attachment name="territoryAttachment" attachTo="Tibet" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sea Zone 60" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sea Zone 4" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
-                    </attachment>
-			
+                    </attachment>			
                     <attachment name="territoryAttachment" attachTo="Sea Zone 55" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
-                    </attachment>
-
-                  
+                    </attachment>            
                     <attachment name="territoryAttachment" attachTo="Sea Zone 24" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sea Zone 21" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sea Zone 7" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sea Zone 28" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sea Zone 62" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sea Zone 70" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
-                    </attachment>
-                    
+                    </attachment>                    
                     <attachment name="territoryAttachment" attachTo="Sea Zone 68" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sea Zone 49" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sea Zone 44" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sea Zone 23" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sea Zone 12" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
- 
                    <attachment name="territoryAttachment" attachTo="Sea Zone 11" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-
                     <attachment name="territoryAttachment" attachTo="Sea Zone 37" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-
                    <attachment name="territoryAttachment" attachTo="Sea Zone 2" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-
                     <attachment name="canalAttachment" attachTo="Sea Zone 28" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                         <option name="canalName" value="Suez Canal"/>
                         <option name="landTerritories" value="Cairo:Middle East"/>
-                    </attachment>
-   
+                    </attachment>  
                     <attachment name="canalAttachment" attachTo="Sea Zone 41" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                         <option name="canalName" value="Suez Canal"/>
                         <option name="landTerritories" value="Cairo:Middle East"/>
-                    </attachment>
-                   
+                    </attachment>                   
                     <attachment name="canalAttachment" attachTo="Sea Zone 15" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                         <option name="canalName" value="Kiel Canal"/>
                         <option name="landTerritories" value="Germany"/>
-                    </attachment>
-   
+                    </attachment>  
                     <attachment name="canalAttachment" attachTo="Sea Zone 16" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                         <option name="canalName" value="Kiel Canal"/>
                         <option name="landTerritories" value="Germany"/>
                     </attachment>
-
                     <attachment name="canalAttachment" attachTo="Sea Zone 4" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                          <option name="canalName" value="Panama Canal"/>
                          <option name="landTerritories" value="E.Mexico"/>
-                    </attachment>
-   
+                    </attachment> 
                     <attachment name="canalAttachment" attachTo="Sea Zone 65" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                           <option name="canalName" value="Panama Canal"/>
                           <option name="landTerritories" value="E.Mexico"/>
-                    </attachment>
-                               
+                    </attachment>                               
                      <attachment name="playerAttachment" attachTo="Russia" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
 			<option name="retainCapitalNumber" value="0"/>
 			<option name="retainCapitalProduceNumber" value="0"/>
 		     </attachment>
- 
                      <attachment name="playerAttachment" attachTo="Germany" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
 			<option name="retainCapitalNumber" value="0"/>
 			<option name="retainCapitalProduceNumber" value="0"/>
 		     </attachment>
-
                      <attachment name="playerAttachment" attachTo="England" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
 			<option name="retainCapitalNumber" value="0"/>
 			<option name="retainCapitalProduceNumber" value="0"/>
 		     </attachment>
-
                      <attachment name="playerAttachment" attachTo="Italy" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
 			<option name="retainCapitalNumber" value="0"/>
 			<option name="retainCapitalProduceNumber" value="0"/>
 		     </attachment>
-
                      <attachment name="playerAttachment" attachTo="America" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
 			<option name="retainCapitalNumber" value="0"/>
 			<option name="retainCapitalProduceNumber" value="0"/>
 		     </attachment>
-
                      <attachment name="playerAttachment" attachTo="Japan" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
 			<option name="retainCapitalNumber" value="0"/>
 			<option name="retainCapitalProduceNumber" value="0"/>
-		     </attachment>
-                   
+		     </attachment>   
                      <attachment name="territoryEffectAttachment" attachTo="Capital1" javaClass="TerritoryEffectAttachment" type="territoryEffect">
                         <option name="combatDefenseEffect" value="infantry" count="1"/>
                         <option name="combatDefenseEffect" value="trench" count="1"/>
@@ -2579,8 +2339,7 @@
                         <option name="combatDefenseEffect" value="siberian" count="1"/>
                         <option name="combatDefenseEffect" value="l.cavalry" count="1"/>
                         <option name="combatDefenseEffect" value="h.cavalry" count="1"/>
-                     </attachment>
-                     
+                     </attachment>     
                      <attachment name="territoryEffectAttachment" attachTo="Capital2" javaClass="TerritoryEffectAttachment" type="territoryEffect">
                         <option name="combatDefenseEffect" value="infantry" count="2"/>
                         <option name="combatDefenseEffect" value="trench" count="2"/>
@@ -2593,13 +2352,9 @@
                         <option name="combatDefenseEffect" value="l.cavalry" count="2"/>
                         <option name="combatDefenseEffect" value="h.cavalry" count="2"/>
                      </attachment>
- 
    </attachmentList>
-
         <initialize>
                 <ownerInitialize>
-                        
-                        <!-- Germany Owned Territories -->
                         <territoryOwner territory="Germany" owner="Germany"/>
                         <territoryOwner territory="Denmark" owner="Germany"/>
                         <territoryOwner territory="S.Norway" owner="Germany"/>
@@ -2614,8 +2369,6 @@
                         <territoryOwner territory="Romania" owner="Germany"/>
                         <territoryOwner territory="Finland" owner="Germany"/> 
                         <territoryOwner territory="W.Africa" owner="Germany"/>
-
-                        <!-- Russia Owned Territories -->
                         <territoryOwner territory="Moscow" owner="Russia"/>
                         <territoryOwner territory="Leningrad" owner="Russia"/>
                         <territoryOwner territory="Sevastopol" owner="Russia"/>
@@ -2652,16 +2405,12 @@
                         <territoryOwner territory="E.Ukraine" owner="Russia"/>
                         <territoryOwner territory="Belarus" owner="Russia"/>
                         <territoryOwner territory="Novgorod" owner="Russia"/>
-
-                        <!-- Japan Owned Territories -->
                         <territoryOwner territory="Japan" owner="Japan"/>
                         <territoryOwner territory="N.Manchuria" owner="Japan"/>
                         <territoryOwner territory="S.Manchuria" owner="Japan"/>
                         <territoryOwner territory="Indochina" owner="Japan"/>
 			<territoryOwner territory="Shanghai" owner="Japan"/>	
                         <territoryOwner territory="Kwangtung" owner="Japan"/>
-
-                        <!-- England Owned Territories -->
                         <territoryOwner territory="Britain" owner="England"/>
                         <territoryOwner territory="W.Canada" owner="England"/>
                         <territoryOwner territory="E.Canada" owner="England"/>
@@ -2693,8 +2442,6 @@
                         <territoryOwner territory="W.Guinea" owner="England"/>
                         <territoryOwner territory="E.Guinea" owner="England"/>
                         <territoryOwner territory="Solomon" owner="England"/>
-
-                        <!-- Italy Owned Territories -->
                         <territoryOwner territory="N.Italy" owner="Italy"/>
                         <territoryOwner territory="S.Italy" owner="Italy"/>
                         <territoryOwner territory="Sicily" owner="Italy"/>
@@ -2704,8 +2451,6 @@
                         <territoryOwner territory="Libya" owner="Italy"/>
                         <territoryOwner territory="Ethiopia" owner="Italy"/>
                         <territoryOwner territory="Somali" owner="Italy"/>
-                
-                        <!-- America Owned Territories -->
                         <territoryOwner territory="E.USA" owner="America"/>
                         <territoryOwner territory="Greenland" owner="America"/>
                         <territoryOwner territory="Iceland" owner="America"/>
@@ -2716,8 +2461,6 @@
                         <territoryOwner territory="Hawaii" owner="America"/>
                         <territoryOwner territory="Midway" owner="America"/>
                         <territoryOwner territory="Philippines" owner="America"/>
-
-                        <!-- China Owned Territories -->
                         <territoryOwner territory="Sinkiang" owner="China"/>
                         <territoryOwner territory="Suiyuan" owner="China"/>
                         <territoryOwner territory="Hsining" owner="China"/>
@@ -2726,12 +2469,8 @@
                         <territoryOwner territory="Chahar" owner="China"/>
                         <territoryOwner territory="Yunnan" owner="China"/>
                         <territoryOwner territory="Kweichow" owner="China"/>
-
                 </ownerInitialize>
-
                 <unitInitialize>
-                      
-                        <!-- Germany  Unit Placements -->
                         <unitPlacement unitType="factory" territory="Germany" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="factory" territory="Finland" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="factory" territory="Romania" quantity="1" owner="Germany"/>
@@ -2761,7 +2500,7 @@
                         <unitPlacement unitType="artillery" territory="Libya" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="armour" territory="Libya" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="fighter" territory="Low Countries" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="infantry" territory="Germany" quantity="12" owner="Germany"/>
+                        <unitPlacement unitType="infantry" territory="Germany" quantity="10" owner="Germany"/>
                         <unitPlacement unitType="artillery" territory="Germany" quantity="2" owner="Germany"/>
                         <unitPlacement unitType="armour" territory="Germany" quantity="3" owner="Germany"/>
                         <unitPlacement unitType="fighter" territory="Germany" quantity="1" owner="Germany"/>
@@ -2770,8 +2509,6 @@
                         <unitPlacement unitType="infantry" territory="Romania" quantity="3" owner="Germany"/>
                         <unitPlacement unitType="artillery" territory="Romania" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="infantry" territory="Ethiopia" quantity="1" owner="Germany"/>
-
-                        <!-- Russia  Unit Placements -->
                         <unitPlacement unitType="factory" territory="Moscow" quantity="1" owner="Russia"/>
                         <unitPlacement unitType="factory" territory="Leningrad" quantity="1" owner="Russia"/>
                         <unitPlacement unitType="factory" territory="Stalingrad" quantity="1" owner="Russia"/>
@@ -2797,7 +2534,7 @@
                         <unitPlacement unitType="infantry" territory="Baku" quantity="1" owner="Russia"/>
                         <unitPlacement unitType="infantry" territory="Central Asia" quantity="1" owner="Russia"/>
                         <unitPlacement unitType="infantry" territory="Leningrad" quantity="2" owner="Russia"/>
-                        <unitPlacement unitType="trench" territory="Leningrad" quantity="10" owner="Russia"/>
+                        <unitPlacement unitType="trench" territory="Leningrad" quantity="8" owner="Russia"/>
                         <unitPlacement unitType="artillery" territory="Leningrad" quantity="1" owner="Russia"/>
                         <unitPlacement unitType="infantry" territory="Vyborg" quantity="1" owner="Russia"/>
                         <unitPlacement unitType="infantry" territory="Karelia" quantity="1" owner="Russia"/>
@@ -2816,8 +2553,6 @@
                         <unitPlacement unitType="infantry" territory="Krasnoyarsk" quantity="1" owner="Russia"/>
                         <unitPlacement unitType="boat" territory="Sea Zone 37" quantity="1" owner="Russia"/>
                         <unitPlacement unitType="trench" territory="Sevastopol" quantity="2" owner="Russia"/>
-
-                        <!-- Japan  Unit Placements -->
                         <unitPlacement unitType="factory" territory="Japan" quantity="1" owner="Japan"/>
                         <unitPlacement unitType="factory" territory="S.Manchuria" quantity="1" owner="Japan"/>
                         <unitPlacement unitType="factory" territory="Indochina" quantity="1" owner="Japan"/>
@@ -2845,8 +2580,6 @@
                         <unitPlacement unitType="infantry" territory="Sea Zone 59" quantity="4" owner="Japan"/>
                         <unitPlacement unitType="transport" territory="Sea Zone 59" quantity="2" owner="Japan"/>
                         <unitPlacement unitType="l.cruiser" territory="Sea Zone 59" quantity="1" owner="Japan"/>
-
-                        <!-- England  Unit Placements -->
                         <unitPlacement unitType="factory" territory="Britain" quantity="1" owner="England"/>
                         <unitPlacement unitType="factory" territory="E.Canada" quantity="1" owner="England"/>
                         <unitPlacement unitType="factory" territory="S.Africa" quantity="1" owner="England"/>
@@ -2893,8 +2626,6 @@
                         <unitPlacement unitType="destroyer" territory="Sea Zone 44" quantity="1" owner="England"/>
                         <unitPlacement unitType="transport" territory="Sea Zone 62" quantity="1" owner="England"/>
                         <unitPlacement unitType="destroyer" territory="Sea Zone 62" quantity="1" owner="England"/>
-
-                        <!-- Italy  Unit Placements -->
                         <unitPlacement unitType="factory" territory="N.Italy" quantity="1" owner="Italy"/>
                         <unitPlacement unitType="factory" territory="Ethiopia" quantity="1" owner="Italy"/>
                         <unitPlacement unitType="infantry" territory="N.Italy" quantity="2" owner="Italy"/>
@@ -2910,9 +2641,6 @@
                         <unitPlacement unitType="infantry" territory="Ethiopia" quantity="2" owner="Italy"/>
                         <unitPlacement unitType="trench" territory="Ethiopia" quantity="1" owner="Italy"/>
                         <unitPlacement unitType="trench" territory="Somali" quantity="1" owner="Italy"/>
-
-
-                        <!-- America  Unit Placements -->
                         <unitPlacement unitType="factory" territory="E.USA" quantity="1" owner="America"/>
                         <unitPlacement unitType="factory" territory="W.USA" quantity="1" owner="America"/>                      
                         <unitPlacement unitType="infantry" territory="E.USA" quantity="1" owner="America"/>
@@ -2934,8 +2662,6 @@
                         <unitPlacement unitType="fighter" territory="Sea Zone 70" quantity="1" owner="America"/>
                         <unitPlacement unitType="destroyer" territory="Sea Zone 4" quantity="1" owner="America"/>
                         <unitPlacement unitType="transport" territory="Sea Zone 4" quantity="1" owner="America"/>
-
-                        <!-- China  Unit Placements -->
                         <unitPlacement unitType="factory" territory="Sinkiang" quantity="1" owner="China"/>
                         <unitPlacement unitType="l.cavalry" territory="Sinkiang" quantity="1" owner="China"/>
                         <unitPlacement unitType="l.cavalry" territory="Yunnan" quantity="1" owner="China"/>    
@@ -2946,7 +2672,6 @@
                         <unitPlacement unitType="l.cavalry" territory="Chahar" quantity="1" owner="China"/>
                         <unitPlacement unitType="h.cavalry" territory="Hsining" quantity="1" owner="China"/>
                 </unitInitialize>
-        
                 <resourceInitialize>                      
                         <resourceGiven player="Germany" resource="PUs" quantity="400"/>
                         <resourceGiven player="Russia" resource="PUs" quantity="200"/>
@@ -2957,196 +2682,146 @@
                         <resourceGiven player="China" resource="PUs" quantity="100"/>                                                        
                </resourceInitialize>
         </initialize>
-
         <propertyList>
-				<!-- OPTIONAL PROPERTIES -->
-	
 		<property name="Germany bid" value="0" editable="true">
                         <number min="0" max="1000"/>
                 </property>
-
                 <property name="Russia bid" value="0" editable="true">
                         <number min="0" max="1000"/>
                 </property>
-
                 <property name="Japan bid" value="0" editable="true">
                         <number min="0" max="1000"/>
                 </property>
-
                 <property name="England bid" value="0" editable="true">
                         <number min="0" max="1000"/>
-                </property>
-				
+                </property>		
 		<property name="Italy bid" value="0" editable="true">
                         <number min="0" max="1000"/>
                 </property>
-
                 <property name="America bid" value="0" editable="true">
                         <number min="0" max="1000"/>
                 </property>
-
                 <property name="China bid" value="0" editable="true">
                         <number min="0" max="1000"/>
-                </property>
-                              								               
+                </property>          								               
 	        <property name="Low Luck" value="false" editable="true">
                         <boolean/>
                 </property>
-
 		<property name="Low Luck for AntiAircraft" value="false" editable="true">
 			<boolean/>
 		</property>
-
 	        <property name="Low Luck for Bombing and Territory Damage" value="false" editable="true">
 			<boolean/>
 		</property>			
-
 		<property name="WW2V3" value="true" editable="false">
                         <boolean/>
-                </property>
-				                
+                </property>	                
                 <property name="Movement By Territory Restricted" value="true" editable="false">
                 	<boolean/>
                 </property>
-                
                 <property name="Production Per X Territories Restricted" value="true" editable="false">
                 	<boolean/>
                 </property>
-                
                 <property name="Unit Placement Per Territory Restricted" value="true" editable="false">
                 	<boolean/>
                 </property>
-                
                 <property name="Place in Any Territory" value="true" editable="false">
                 	<boolean/>
                 </property>
-                
                 <property name="Unplaced units live when not placed" value ="true" editable="false">
                         <boolean/>
-                </property>
-			
+                </property>	
 		<property name="Occupied Territories" value="true" editable="false">
                 	<boolean/>
-                </property>
-				 
+                </property>		 
                 <property name="Raids May Be Preceeded By Air Battles" value="true" editable="false">
                         <boolean/>
                 </property>
-
                 <property name="Damage From Bombing Done To Units Instead Of Territories" value="true" editable="false">
                         <boolean/>
                 </property>
-
 		<property name="Blitz Through Factories And AA Restricted" value="true" editable="false">
                 	<boolean/>
-                </property>
-				
+                </property>		
 		<property name="Roll AA Individually" value="true" editable="false">
                         <boolean/>
-                </property>
-                       
+                </property>    
 		<property name="Choose AA Casualties" value="false" editable="false">
                         <boolean/>
-                </property>
-				
+                </property>		
 		<property name="AA Territory Restricted" value="true" editable="false">
                 	<boolean/>
                 </property>
-
 		<property name="Partial Amphibious Retreat" value="true" editable="false">
                         <boolean/>
                 </property>
-                
 		<property name="Hari-Kari Units" value="true" editable="false">
                 	<boolean/>
-                </property>
-				
+                </property>		
 		<property name="Allied Air Dependents" value="true" editable="false">
 			<boolean/>
-		</property>
-				
+		</property>		
 		<property name="Surviving Air Move To Land" value="true" editable="false">
                         <boolean/>
-                </property>
-                				
+                </property>   				
 		<property name="Ignore Transport In Movement" value="true" editable="false">
                 	<boolean/>
-                </property>
-                
+                </property> 
                 <property name="Transport Casualties Restricted" value="true" editable="false">
                 	<boolean/>
-                </property>
-				
+                </property>		
 		<property name="Unescorted Transport Dies" value="true" editable="false">
                 	<boolean/>
-                </property>
-				
+                </property>		
                 <property name="Unit Placement Restrictions" value="true" editable="false">
                         <boolean/>
-                </property>
- 				 
+                </property>		 
                 <property name="Previous Units Fight" value="true" editable="false">
 		        <boolean/>
-		</property>
-				               
+		</property>		               
                 <property name="Units Can Be Changed On Capture" value="true" editable="false">
                         <boolean/>
-                </property>
-				
+                </property>		
 		<property name="Produce fighters on carriers" value="true" editable="false">
                         <boolean/>
                 </property>
-
                 <property name="Produce new fighters on old carriers" value="true" editable="false">
                         <boolean/>
                 </property>
-
                 <property name="Move existing fighters to new carriers" value="false" editable="false">
                         <boolean/>
                 </property>
-
                 <property name="Land existing fighters on new carriers" value="true" editable="false">
                         <boolean/>
                 </property>
-
 		<property name="Unit Placement In Enemy Seas" value="true" editable="false">
                         <boolean/>
                 </property>
-               
                 <property name="Placement Restricted By Factory" value="true" editable="false">
                 	<boolean/>
-                </property>
-			
+                </property>	
                 <property name="Convoy Blockades Roll Dice For Cost" value="true" editable="false">
 			<boolean/>
 		</property>
-	
 		<property name="Damage From Bombing Done To Units Instead Of Territories" value="true" editable="false">
                 	<boolean/>
-                </property>
-			
+                </property>	
                 <property name="Use Bombing Max Dice Sides And Bonus" value="true" editable="false">
                         <boolean/>
                 </property>
-		
                 <property name="Economic Victory" value="true" editable="false">
                        <boolean/>
                 </property>
-
                 <property name="Axis Economic Victory" value="1505" editable="false">
                        <number min="0" max="1000"/>
                 </property>
-
                 <property name="Allies Economic Victory" value="2005" editable="false">
                        <number min="0" max="1000"/>
                 </property>
-
                 <property name="maxFactoriesPerTerritory" value="1" editable="false">
 			<number min="1" max="100"/>
 		</property>
-
-                <property name="mapName" value="aggression_1941" editable="false"/>
-				
+                <property name="mapName" value="aggression_1941" editable="false"/>		
                 <property name="notes">
 		<value><![CDATA[
 <html>
@@ -3156,7 +2831,7 @@
 		<br>
 		<b><span style="font-size:300%;color:660000;">AGGRESSION 1941</span></b>
 		<br>
-                <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 10.12.2020</em></h1>
+                <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 21.12.2020</em></h1>
                 <br>
                 <br><img src="map.png"/>
 		<br>
@@ -3358,7 +3033,7 @@
             <td bgcolor="CCCC99" style="text-align: center">4</td>
             <td bgcolor="CCCC99" style="text-align: center">4</td>
             <td bgcolor="CCCC99" style="text-align: center">2</td>
-            <td bgcolor="CCCC99" style="text-align: center">3 (6%)</td>
+            <td bgcolor="CCCC99" style="text-align: center">4 (8%)</td>
             <td bgcolor="CCCC99" style="text-align: center">50</td>
             <td bgcolor="CCCC99">Blitz</td>
          </tr>
@@ -3368,8 +3043,8 @@
             <td bgcolor="CCAA77" style="text-align: center">3</td>
             <td bgcolor="CCAA77" style="text-align: center">3</td>
             <td bgcolor="CCAA77" style="text-align: center">2</td>
-            <td bgcolor="CCAA77" style="text-align: center">3 (8.5%)</td>
-            <td bgcolor="CCAA77" style="text-align: center">35</td>
+            <td bgcolor="CCAA77" style="text-align: center">3 (7.5%)</td>
+            <td bgcolor="CCAA77" style="text-align: center">40</td>
             <td bgcolor="CCAA77">Italian unit, blitz</td>
          </tr>
          <tr>
@@ -3388,8 +3063,8 @@
             <td bgcolor="CCAA77" style="text-align: center">1</td>
             <td bgcolor="CCAA77" style="text-align: center">3</td>
             <td bgcolor="CCAA77" style="text-align: center">2</td>
-            <td bgcolor="CCAA77" style="text-align: center">2 (7%)</td>
-            <td bgcolor="CCAA77" style="text-align: center">30</td>
+            <td bgcolor="CCAA77" style="text-align: center">2 (10%)</td>
+            <td bgcolor="CCAA77" style="text-align: center">20</td>
             <td bgcolor="CCAA77">Chinese unit, blitz</td>
          </tr>
         <tr>
@@ -3398,8 +3073,8 @@
             <td bgcolor="CCCC99" style="text-align: center">3</td>
             <td bgcolor="CCCC99" style="text-align: center">3</td>
             <td bgcolor="CCCC99" style="text-align: center">2</td>
-            <td bgcolor="CCCC99" style="text-align: center">2 (5%)</td>
-            <td bgcolor="CCCC99" style="text-align: center">40</td>
+            <td bgcolor="CCCC99" style="text-align: center">2 (7%)</td>
+            <td bgcolor="CCCC99" style="text-align: center">30</td>
             <td bgcolor="CCCC99">Chinese unit, blitz</td>
          </tr>
 </table>
@@ -3572,7 +3247,7 @@
             <td bgcolor="CCAA77"><img src="trench.png"/></td>
             <td bgcolor="CCAA77">Trench</td>
             <td bgcolor="CCAA77" style="text-align: center">1 can be placed per territory per round</td>
-            <td bgcolor="CCAA77" style="text-align: center">3 defense, 2 (6%) upkeep</td>
+            <td bgcolor="CCAA77" style="text-align: center">3 defense, 1 (3%) upkeep</td>
          </tr> 
 		 </table>
 		 </div>
@@ -3650,21 +3325,18 @@ For each hit scored, the enemy must allocate 1 casualty.</li>
 <br> # AA50, Big World project teams and Cernel for inspirations.
 <br> # Mirko Bruner for numbers and relief tiles.
 <br> # Veqryn, VictorInThePacific, Hepster and Pulicat for the rulebook and the handbook.
-<br> # Black_Elk for the creation of PoS 2 and explanations.
+<br> # Veqryn for the creation of PoS 2 and explanations.
 <br>==========================================================
 <br>
 						<br><br>
                                                 <b>Contact:yuksely1992@gmail.com</b>
 					        <br>
                                                 <b>NAVALLAND 2020</b>
-					        <br>
-                                                
+					        <br>                                      
    </body>
 </html>					
 	        	]]>
 		</value>
 		</property>
-
-
     </propertyList>
 </game>
