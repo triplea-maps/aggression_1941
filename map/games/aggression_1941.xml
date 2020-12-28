@@ -5,7 +5,6 @@
         <loader javaClass="games.strategy.triplea.TripleA"/>
 	<triplea minimumVersion="1.9"/> 
                  <map>  
-                <!-- Territory Name Definitions -->
                 <territory name="Sea Zone 12" water="true"/>
                 <territory name="Sea Zone 1" water="true"/>
                 <territory name="Sea Zone 2" water="true"/>
@@ -92,7 +91,7 @@
                 <territory name="Denmark"/>
                 <territory name="S.Norway"/>
                 <territory name="N.Norway"/>
-                <territory name="Low Countries"/>
+                <territory name="Netherlands"/>
                 <territory name="Lorraine"/>
                 <territory name="Normandy"/>
                 <territory name="Bordeaux"/>
@@ -192,11 +191,11 @@
                 <territory name="Alaska"/>
                 <territory name="Hawaii"/>
                 <territory name="Midway"/>
-                <territory name="S.America"/>
+                <territory name="South America"/>
                 <territory name="Sweden"/>
                 <territory name="Switzerland"/>
                 <territory name="Turkey"/>
-                <territory name="Iberia"/>
+                <territory name="Spain"/>
                 <territory name="W.Sahara"/>
                 <territory name="Sahara"/>
                 <territory name="Angola"/>
@@ -268,23 +267,23 @@
                 <connection t1="E.USA" t2="E.Mexico"/>
                 <connection t1="E.USA" t2="Sea Zone 4"/>
                 <connection t1="W.Mexico" t2="E.Mexico"/>
-                <connection t1="S.America" t2="E.Mexico"/>
+                <connection t1="South America" t2="E.Mexico"/>
                 <connection t1="Sea Zone 4" t2="E.Mexico"/>
-                <connection t1="S.America" t2="Sea Zone 4"/>
+                <connection t1="South America" t2="Sea Zone 4"/>
                 <connection t1="Greenland" t2="Sea Zone 2"/>
                 <connection t1="Normandy" t2="Bordeaux"/>
                 <connection t1="Normandy" t2="Lorraine"/>
-                <connection t1="Normandy" t2="Low Countries"/>
+                <connection t1="Normandy" t2="Netherlands"/>
                 <connection t1="Lorraine" t2="Bordeaux"/>
                 <connection t1="Marseille" t2="Bordeaux"/>
-                <connection t1="Iberia" t2="Bordeaux"/>
+                <connection t1="Spain" t2="Bordeaux"/>
                 <connection t1="Switzerland" t2="Lorraine"/>
                 <connection t1="Germany" t2="Lorraine"/>
                 <connection t1="Germany" t2="Belarus"/>
                 <connection t1="Germany" t2="W.Ukraine"/>
-                <connection t1="Low Countries" t2="Lorraine"/>
+                <connection t1="Netherlands" t2="Lorraine"/>
                 <connection t1="Marseille" t2="Lorraine"/>
-                <connection t1="Marseille" t2="Iberia"/>
+                <connection t1="Marseille" t2="Spain"/>
                 <connection t1="Marseille" t2="N.Italy"/>
                 <connection t1="Marseille" t2="Switzerland"/>
                 <connection t1="Sea Zone 68" t2="Sea Zone 2"/>
@@ -304,7 +303,7 @@
                 <connection t1="Sea Zone 5" t2="Sea Zone 8"/>
                 <connection t1="Sea Zone 5" t2="Sea Zone 10"/>
                 <connection t1="Sea Zone 5" t2="Sea Zone 22"/>
-                <connection t1="Sea Zone 5" t2="S.America"/>
+                <connection t1="Sea Zone 5" t2="South America"/>
                 <connection t1="Sea Zone 8" t2="Sea Zone 10"/>
                 <connection t1="Sea Zone 8" t2="Sea Zone 9"/>
                 <connection t1="Sea Zone 22" t2="Sea Zone 10"/>
@@ -326,13 +325,13 @@
                 <connection t1="Sea Zone 13" t2="Sea Zone 15"/>
                 <connection t1="Sea Zone 13" t2="S.Norway"/>
                 <connection t1="Sea Zone 13" t2="Denmark"/>
-                <connection t1="Iberia" t2="Sea Zone 9"/>
+                <connection t1="Spain" t2="Sea Zone 9"/>
                 <connection t1="Sea Zone 20" t2="Sea Zone 14"/>
                 <connection t1="Sea Zone 20" t2="Sea Zone 15"/>
                 <connection t1="Sea Zone 20" t2="Normandy"/>
-                <connection t1="Sea Zone 20" t2="Low Countries"/>
+                <connection t1="Sea Zone 20" t2="Netherlands"/>
                 <connection t1="Sea Zone 21" t2="Sea Zone 9"/>
-                <connection t1="Sea Zone 21" t2="Iberia"/> 
+                <connection t1="Sea Zone 21" t2="Spain"/> 
                 <connection t1="Sea Zone 21" t2="Bordeaux"/>
                 <connection t1="Sea Zone 21" t2="Normandy"/>
                 <connection t1="Sea Zone 9" t2="W.Sahara"/>
@@ -364,7 +363,7 @@
                 <connection t1="Sea Zone 24" t2="Sea Zone 27"/>
                 <connection t1="Sea Zone 25" t2="Sea Zone 27"/>
                 <connection t1="Sea Zone 24" t2="Gibraltar"/>
-                <connection t1="Sea Zone 24" t2="Iberia"/>
+                <connection t1="Sea Zone 24" t2="Spain"/>
                 <connection t1="Sea Zone 24" t2="Sicily"/>
                 <connection t1="S.Italy" t2="Sicily"/>
                 <connection t1="Sea Zone 24" t2="Malta"/>
@@ -412,7 +411,7 @@
                 <connection t1="Afghanistan" t2="Iran"/>
                 <connection t1="Sea Zone 38" t2="Sea Zone 37"/>
                 <connection t1="Denmark" t2="Sea Zone 15"/>
-                <connection t1="Sea Zone 15" t2="Low Countries"/>
+                <connection t1="Sea Zone 15" t2="Netherlands"/>
                 <connection t1="Sea Zone 15" t2="Germany"/>
                 <connection t1="Sea Zone 38" t2="Sea Zone 39"/>
                 <connection t1="Novaya Zemlya" t2="Sea Zone 39"/>
@@ -589,9 +588,9 @@
                 <connection t1="Sea Zone 67" t2="Sea Zone 4"/>
                 <connection t1="Sea Zone 67" t2="Sea Zone 70"/>
                 <connection t1="Sea Zone 67" t2="E.Mexico"/>
-                <connection t1="Sea Zone 67" t2="S.America"/>
+                <connection t1="Sea Zone 67" t2="South America"/>
                 <connection t1="Sea Zone 67" t2="Sea Zone 22"/>
-                <connection t1="S.America" t2="Sea Zone 22"/>
+                <connection t1="South America" t2="Sea Zone 22"/>
                 <connection t1="Sea Zone 23" t2="Sea Zone 22"/>
                 <connection t1="Sea Zone 23" t2="Sea Zone 43"/>
                 <connection t1="Sea Zone 23" t2="Sea Zone 48"/>
@@ -599,11 +598,11 @@
                 <connection t1="Sea Zone 23" t2="S.Africa"/>
                 <connection t1="Sea Zone 23" t2="Mozambique"/>
                 <connection t1="Sea Zone 67" t2="Sea Zone 66"/>
-                <connection t1="Iberia" t2="Gibraltar"/>
+                <connection t1="Spain" t2="Gibraltar"/>
                 <connection t1="N.Italy" t2="Switzerland"/>
                 <connection t1="N.Italy" t2="S.Italy"/>
                 <connection t1="N.Italy" t2="Germany"/>
-                <connection t1="Low Countries" t2="Germany"/>
+                <connection t1="Netherlands" t2="Germany"/>
                 <connection t1="Denmark" t2="Germany"/>
                 <connection t1="Baltics" t2="Germany"/>
                 <connection t1="Hungary" t2="Germany"/>
@@ -1224,7 +1223,7 @@
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Denmark" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="10"/>
+                        <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
@@ -1247,7 +1246,7 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-                   <attachment name="territoryAttachment" attachTo="Low Countries" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                   <attachment name="territoryAttachment" attachTo="Netherlands" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
@@ -1641,8 +1640,8 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                      </attachment>
                      <attachment name="territoryAttachment" attachTo="S.Manchuria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="30"/>
-                        <option name="unitProduction" value="3"/>
+                        <option name="production" value="20"/>
+                        <option name="unitProduction" value="2"/>
                         <option name="whenCapturedByGoesTo" value="England:China"/>
                         <option name="whenCapturedByGoesTo" value="Russia:China"/>
                         <option name="whenCapturedByGoesTo" value="America:China"/>
@@ -2161,7 +2160,7 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-                    <attachment name="territoryAttachment" attachTo="S.America" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="South America" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                     </attachment>
@@ -2192,7 +2191,7 @@
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                     </attachment> 
-                    <attachment name="territoryAttachment" attachTo="Iberia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="Spain" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                     </attachment>
@@ -2359,7 +2358,7 @@
                         <territoryOwner territory="Denmark" owner="Germany"/>
                         <territoryOwner territory="S.Norway" owner="Germany"/>
                         <territoryOwner territory="N.Norway" owner="Germany"/>
-                        <territoryOwner territory="Low Countries" owner="Germany"/>
+                        <territoryOwner territory="Netherlands" owner="Germany"/>
                         <territoryOwner territory="Normandy" owner="Germany"/>
                         <territoryOwner territory="Lorraine" owner="Germany"/>
                         <territoryOwner territory="Bordeaux" owner="Germany"/>
@@ -2499,7 +2498,7 @@
                         <unitPlacement unitType="infantry" territory="Libya" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="artillery" territory="Libya" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="armour" territory="Libya" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="fighter" territory="Low Countries" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="fighter" territory="Netherlands" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="infantry" territory="Germany" quantity="10" owner="Germany"/>
                         <unitPlacement unitType="artillery" territory="Germany" quantity="2" owner="Germany"/>
                         <unitPlacement unitType="armour" territory="Germany" quantity="3" owner="Germany"/>
@@ -2831,7 +2830,7 @@
 		<br>
 		<b><span style="font-size:300%;color:660000;">AGGRESSION 1941</span></b>
 		<br>
-                <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 22.12.2020</em></h1>
+                <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 28.12.2020</em></h1>
                 <br>
                 <br><img src="map.png"/>
 		<br>
@@ -2935,7 +2934,7 @@
                                         <li>All nations are the original owner of all their starting territories this mean their territories cannot be controlled by other alliance members by recapturing them from the enemy.</li>
                                         <li>Islands have the same rules with land territories.</li>
                                         <li>Sea territories have no owner.</li>
-                                        <li>South America, Iberia, Sweden, Switzerland, Turkey, Sahara, Western Sahara, Angola, Mozambique, Arabia, Afganistan and Tibet are impassable territories which means units cannot place on them, they cannot even use these territories as transit including air units. Siberia (Northeastern Asia) is also impassable territory despite having the same colour with Russia.</li>
+                                        <li>South America, Spain, Sweden, Switzerland, Turkey, Sahara, Western Sahara, Angola, Mozambique, Arabia, Afganistan and Tibet are impassable territories which means units cannot place on them, they cannot even use these territories as transit including air units. Siberia (Northeastern Asia) is also impassable territory despite having the same colour with Russia.</li>
 <br>
       <h1 style="text-align: center;font-size:120%;000000"><em>Territories</em></h1>
 <div style="text-align: left;" bgcolor="DADADA">        	   	
