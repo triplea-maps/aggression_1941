@@ -1029,7 +1029,9 @@
 		<playerRepair player="America" frontier="repair"/>
                 <playerRepair player="China" frontier="repair"/>                                                                                     
         </production> 
-        <attachmentList>            
+            <technology>
+            </technology>
+      <attachmentList>            
                 <attachment name="unitAttachment" attachTo="infantry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="1"/>
                          <option name="transportCost" value="2"/>
