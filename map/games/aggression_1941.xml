@@ -779,8 +779,7 @@
                 <unit name="trench"/>
         </unitList>
       <territoryEffectList>
-        <territoryEffect name="Capital1"/>
-        <territoryEffect name="Capital2"/>
+        <territoryEffect name="Capital"/>
       </territoryEffectList>
         <gamePlay>
                 <delegate name="initDelegate" javaClass="games.strategy.triplea.delegate.InitializationDelegate" display="Initializing Delegates"/>
@@ -1096,7 +1095,7 @@
                          <option name="attack" value="4"/>
                          <option name="defense" value="4"/>
                          <option name="isAAforCombatOnly" value="true"/> 
-                         <option name="createsResourcesList" value="-4:PUs"/>
+                         <option name="createsResourcesList" value="-3:PUs"/>
                 </attachment>                  
                 <attachment name="unitAttachment" attachTo="fighter" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="4"/>
@@ -1217,7 +1216,8 @@
                         <option name="production" value="250"/>
                         <option name="unitProduction" value="25"/>
                         <option name="capital" value="Germany"/>
-                        <option name="territoryEffect" value="Capital2"/>
+                        <option name="territoryEffect" value="Capital"/>
+                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
@@ -1391,7 +1391,8 @@
                         <option name="production" value="30"/>
                         <option name="unitProduction" value="3"/>
                         <option name="capital" value="Russia"/>
-                        <option name="territoryEffect" value="Capital1"/>
+                        <option name="territoryEffect" value="Capital"/>
+                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
@@ -1626,7 +1627,8 @@
                         <option name="production" value="100"/>
                         <option name="unitProduction" value="10"/>
                         <option name="capital" value="Japan"/>                     
-                        <option name="territoryEffect" value="Capital1"/>
+                        <option name="territoryEffect" value="Capital"/>
+                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="England:America"/>
                         <option name="whenCapturedByGoesTo" value="Russia:America"/>
                         <option name="whenCapturedByGoesTo" value="China:America"/>
@@ -1743,7 +1745,8 @@
                         <option name="production" value="100"/>
                         <option name="unitProduction" value="10"/>
                         <option name="capital" value="England"/>                   
-                        <option name="territoryEffect" value="Capital1"/>
+                        <option name="territoryEffect" value="Capital"/>
+                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
@@ -1938,7 +1941,8 @@
                         <option name="production" value="60"/>
                         <option name="unitProduction" value="6"/>
                         <option name="capital" value="Italy"/>
-                        <option name="territoryEffect" value="Capital1"/>
+                        <option name="territoryEffect" value="Capital"/>
+                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
@@ -2014,7 +2018,8 @@
                         <option name="production" value="250"/>
                         <option name="unitProduction" value="25"/>
                         <option name="capital" value="America"/>
-                        <option name="territoryEffect" value="Capital1"/>
+                        <option name="territoryEffect" value="Capital"/>
+                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="China:America"/>
                         <option name="whenCapturedByGoesTo" value="Russia:America"/>
                         <option name="whenCapturedByGoesTo" value="England:America"/>
@@ -2099,7 +2104,8 @@
                         <option name="production" value="30"/>
                         <option name="unitProduction" value="3"/>
                         <option name="capital" value="China"/>
-                        <option name="territoryEffect" value="Capital1"/>
+                        <option name="territoryEffect" value="Capital"/>
+                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="America:China"/>
                         <option name="whenCapturedByGoesTo" value="Russia:China"/>
                         <option name="whenCapturedByGoesTo" value="England:China"/>
@@ -2329,19 +2335,7 @@
 			<option name="retainCapitalNumber" value="0"/>
 			<option name="retainCapitalProduceNumber" value="0"/>
 		     </attachment>   
-                     <attachment name="territoryEffectAttachment" attachTo="Capital1" javaClass="TerritoryEffectAttachment" type="territoryEffect">
-                        <option name="combatDefenseEffect" value="infantry" count="1"/>
-                        <option name="combatDefenseEffect" value="trench" count="1"/>
-                        <option name="combatDefenseEffect" value="artillery" count="1"/>
-                        <option name="combatDefenseEffect" value="armour" count="1"/>
-                        <option name="combatDefenseEffect" value="fighter" count="1"/>
-                        <option name="combatDefenseEffect" value="bomber" count="1"/>
-                        <option name="combatDefenseEffect" value="tankette" count="1"/>
-                        <option name="combatDefenseEffect" value="siberian" count="1"/>
-                        <option name="combatDefenseEffect" value="l.cavalry" count="1"/>
-                        <option name="combatDefenseEffect" value="h.cavalry" count="1"/>
-                     </attachment>     
-                     <attachment name="territoryEffectAttachment" attachTo="Capital2" javaClass="TerritoryEffectAttachment" type="territoryEffect">
+                     <attachment name="territoryEffectAttachment" attachTo="Capital" javaClass="TerritoryEffectAttachment" type="territoryEffect">
                         <option name="combatDefenseEffect" value="infantry" count="2"/>
                         <option name="combatDefenseEffect" value="trench" count="2"/>
                         <option name="combatDefenseEffect" value="artillery" count="2"/>
@@ -2353,7 +2347,7 @@
                         <option name="combatDefenseEffect" value="l.cavalry" count="2"/>
                         <option name="combatDefenseEffect" value="h.cavalry" count="2"/>
                      </attachment>
-   </attachmentList>
+ </attachmentList>
         <initialize>
                 <ownerInitialize>
                         <territoryOwner territory="Germany" owner="Germany"/>
@@ -2717,6 +2711,15 @@
 		<property name="WW2V3" value="true" editable="false">
                         <boolean/>
                 </property>	                
+                <property name="Total Victory" value="true" editable="true">
+			<boolean/>
+		</property>
+		<property name="Axis Total Victory VCs" value="7" editable="false">
+			<number min="7" max="7"/>
+		</property>
+		<property name="Allies Total Victory VCs" value="7" editable="false">
+			<number min="7" max="7"/>
+		</property>
                 <property name="Movement By Territory Restricted" value="true" editable="false">
                 	<boolean/>
                 </property>
@@ -2810,15 +2813,6 @@
                 <property name="Use Bombing Max Dice Sides And Bonus" value="true" editable="false">
                         <boolean/>
                 </property>
-                <property name="Economic Victory" value="true" editable="false">
-                       <boolean/>
-                </property>
-                <property name="Axis Economic Victory" value="1505" editable="false">
-                       <number min="0" max="1000"/>
-                </property>
-                <property name="Allies Economic Victory" value="2005" editable="false">
-                       <number min="0" max="1000"/>
-                </property>
                 <property name="maxFactoriesPerTerritory" value="1" editable="false">
 			<number min="1" max="100"/>
 		</property>
@@ -2832,11 +2826,11 @@
 		<br>
 		<b><span style="font-size:300%;color:660000;">AGGRESSION 1941</span></b>
 		<br>
-                <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 28.12.2020</em></h1>
+                <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 19.01.2021</em></h1>
                 <br>
                 <br><img src="map.png"/>
 		<br>
-		<br>Two-sided, turn-based WWII game which loosely based on year of 1941. Axis needs more than 1500 production power at the beginning of the 21.th round for victory whereas Allies have to exceed 2000 production power to win. If no side achieves its objective until the end of 20.th round, it is considered stalemate (draw) although players can still agree with the one of these options without achieving their objectives in any round also they are free to extend draw option up to 25.th round.  
+		<br>Two-sided, turn-based WWII game which loosely based on year of 1941. Victory is achieved with controlling all capitals until the end of round 20 otherwise it is considered stalemate.  
 		<br>
                 <br>Draw option currently is not supported by the engine.
                 <br>
@@ -2989,7 +2983,7 @@
 <br>
 <b>Capitals</b>
 <br>
-<li>They are marked with the flag icons. Nations do not lose their remained incomes and placement abilities if their capitals are lost. Germany's capital provides +2 additional defense for every units whereas other capitals provide only +1 additional defense.</li>
+<li>They are marked with the flag icons which provides +2 defensive bonus to all units.</li>
 <br>
 <b>Purchase</b>
 <br>
@@ -3034,7 +3028,7 @@
             <td bgcolor="CCCC99" style="text-align: center">4</td>
             <td bgcolor="CCCC99" style="text-align: center">4</td>
             <td bgcolor="CCCC99" style="text-align: center">2</td>
-            <td bgcolor="CCCC99" style="text-align: center">4 (8%)</td>
+            <td bgcolor="CCCC99" style="text-align: center">3 (6%)</td>
             <td bgcolor="CCCC99" style="text-align: center">50</td>
             <td bgcolor="CCCC99">Blitz</td>
          </tr>
@@ -3273,9 +3267,9 @@
 <br>
 <li>Allows naval units (except transport) and fighters to do damage up to the value of land territories surrounding a blockade zone, to the enemy's income after they finish their turn. Each blockade power represents 10-13 PUs income reduction of enemy if they do not sink them in their blockade shores.</li>
 <br>
-<b>How Units fire at the enemy</b>
+<b>How Units Fire</b>
 <br>
-<li>Each unit in the game has a certain attack power and defense power (for example, infantry have 1 attack and 2 defense). This means that during battle, their owner will roll 1 die for each infantry they have. If the infantry are attacking, then the owner will score 1 hit for each die that shows a 1. If the infantry are defending, then the owner will score 1 hit for each die that shows a 2 or less (1 or 2). This is called rolling at 2. For example, if you had 3 infantry and 1 tank defending, you would roll 3 at 3, and 1 at 34, because you have 3 infantry defending at 3, and 1 tank defending at 4.
+<li>Each unit in the game has a certain attack power and defense power (for example, infantry have 1 attack and 2 defense). This means that during battle, their owner will roll 1 die for each infantry they have. If the infantry are attacking, then the owner will score 1 hit for each die that shows a 1. If the infantry are defending, then the owner will score 1 hit for each die that shows a 2 or less (1 or 2). This is called rolling at 2. For example, if you had 3 infantry and 1 tank defending, you would roll 3 at 3, and 1 at 4, because you have 3 infantry defending at 3, and 1 tank defending at 4.
 For each hit scored, the enemy must allocate 1 casualty.</li>
 <br>
 <b>Amphibious Combat</b>
