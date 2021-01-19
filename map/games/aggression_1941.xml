@@ -810,45 +810,45 @@
                         <step name="chineseBid" delegate="bid" player="China" maxRunCount="1"/>
                         <step name="chineseBidPlace" delegate="placeBid" player="China" maxRunCount="1"/>
                         <step name="germanCombatMove" delegate="move" player="Germany"/>
-                        <step name="germanPurchase" delegate="purchase" player="Germany"/> 
                         <step name="germanBattle" delegate="battle" player="Germany"/>
                         <step name="germanNonCombatMove" delegate="move" player="Germany" display="Non Combat Move"/>
+                        <step name="germanPurchase" delegate="purchase" player="Germany"/> 
                         <step name="germanPlace" delegate="place" player="Germany"/>
                         <step name="germanEndTurn" delegate="endTurn" player="Germany"/>
                         <step name="russianCombatMove" delegate="move" player="Russia"/>
-                        <step name="russianPurchase" delegate="purchase" player="Russia"/>
                         <step name="russianBattle" delegate="battle" player="Russia"/>
                         <step name="russianNonCombatMove" delegate="move" player="Russia" display="Non Combat Move"/>
+                        <step name="russianPurchase" delegate="purchase" player="Russia"/>       
                         <step name="russianPlace" delegate="place" player="Russia"/>
                         <step name="russianEndTurn" delegate="endTurn" player="Russia"/>                  
                         <step name="japaneseCombatMove" delegate="move" player="Japan"/>
-                        <step name="japanesePurchase" delegate="purchase" player="Japan"/>
                         <step name="japaneseBattle" delegate="battle" player="Japan"/>
                         <step name="japaneseNonCombatMove" delegate="move" player="Japan" display="Non Combat Move"/>
+                        <step name="japanesePurchase" delegate="purchase" player="Japan"/>
                         <step name="japanesePlace" delegate="place" player="Japan"/>
                         <step name="japaneseEndTurn" delegate="endTurn" player="Japan"/>
-                        <step name="britishCombatMove" delegate="move" player="England"/>
-                        <step name="britishPurchase" delegate="purchase" player="England"/> 
+                        <step name="britishCombatMove" delegate="move" player="England"/> 
                         <step name="britishBattle" delegate="battle" player="England"/>
                         <step name="britishNonCombatMove" delegate="move" player="England" display="Non Combat Move"/>
+                        <step name="britishPurchase" delegate="purchase" player="England"/>
                         <step name="britishPlace" delegate="place" player="England"/>
                         <step name="britishEndTurn" delegate="endTurn" player="England"/>
                         <step name="italianCombatMove" delegate="move" player="Italy"/>
-                        <step name="italianPurchase" delegate="purchase" player="Italy"/>
                         <step name="italianBattle" delegate="battle" player="Italy"/>
                         <step name="italianNonCombatMove" delegate="move" player="Italy" display="Non Combat Move"/>
+                        <step name="italianPurchase" delegate="purchase" player="Italy"/>
                         <step name="italianPlace" delegate="place" player="Italy"/>
                         <step name="italianEndTurn" delegate="endTurn" player="Italy"/>
                         <step name="americanCombatMove" delegate="move" player="America"/>
-                        <step name="americanPurchase" delegate="purchase" player="America"/>
                         <step name="americanBattle" delegate="battle" player="America"/>
                         <step name="americanNonCombatMove" delegate="move" player="America" display="Non Combat Move"/>
+                        <step name="americanPurchase" delegate="purchase" player="America"/>
                         <step name="americanPlace" delegate="place" player="America"/>
                         <step name="americanEndTurn" delegate="endTurn" player="America"/>
                         <step name="chineseCombatMove" delegate="move" player="China"/>
-                        <step name="chinesePurchase" delegate="purchase" player="China"/>
                         <step name="chineseBattle" delegate="battle" player="China"/>
                         <step name="chineseNonCombatMove" delegate="move" player="China" display="Non Combat Move"/>
+                        <step name="chinesePurchase" delegate="purchase" player="China"/>
                         <step name="chinesePlace" delegate="place" player="China"/>
                         <step name="chineseEndTurn" delegate="endTurn" player="China"/>
         <step name="endRoundStep" delegate="endRound"/>
@@ -2828,8 +2828,6 @@
 		<br>
                 <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 19.01.2021</em></h1>
                 <br>
-                <br><img src="map.png"/>
-		<br>
 		<br>Two-sided, turn-based WWII game which loosely based on year of 1941. Victory is achieved with controlling all capitals until the end of round 20 otherwise it is considered stalemate.  
 		<br>
                 <br>Draw option currently is not supported by the engine.
@@ -2944,9 +2942,7 @@
 <br>
 <br>==========================================================
 <br>
-<br>The game goes with finishing each of these stages in order. 
-<br>
-<br><img src="Order.png"/>
+<br>The game goes with finishing the stages in order. 
 <br>
 <br>ROUND: The sum of all stages from Germany's "Combat Move" to China's "Turn Complete".
 <br>TURN: The sum of all stages that conducted by the same nation in a round. 
