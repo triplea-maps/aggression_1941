@@ -2489,7 +2489,6 @@
                         <unitPlacement unitType="factory" territory="Bordeaux" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="armour" territory="Marseille" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="infantry" territory="Crete" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="trench" territory="Crete" quantity="2" owner="Germany"/>
                         <unitPlacement unitType="infantry" territory="Algeria" quantity="2" owner="Germany"/>
                         <unitPlacement unitType="infantry" territory="Libya" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="artillery" territory="Libya" quantity="1" owner="Germany"/>
@@ -2629,6 +2628,7 @@
                         <unitPlacement unitType="fighter" territory="S.Italy" quantity="1" owner="Italy"/>
                         <unitPlacement unitType="infantry" territory="Yugoslavia" quantity="2" owner="Italy"/>
                         <unitPlacement unitType="tankette" territory="Greece" quantity="1" owner="Italy"/>
+                        <unitPlacement unitType="trench" territory="Crete" quantity="2" owner="Italy"/>
                         <unitPlacement unitType="infantry" territory="Libya" quantity="2" owner="Italy"/>
                         <unitPlacement unitType="destroyer" territory="Sea Zone 27" quantity="1" owner="Italy"/>
                         <unitPlacement unitType="cruiser" territory="Sea Zone 27" quantity="2" owner="Italy"/>
