@@ -2485,8 +2485,206 @@
                         <territoryOwner territory="Kweichow" owner="China"/>
                 </ownerInitialize>
                 <unitInitialize>
-
+                        <unitPlacement unitType="factory" territory="Germany" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="factory" territory="Finland" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="factory" territory="Romania" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="infantry" territory="Finland" quantity="2" owner="Germany"/>
+                        <unitPlacement unitType="trench" territory="Finland" quantity="2" owner="Germany"/>
+                        <unitPlacement unitType="infantry" territory="N.Norway" quantity="2" owner="Germany"/>
+                        <unitPlacement unitType="fighter" territory="N.Norway" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="infantry" territory="S.Norway" quantity="2" owner="Germany"/>
+                        <unitPlacement unitType="fighter" territory="S.Norway" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="trench" territory="S.Norway" quantity="2" owner="Germany"/>
+                        <unitPlacement unitType="trench" territory="N.Norway" quantity="2" owner="Germany"/>
+                        <unitPlacement unitType="submarine" territory="Sea Zone 12" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="submarine" territory="Sea Zone 20" quantity="2" owner="Germany"/>
+                        <unitPlacement unitType="transport" territory="Sea Zone 25" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="fighter" territory="Normandy" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="artillery" territory="Normandy" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="infantry" territory="Normandy" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="trench" territory="Algeria" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="infantry" territory="Lorraine" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="infantry" territory="Bordeaux" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="factory" territory="Bordeaux" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="armour" territory="Marseille" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="infantry" territory="Crete" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="infantry" territory="Algeria" quantity="2" owner="Germany"/>
+                        <unitPlacement unitType="infantry" territory="Libya" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="artillery" territory="Libya" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="armour" territory="Libya" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="fighter" territory="Netherlands" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="infantry" territory="Germany" quantity="10" owner="Germany"/>
+                        <unitPlacement unitType="artillery" territory="Germany" quantity="2" owner="Germany"/>
+                        <unitPlacement unitType="armour" territory="Germany" quantity="3" owner="Germany"/>
+                        <unitPlacement unitType="fighter" territory="Germany" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="bomber" territory="Germany" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="infantry" territory="Hungary" quantity="2" owner="Germany"/>
+                        <unitPlacement unitType="infantry" territory="Romania" quantity="3" owner="Germany"/>
+                        <unitPlacement unitType="artillery" territory="Romania" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="infantry" territory="Ethiopia" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="factory" territory="Moscow" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="factory" territory="Leningrad" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="factory" territory="Stalingrad" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="factory" territory="Sevastopol" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="factory" territory="Arkhangelsk" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="factory" territory="Baku" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="factory" territory="Omsk" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="factory" territory="Krasnoyarsk" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="factory" territory="Irkutsk" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Baltics" quantity="1" owner="Russia"/>                      
+                        <unitPlacement unitType="infantry" territory="Belarus" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="W.Ukraine" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="E.Ukraine" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Sevastopol" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Novgorod" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Kaluga" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Tambov" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Novosibirsk" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Stalingrad" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="fighter" territory="Rostov" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Samara" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Caucasus" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Baku" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Central Asia" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Leningrad" quantity="2" owner="Russia"/>
+                        <unitPlacement unitType="trench" territory="Leningrad" quantity="8" owner="Russia"/>
+                        <unitPlacement unitType="artillery" territory="Leningrad" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Vyborg" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Karelia" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Vyazma" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Arkhangelsk" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Bereznik" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Moscow" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="fighter" territory="Moscow" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Ryazan" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Kursk" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="artillery" territory="Ryazan" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="armour" territory="Yekaterinburg" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="armour" territory="Central Asia" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Omsk" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Irkutsk" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="infantry" territory="Krasnoyarsk" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="boat" territory="Sea Zone 37" quantity="1" owner="Russia"/>
+                        <unitPlacement unitType="trench" territory="Sevastopol" quantity="2" owner="Russia"/>
+                        <unitPlacement unitType="factory" territory="Japan" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="factory" territory="S.Manchuria" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="factory" territory="Indochina" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="infantry" territory="Japan" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="armour" territory="Japan" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="fighter" territory="Japan" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="bomber" territory="Japan" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="infantry" territory="S.Manchuria" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="infantry" territory="Shanghai" quantity="3" owner="Japan"/>
+                        <unitPlacement unitType="infantry" territory="Kwangtung" quantity="2" owner="Japan"/>
+                        <unitPlacement unitType="fighter" territory="Shanghai" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="fighter" territory="Kwangtung" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="infantry" territory="Indochina" quantity="3" owner="Japan"/>
+                        <unitPlacement unitType="infantry" territory="Sea Zone 57" quantity="3" owner="Japan"/>
+                        <unitPlacement unitType="artillery" territory="Sea Zone 57" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="transport" territory="Sea Zone 57" quantity="2" owner="Japan"/>
+                        <unitPlacement unitType="l.cruiser" territory="Sea Zone 57" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="cruiser" territory="Sea Zone 57" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="cruiser" territory="Sea Zone 49" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="fighter" territory="Sea Zone 57" quantity="2" owner="Japan"/>
+                        <unitPlacement unitType="carrier" territory="Sea Zone 57" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="transport" territory="Sea Zone 56" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="carrier" territory="Sea Zone 59" quantity="2" owner="Japan"/>
+                        <unitPlacement unitType="fighter" territory="Sea Zone 59" quantity="4" owner="Japan"/>
+                        <unitPlacement unitType="infantry" territory="Sea Zone 59" quantity="4" owner="Japan"/>
+                        <unitPlacement unitType="transport" territory="Sea Zone 59" quantity="2" owner="Japan"/>
+                        <unitPlacement unitType="l.cruiser" territory="Sea Zone 59" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="factory" territory="Britain" quantity="1" owner="England"/>
+                        <unitPlacement unitType="factory" territory="E.Canada" quantity="1" owner="England"/>
+                        <unitPlacement unitType="factory" territory="S.Africa" quantity="1" owner="England"/>
+                        <unitPlacement unitType="factory" territory="W.India" quantity="1" owner="England"/>
+                        <unitPlacement unitType="factory" territory="E.India" quantity="1" owner="England"/>
+                        <unitPlacement unitType="factory" territory="Cairo" quantity="1" owner="England"/>
+                        <unitPlacement unitType="factory" territory="Victoria" quantity="1" owner="England"/>
+                        <unitPlacement unitType="factory" territory="Queensland" quantity="1" owner="England"/>
+                        <unitPlacement unitType="factory" territory="W.Australia" quantity="1" owner="England"/>
+                        <unitPlacement unitType="trench" territory="Victoria" quantity="1" owner="England"/>
+                        <unitPlacement unitType="infantry" territory="Britain" quantity="4" owner="England"/>
+                        <unitPlacement unitType="infantry" territory="S.Africa" quantity="2" owner="England"/>
+                        <unitPlacement unitType="armour" territory="Britain" quantity="1" owner="England"/>
+                        <unitPlacement unitType="artillery" territory="Britain" quantity="1" owner="England"/>
+                        <unitPlacement unitType="fighter" territory="Britain" quantity="2" owner="England"/>
+                        <unitPlacement unitType="bomber" territory="Britain" quantity="1" owner="England"/>
+                        <unitPlacement unitType="infantry" territory="W.Canada" quantity="1" owner="England"/>
+                        <unitPlacement unitType="armour" territory="E.Canada" quantity="1" owner="England"/>
+                        <unitPlacement unitType="infantry" territory="El Alamein" quantity="2" owner="England"/>
+                        <unitPlacement unitType="armour" territory="El Alamein" quantity="1" owner="England"/>
+                        <unitPlacement unitType="artillery" territory="El Alamein" quantity="1" owner="England"/>
+                        <unitPlacement unitType="infantry" territory="Cairo" quantity="1" owner="England"/>      
+                        <unitPlacement unitType="infantry" territory="Middle East" quantity="1" owner="England"/>
+                        <unitPlacement unitType="infantry" territory="Iran" quantity="1" owner="England"/>
+                        <unitPlacement unitType="infantry" territory="W.India" quantity="3" owner="England"/>
+                        <unitPlacement unitType="trench" territory="W.India" quantity="1" owner="England"/>
+                        <unitPlacement unitType="artillery" territory="W.India" quantity="1" owner="England"/>
+                        <unitPlacement unitType="infantry" territory="E.India" quantity="2" owner="England"/>
+                        <unitPlacement unitType="infantry" territory="Gibraltar" quantity="1" owner="England"/>
+                        <unitPlacement unitType="infantry" territory="Malta" quantity="1" owner="England"/>
+                        <unitPlacement unitType="infantry" territory="Victoria" quantity="3" owner="England"/>
+                        <unitPlacement unitType="artillery" territory="Victoria" quantity="1" owner="England"/>
+                        <unitPlacement unitType="fighter" territory="Victoria" quantity="1" owner="England"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 3" quantity="1" owner="England"/>
+                        <unitPlacement unitType="transport" territory="Sea Zone 3" quantity="1" owner="England"/>
+                        <unitPlacement unitType="transport" territory="Sea Zone 6" quantity="1" owner="England"/>
+                        <unitPlacement unitType="cruiser" territory="Sea Zone 6" quantity="1" owner="England"/>
+                        <unitPlacement unitType="cruiser" territory="Sea Zone 9" quantity="1" owner="England"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 9" quantity="1" owner="England"/>
+                        <unitPlacement unitType="transport" territory="Sea Zone 44" quantity="1" owner="England"/>
+                        <unitPlacement unitType="cruiser" territory="Sea Zone 44" quantity="1" owner="England"/>
+                        <unitPlacement unitType="carrier" territory="Sea Zone 44" quantity="1" owner="England"/>
+                        <unitPlacement unitType="fighter" territory="Sea Zone 44" quantity="1" owner="England"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 44" quantity="1" owner="England"/>
+                        <unitPlacement unitType="transport" territory="Sea Zone 62" quantity="1" owner="England"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 62" quantity="1" owner="England"/>
+                        <unitPlacement unitType="factory" territory="N.Italy" quantity="1" owner="Italy"/>
+                        <unitPlacement unitType="factory" territory="Ethiopia" quantity="1" owner="Italy"/>
+                        <unitPlacement unitType="infantry" territory="N.Italy" quantity="2" owner="Italy"/>
+                        <unitPlacement unitType="tankette" territory="N.Italy" quantity="1" owner="Italy"/>
+                        <unitPlacement unitType="infantry" territory="S.Italy" quantity="1" owner="Italy"/>
+                        <unitPlacement unitType="fighter" territory="S.Italy" quantity="1" owner="Italy"/>
+                        <unitPlacement unitType="infantry" territory="Yugoslavia" quantity="2" owner="Italy"/>
+                        <unitPlacement unitType="tankette" territory="Greece" quantity="1" owner="Italy"/>
+                        <unitPlacement unitType="trench" territory="Crete" quantity="2" owner="Italy"/>
+                        <unitPlacement unitType="infantry" territory="Libya" quantity="2" owner="Italy"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 27" quantity="1" owner="Italy"/>
+                        <unitPlacement unitType="cruiser" territory="Sea Zone 27" quantity="2" owner="Italy"/>
+                        <unitPlacement unitType="transport" territory="Sea Zone 27" quantity="1" owner="Italy"/>
+                        <unitPlacement unitType="infantry" territory="Ethiopia" quantity="2" owner="Italy"/>
+                        <unitPlacement unitType="trench" territory="Ethiopia" quantity="1" owner="Italy"/>
+                        <unitPlacement unitType="trench" territory="Somali" quantity="1" owner="Italy"/>
+                        <unitPlacement unitType="factory" territory="E.USA" quantity="1" owner="America"/>
+                        <unitPlacement unitType="factory" territory="W.USA" quantity="1" owner="America"/>                      
+                        <unitPlacement unitType="infantry" territory="E.USA" quantity="1" owner="America"/>
+                        <unitPlacement unitType="artillery" territory="E.USA" quantity="1" owner="America"/>
+                        <unitPlacement unitType="infantry" territory="W.USA" quantity="2" owner="America"/>
+                        <unitPlacement unitType="infantry" territory="Alaska" quantity="1" owner="America"/>
+                        <unitPlacement unitType="infantry" territory="Hawaii" quantity="1" owner="America"/>
+                        <unitPlacement unitType="infantry" territory="Midway" quantity="1" owner="America"/>
+                        <unitPlacement unitType="infantry" territory="Philippines" quantity="1" owner="America"/>
+                        <unitPlacement unitType="fighter" territory="Iceland" quantity="1" owner="America"/>
+                        <unitPlacement unitType="bomber" territory="E.USA" quantity="1" owner="America"/>
+                        <unitPlacement unitType="fighter" territory="W.USA" quantity="1" owner="America"/>
+                        <unitPlacement unitType="bomber" territory="W.USA" quantity="1" owner="America"/>
+                        <unitPlacement unitType="fighter" territory="Hawaii" quantity="1" owner="America"/>
+                        <unitPlacement unitType="factory" territory="Hawaii" quantity="1" owner="America"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 71" quantity="1" owner="America"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 70" quantity="1" owner="America"/>
+                        <unitPlacement unitType="carrier" territory="Sea Zone 70" quantity="1" owner="America"/>
+                        <unitPlacement unitType="fighter" territory="Sea Zone 70" quantity="1" owner="America"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 4" quantity="1" owner="America"/>
+                        <unitPlacement unitType="transport" territory="Sea Zone 4" quantity="1" owner="America"/>
+                        <unitPlacement unitType="factory" territory="Sinkiang" quantity="1" owner="China"/>
+                        <unitPlacement unitType="l.cavalry" territory="Sinkiang" quantity="1" owner="China"/>
+                        <unitPlacement unitType="l.cavalry" territory="Yunnan" quantity="1" owner="China"/>    
+                        <unitPlacement unitType="l.cavalry" territory="Szechwan" quantity="1" owner="China"/>
+                        <unitPlacement unitType="l.cavalry" territory="Suiyuan" quantity="1" owner="China"/>
+                        <unitPlacement unitType="l.cavalry" territory="Kweichow" quantity="1" owner="China"/>
+                        <unitPlacement unitType="l.cavalry" territory="Hupeh" quantity="1" owner="China"/>
+                        <unitPlacement unitType="l.cavalry" territory="Chahar" quantity="1" owner="China"/>
+                        <unitPlacement unitType="h.cavalry" territory="Hsining" quantity="1" owner="China"/>
                 </unitInitialize>
                 <resourceInitialize>                      
                         <resourceGiven player="Germany" resource="PUs" quantity="400"/>
