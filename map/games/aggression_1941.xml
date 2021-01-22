@@ -202,7 +202,6 @@
                 <territory name="Mozambique"/>
                 <territory name="Arabia"/>
                 <territory name="Afghanistan"/>
-                <!-- Territory Connections -->
                 <connection t1="Sea Zone 12" t2="Sea Zone 11"/>
                 <connection t1="Sea Zone 12" t2="Iceland"/>
                 <connection t1="Sea Zone 12" t2="Sea Zone 6"/>
