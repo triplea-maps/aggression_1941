@@ -1217,7 +1217,6 @@
                         <option name="unitProduction" value="25"/>
                         <option name="capital" value="Germany"/>
                         <option name="territoryEffect" value="Capital"/>
-                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
@@ -1392,7 +1391,6 @@
                         <option name="unitProduction" value="3"/>
                         <option name="capital" value="Russia"/>
                         <option name="territoryEffect" value="Capital"/>
-                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
@@ -1628,7 +1626,6 @@
                         <option name="unitProduction" value="10"/>
                         <option name="capital" value="Japan"/>                     
                         <option name="territoryEffect" value="Capital"/>
-                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="England:America"/>
                         <option name="whenCapturedByGoesTo" value="Russia:America"/>
                         <option name="whenCapturedByGoesTo" value="China:America"/>
@@ -1746,7 +1743,6 @@
                         <option name="unitProduction" value="10"/>
                         <option name="capital" value="England"/>                   
                         <option name="territoryEffect" value="Capital"/>
-                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
@@ -1942,7 +1938,6 @@
                         <option name="unitProduction" value="6"/>
                         <option name="capital" value="Italy"/>
                         <option name="territoryEffect" value="Capital"/>
-                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
@@ -2019,7 +2014,6 @@
                         <option name="unitProduction" value="25"/>
                         <option name="capital" value="America"/>
                         <option name="territoryEffect" value="Capital"/>
-                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="China:America"/>
                         <option name="whenCapturedByGoesTo" value="Russia:America"/>
                         <option name="whenCapturedByGoesTo" value="England:America"/>
@@ -2105,7 +2099,6 @@
                         <option name="unitProduction" value="3"/>
                         <option name="capital" value="China"/>
                         <option name="territoryEffect" value="Capital"/>
-                        <option name="victoryCity" value="1"/>
                         <option name="whenCapturedByGoesTo" value="America:China"/>
                         <option name="whenCapturedByGoesTo" value="Russia:China"/>
                         <option name="whenCapturedByGoesTo" value="England:China"/>
@@ -2347,7 +2340,33 @@
                         <option name="combatDefenseEffect" value="l.cavalry" count="2"/>
                         <option name="combatDefenseEffect" value="h.cavalry" count="2"/>
                      </attachment>
- </attachmentList>
+                     <attachment name="conditionAttachmentUnconditionalAxisVictory" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+			<option name="gameProperty" value="Unconditional Surrender"/>
+			<option name="alliedOwnershipTerritories" value="Germany:N.Italy:Japan:E.USA:Britain:Moscow:Sinkiang" count="7"/>
+		</attachment>
+		<attachment name="conditionAttachmentUnconditionalAlliesVictory" attachTo="Russia" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+			<option name="gameProperty" value="Unconditional Surrender"/>
+			<option name="alliedOwnershipTerritories" value="Germany:N.Italy:Japan:E.USA:Britain:Moscow:Sinkiang" count="7"/>
+		</attachment>
+
+		<attachment name="triggerAttachmentUnconditionalAxisVictory" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+			<option name="conditions" value="conditionAttachmentUnconditionalAxisVictory"/>
+			<option name="when" value="after:germanBattle"/>
+			<option name="when" value="after:japaneseBattle"/>
+			<option name="when" value="after:italianBattle"/>
+                        <option name="victory" value="AXIS_VICTORY_UNCONDITIONAL"/>
+			<option name="players" value="Germany:Japan:Italy"/>
+		</attachment>
+		<attachment name="triggerAttachmentUnconditionalAlliesVictory" attachTo="Russia" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+			<option name="conditions" value="conditionAttachmentUnconditionalAlliesVictory"/>
+			<option name="when" value="after:russianBattle"/>
+			<option name="when" value="after:britishBattle"/>
+			<option name="when" value="after:americanBattle"/>
+			<option name="when" value="after:chineseBattle"/>
+			<option name="victory" value="ALLIES_VICTORY_UNCONDITIONAL"/>
+			<option name="players" value="Russia:England:America:China"/>
+		</attachment>
+</attachmentList>
         <initialize>
                 <ownerInitialize>
                         <territoryOwner territory="Germany" owner="Germany"/>
@@ -2466,206 +2485,8 @@
                         <territoryOwner territory="Kweichow" owner="China"/>
                 </ownerInitialize>
                 <unitInitialize>
-                        <unitPlacement unitType="factory" territory="Germany" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="factory" territory="Finland" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="factory" territory="Romania" quantity="1" owner="Germany"/>
+
                         <unitPlacement unitType="infantry" territory="Finland" quantity="2" owner="Germany"/>
-                        <unitPlacement unitType="trench" territory="Finland" quantity="2" owner="Germany"/>
-                        <unitPlacement unitType="infantry" territory="N.Norway" quantity="2" owner="Germany"/>
-                        <unitPlacement unitType="fighter" territory="N.Norway" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="infantry" territory="S.Norway" quantity="2" owner="Germany"/>
-                        <unitPlacement unitType="fighter" territory="S.Norway" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="trench" territory="S.Norway" quantity="2" owner="Germany"/>
-                        <unitPlacement unitType="trench" territory="N.Norway" quantity="2" owner="Germany"/>
-                        <unitPlacement unitType="submarine" territory="Sea Zone 12" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="submarine" territory="Sea Zone 20" quantity="2" owner="Germany"/>
-                        <unitPlacement unitType="transport" territory="Sea Zone 25" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="fighter" territory="Normandy" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="artillery" territory="Normandy" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="infantry" territory="Normandy" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="trench" territory="Algeria" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="infantry" territory="Lorraine" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="infantry" territory="Bordeaux" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="factory" territory="Bordeaux" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="armour" territory="Marseille" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="infantry" territory="Crete" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="infantry" territory="Algeria" quantity="2" owner="Germany"/>
-                        <unitPlacement unitType="infantry" territory="Libya" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="artillery" territory="Libya" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="armour" territory="Libya" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="fighter" territory="Netherlands" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="infantry" territory="Germany" quantity="10" owner="Germany"/>
-                        <unitPlacement unitType="artillery" territory="Germany" quantity="2" owner="Germany"/>
-                        <unitPlacement unitType="armour" territory="Germany" quantity="3" owner="Germany"/>
-                        <unitPlacement unitType="fighter" territory="Germany" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="bomber" territory="Germany" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="infantry" territory="Hungary" quantity="2" owner="Germany"/>
-                        <unitPlacement unitType="infantry" territory="Romania" quantity="3" owner="Germany"/>
-                        <unitPlacement unitType="artillery" territory="Romania" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="infantry" territory="Ethiopia" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="factory" territory="Moscow" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="factory" territory="Leningrad" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="factory" territory="Stalingrad" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="factory" territory="Sevastopol" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="factory" territory="Arkhangelsk" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="factory" territory="Baku" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="factory" territory="Omsk" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="factory" territory="Krasnoyarsk" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="factory" territory="Irkutsk" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Baltics" quantity="1" owner="Russia"/>                      
-                        <unitPlacement unitType="infantry" territory="Belarus" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="W.Ukraine" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="E.Ukraine" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Sevastopol" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Novgorod" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Kaluga" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Tambov" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Novosibirsk" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Stalingrad" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="fighter" territory="Rostov" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Samara" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Caucasus" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Baku" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Central Asia" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Leningrad" quantity="2" owner="Russia"/>
-                        <unitPlacement unitType="trench" territory="Leningrad" quantity="8" owner="Russia"/>
-                        <unitPlacement unitType="artillery" territory="Leningrad" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Vyborg" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Karelia" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Vyazma" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Arkhangelsk" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Bereznik" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Moscow" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="fighter" territory="Moscow" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Ryazan" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Kursk" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="artillery" territory="Ryazan" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="armour" territory="Yekaterinburg" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="armour" territory="Central Asia" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Omsk" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Irkutsk" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="infantry" territory="Krasnoyarsk" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="boat" territory="Sea Zone 37" quantity="1" owner="Russia"/>
-                        <unitPlacement unitType="trench" territory="Sevastopol" quantity="2" owner="Russia"/>
-                        <unitPlacement unitType="factory" territory="Japan" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="factory" territory="S.Manchuria" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="factory" territory="Indochina" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="infantry" territory="Japan" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="armour" territory="Japan" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="fighter" territory="Japan" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="bomber" territory="Japan" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="infantry" territory="S.Manchuria" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="infantry" territory="Shanghai" quantity="3" owner="Japan"/>
-                        <unitPlacement unitType="infantry" territory="Kwangtung" quantity="2" owner="Japan"/>
-                        <unitPlacement unitType="fighter" territory="Shanghai" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="fighter" territory="Kwangtung" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="infantry" territory="Indochina" quantity="3" owner="Japan"/>
-                        <unitPlacement unitType="infantry" territory="Sea Zone 57" quantity="3" owner="Japan"/>
-                        <unitPlacement unitType="artillery" territory="Sea Zone 57" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="transport" territory="Sea Zone 57" quantity="2" owner="Japan"/>
-                        <unitPlacement unitType="l.cruiser" territory="Sea Zone 57" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="cruiser" territory="Sea Zone 57" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="cruiser" territory="Sea Zone 49" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="fighter" territory="Sea Zone 57" quantity="2" owner="Japan"/>
-                        <unitPlacement unitType="carrier" territory="Sea Zone 57" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="transport" territory="Sea Zone 56" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="carrier" territory="Sea Zone 59" quantity="2" owner="Japan"/>
-                        <unitPlacement unitType="fighter" territory="Sea Zone 59" quantity="4" owner="Japan"/>
-                        <unitPlacement unitType="infantry" territory="Sea Zone 59" quantity="4" owner="Japan"/>
-                        <unitPlacement unitType="transport" territory="Sea Zone 59" quantity="2" owner="Japan"/>
-                        <unitPlacement unitType="l.cruiser" territory="Sea Zone 59" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="factory" territory="Britain" quantity="1" owner="England"/>
-                        <unitPlacement unitType="factory" territory="E.Canada" quantity="1" owner="England"/>
-                        <unitPlacement unitType="factory" territory="S.Africa" quantity="1" owner="England"/>
-                        <unitPlacement unitType="factory" territory="W.India" quantity="1" owner="England"/>
-                        <unitPlacement unitType="factory" territory="E.India" quantity="1" owner="England"/>
-                        <unitPlacement unitType="factory" territory="Cairo" quantity="1" owner="England"/>
-                        <unitPlacement unitType="factory" territory="Victoria" quantity="1" owner="England"/>
-                        <unitPlacement unitType="factory" territory="Queensland" quantity="1" owner="England"/>
-                        <unitPlacement unitType="factory" territory="W.Australia" quantity="1" owner="England"/>
-                        <unitPlacement unitType="trench" territory="Victoria" quantity="1" owner="England"/>
-                        <unitPlacement unitType="infantry" territory="Britain" quantity="4" owner="England"/>
-                        <unitPlacement unitType="infantry" territory="S.Africa" quantity="2" owner="England"/>
-                        <unitPlacement unitType="armour" territory="Britain" quantity="1" owner="England"/>
-                        <unitPlacement unitType="artillery" territory="Britain" quantity="1" owner="England"/>
-                        <unitPlacement unitType="fighter" territory="Britain" quantity="2" owner="England"/>
-                        <unitPlacement unitType="bomber" territory="Britain" quantity="1" owner="England"/>
-                        <unitPlacement unitType="infantry" territory="W.Canada" quantity="1" owner="England"/>
-                        <unitPlacement unitType="armour" territory="E.Canada" quantity="1" owner="England"/>
-                        <unitPlacement unitType="infantry" territory="El Alamein" quantity="2" owner="England"/>
-                        <unitPlacement unitType="armour" territory="El Alamein" quantity="1" owner="England"/>
-                        <unitPlacement unitType="artillery" territory="El Alamein" quantity="1" owner="England"/>
-                        <unitPlacement unitType="infantry" territory="Cairo" quantity="1" owner="England"/>      
-                        <unitPlacement unitType="infantry" territory="Middle East" quantity="1" owner="England"/>
-                        <unitPlacement unitType="infantry" territory="Iran" quantity="1" owner="England"/>
-                        <unitPlacement unitType="infantry" territory="W.India" quantity="3" owner="England"/>
-                        <unitPlacement unitType="trench" territory="W.India" quantity="1" owner="England"/>
-                        <unitPlacement unitType="artillery" territory="W.India" quantity="1" owner="England"/>
-                        <unitPlacement unitType="infantry" territory="E.India" quantity="2" owner="England"/>
-                        <unitPlacement unitType="infantry" territory="Gibraltar" quantity="1" owner="England"/>
-                        <unitPlacement unitType="infantry" territory="Malta" quantity="1" owner="England"/>
-                        <unitPlacement unitType="infantry" territory="Victoria" quantity="3" owner="England"/>
-                        <unitPlacement unitType="artillery" territory="Victoria" quantity="1" owner="England"/>
-                        <unitPlacement unitType="fighter" territory="Victoria" quantity="1" owner="England"/>
-                        <unitPlacement unitType="destroyer" territory="Sea Zone 3" quantity="1" owner="England"/>
-                        <unitPlacement unitType="transport" territory="Sea Zone 3" quantity="1" owner="England"/>
-                        <unitPlacement unitType="transport" territory="Sea Zone 6" quantity="1" owner="England"/>
-                        <unitPlacement unitType="cruiser" territory="Sea Zone 6" quantity="1" owner="England"/>
-                        <unitPlacement unitType="cruiser" territory="Sea Zone 9" quantity="1" owner="England"/>
-                        <unitPlacement unitType="destroyer" territory="Sea Zone 9" quantity="1" owner="England"/>
-                        <unitPlacement unitType="transport" territory="Sea Zone 44" quantity="1" owner="England"/>
-                        <unitPlacement unitType="cruiser" territory="Sea Zone 44" quantity="1" owner="England"/>
-                        <unitPlacement unitType="carrier" territory="Sea Zone 44" quantity="1" owner="England"/>
-                        <unitPlacement unitType="fighter" territory="Sea Zone 44" quantity="1" owner="England"/>
-                        <unitPlacement unitType="destroyer" territory="Sea Zone 44" quantity="1" owner="England"/>
-                        <unitPlacement unitType="transport" territory="Sea Zone 62" quantity="1" owner="England"/>
-                        <unitPlacement unitType="destroyer" territory="Sea Zone 62" quantity="1" owner="England"/>
-                        <unitPlacement unitType="factory" territory="N.Italy" quantity="1" owner="Italy"/>
-                        <unitPlacement unitType="factory" territory="Ethiopia" quantity="1" owner="Italy"/>
-                        <unitPlacement unitType="infantry" territory="N.Italy" quantity="2" owner="Italy"/>
-                        <unitPlacement unitType="tankette" territory="N.Italy" quantity="1" owner="Italy"/>
-                        <unitPlacement unitType="infantry" territory="S.Italy" quantity="1" owner="Italy"/>
-                        <unitPlacement unitType="fighter" territory="S.Italy" quantity="1" owner="Italy"/>
-                        <unitPlacement unitType="infantry" territory="Yugoslavia" quantity="2" owner="Italy"/>
-                        <unitPlacement unitType="tankette" territory="Greece" quantity="1" owner="Italy"/>
-                        <unitPlacement unitType="trench" territory="Crete" quantity="2" owner="Italy"/>
-                        <unitPlacement unitType="infantry" territory="Libya" quantity="2" owner="Italy"/>
-                        <unitPlacement unitType="destroyer" territory="Sea Zone 27" quantity="1" owner="Italy"/>
-                        <unitPlacement unitType="cruiser" territory="Sea Zone 27" quantity="2" owner="Italy"/>
-                        <unitPlacement unitType="transport" territory="Sea Zone 27" quantity="1" owner="Italy"/>
-                        <unitPlacement unitType="infantry" territory="Ethiopia" quantity="2" owner="Italy"/>
-                        <unitPlacement unitType="trench" territory="Ethiopia" quantity="1" owner="Italy"/>
-                        <unitPlacement unitType="trench" territory="Somali" quantity="1" owner="Italy"/>
-                        <unitPlacement unitType="factory" territory="E.USA" quantity="1" owner="America"/>
-                        <unitPlacement unitType="factory" territory="W.USA" quantity="1" owner="America"/>                      
-                        <unitPlacement unitType="infantry" territory="E.USA" quantity="1" owner="America"/>
-                        <unitPlacement unitType="artillery" territory="E.USA" quantity="1" owner="America"/>
-                        <unitPlacement unitType="infantry" territory="W.USA" quantity="2" owner="America"/>
-                        <unitPlacement unitType="infantry" territory="Alaska" quantity="1" owner="America"/>
-                        <unitPlacement unitType="infantry" territory="Hawaii" quantity="1" owner="America"/>
-                        <unitPlacement unitType="infantry" territory="Midway" quantity="1" owner="America"/>
-                        <unitPlacement unitType="infantry" territory="Philippines" quantity="1" owner="America"/>
-                        <unitPlacement unitType="fighter" territory="Iceland" quantity="1" owner="America"/>
-                        <unitPlacement unitType="bomber" territory="E.USA" quantity="1" owner="America"/>
-                        <unitPlacement unitType="fighter" territory="W.USA" quantity="1" owner="America"/>
-                        <unitPlacement unitType="bomber" territory="W.USA" quantity="1" owner="America"/>
-                        <unitPlacement unitType="fighter" territory="Hawaii" quantity="1" owner="America"/>
-                        <unitPlacement unitType="factory" territory="Hawaii" quantity="1" owner="America"/>
-                        <unitPlacement unitType="destroyer" territory="Sea Zone 71" quantity="1" owner="America"/>
-                        <unitPlacement unitType="destroyer" territory="Sea Zone 70" quantity="1" owner="America"/>
-                        <unitPlacement unitType="carrier" territory="Sea Zone 70" quantity="1" owner="America"/>
-                        <unitPlacement unitType="fighter" territory="Sea Zone 70" quantity="1" owner="America"/>
-                        <unitPlacement unitType="destroyer" territory="Sea Zone 4" quantity="1" owner="America"/>
-                        <unitPlacement unitType="transport" territory="Sea Zone 4" quantity="1" owner="America"/>
-                        <unitPlacement unitType="factory" territory="Sinkiang" quantity="1" owner="China"/>
-                        <unitPlacement unitType="l.cavalry" territory="Sinkiang" quantity="1" owner="China"/>
-                        <unitPlacement unitType="l.cavalry" territory="Yunnan" quantity="1" owner="China"/>    
-                        <unitPlacement unitType="l.cavalry" territory="Szechwan" quantity="1" owner="China"/>
-                        <unitPlacement unitType="l.cavalry" territory="Suiyuan" quantity="1" owner="China"/>
-                        <unitPlacement unitType="l.cavalry" territory="Kweichow" quantity="1" owner="China"/>
-                        <unitPlacement unitType="l.cavalry" territory="Hupeh" quantity="1" owner="China"/>
-                        <unitPlacement unitType="l.cavalry" territory="Chahar" quantity="1" owner="China"/>
-                        <unitPlacement unitType="h.cavalry" territory="Hsining" quantity="1" owner="China"/>
                 </unitInitialize>
                 <resourceInitialize>                      
                         <resourceGiven player="Germany" resource="PUs" quantity="400"/>
@@ -2698,27 +2519,18 @@
                 </property>
                 <property name="China bid" value="0" editable="true">
                         <number min="0" max="1000"/>
-                </property>          								               
-	        <property name="Low Luck" value="false" editable="true">
-                        <boolean/>
-                </property>
-		<property name="Low Luck for AntiAircraft" value="false" editable="true">
-			<boolean/>
-		</property>
-	        <property name="Low Luck for Bombing and Territory Damage" value="false" editable="true">
-			<boolean/>
-		</property>			
+                </property>          								               			
 		<property name="WW2V3" value="true" editable="false">
                         <boolean/>
                 </property>	                
-                <property name="Total Victory" value="true" editable="true">
+                <property name="Use Triggers" value="true" editable="false">
 			<boolean/>
 		</property>
-		<property name="Axis Total Victory VCs" value="7" editable="false">
-			<number min="7" max="7"/>
+                <property name="Triggered Victory" value="true" editable="false">
+			<boolean/>
 		</property>
-		<property name="Allies Total Victory VCs" value="7" editable="false">
-			<number min="7" max="7"/>
+		<property name="Unconditional Surrender" value="true" editable="false">
+			<boolean/>
 		</property>
                 <property name="Movement By Territory Restricted" value="true" editable="false">
                 	<boolean/>
@@ -2828,14 +2640,9 @@
 		<br>
                 <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 19.01.2021</em></h1>
                 <br>
-		<br>Two-sided, turn-based WWII game which loosely based on year of 1941. Victory is achieved with controlling all capitals until the end of round 20 otherwise it is considered stalemate.  
+		<br>Two-sided, turn-based WWII game which loosely based on year of 1941. Victory is achieved with controlling all capitals within 20 rounds otherwise it is considered draw.  
 		<br>
-                <br>Draw option currently is not supported by the engine.
-                <br>
                 <br>WARNING! The balance hasn't extensively tested yet. Still progressing...
-                <br>
-		<br>Every nation is allied with each other on the same side and enemy of the opposite side.
-                <br>
                 <br>
       <table border="1" bgcolor="EEEEEE" align="center">
          <th style="font-size:125%;000000" bgcolor="997744" colspan="4" width="250">Alliances</th>
@@ -2878,7 +2685,7 @@
 <br>==========================================================
       <br>
       <h1 style="text-align: center;font-size:120%;000000"><em>Canals</em></h1>
-      <br>They allow naval units to move through canal routes which specifically marked. They have no effect on land connections and any air unit can use their routes freely. There are three canals in the game.
+      <br>They allow naval units to move through canal routes.They have no effect on land connections and any air unit can use their routes freely.
 <br>
 		<table border="1" bgcolor="EEEEEE" align="center">
          <tr>
@@ -2912,8 +2719,7 @@
 <br>
       <h1 style="text-align: center;font-size:120%;000000"><em>Screen</em></h1>
 <div style="text-align: left;" bgcolor="DADADA">        	   	
-					<ul><li>Playing with the default zoom is recommended.</li>
-					<li>The main screen cannot display the whole World at once, only shows part of the map. The part that is displayed can be rapidly moved or changed via using the main screen or the minimap attached to top-right corner.</li>
+					<ul><li>The main screen cannot display the whole World at once, only shows part of the map. The part that is displayed can be rapidly moved or changed via using the main screen or the minimap attached to top-right corner.</li>
 <br>
 <br><img src="screen.png"/>
 <br>
@@ -2922,13 +2728,10 @@
 <br>
 <div style="text-align: left;" bgcolor="DADADA">        	   	
 					<ul><li>Almost all land territories have an production value which marked from 5 to 250 and they produce these incomes each turn after capturing them for their controller. </li>
-					<li>Land territories without numbers do not produce income.</li>
-					<li>Land territories will always have an owner.</li>
-                                        <li>Land territories can be controlled by only one nation but they can be captured by one of the opposite side nation.</li>
-                                        <li>All nations are the original owner of all their starting territories this mean their territories cannot be controlled by other alliance members by recapturing them from the enemy.</li>
+                                        <li>Land territories can be controlled by only one nation at the same time</li>
                                         <li>Islands have the same rules with land territories.</li>
                                         <li>Sea territories have no owner.</li>
-                                        <li>South America, Spain, Sweden, Switzerland, Turkey, Sahara, Western Sahara, Angola, Mozambique, Arabia, Afganistan and Tibet are impassable territories which means units cannot place on them, they cannot even use these territories as transit including air units. Siberia (Northeastern Asia) is also impassable territory despite having the same colour with Russia.</li>
+                                        <li>White territories are impassable including Siberia which means units cannot place on them, they cannot even use them as transit including air units. </li>
 <br>
       <h1 style="text-align: center;font-size:120%;000000"><em>Territories</em></h1>
 <div style="text-align: left;" bgcolor="DADADA">        	   	
@@ -2956,16 +2759,16 @@
                                         <li>Land and sea units stop moving as soon as they enter an area occupied by an enemy unit except enemy transport. Armour may move through empty territories (Blitz) controlled by an opposing player without being required to stop capturing that territory as they go.</li>
                                         <li>Air units can not move so far that their remaining movement allowance is insufficient for them to return to an eligible landing area, but players can conduct suicidal attacks by not moving carriers to rescue them. Whatever engine allows about it is legal.</li>
 <li>Air units can fly and attack over enemy units as long as they retain sufficient movement power to safely return.</li>
-<li>Only in this stage units may enter into any form of combat situation. If a player moves units into a territory or sea zone owned by the enemy, or containing enemy units, then the units must stop and participate in the battle.</li>
+<li>Only in this stage units may enter into any form of combat situation. If a player moves units into a territory owned by the enemy, or containing enemy units, then the units must stop and participate in the battle.</li>
 <li>At the end of this stage, combat will be resolved for each territory and sea zone which the player and any opposite alliance member has at least one combatant unit.</li>
-<li>Units that do not use up their full movement allowance in this stage retain the remainder for the Non-Combat Movement stage except the land and sea units that engage in combat. They lose their remaining movement points.</li>
+<li>Units that do not use up their full movement allowance in this stage retain the remainder for the Non-Combat Movement stage except the land and sea units that engaged in combat. They lose their remaining movement points.</li>
 <br>
 <b>Transports</b>
 <br>
-<li>They can carry one foot infantry and one more land unit.</li>
-<li>The procedure is that a land unit moves onto a transport in an adjacent sea zone and later moves onto a territory adjacent to the transport. The transport may move at any point in this process. The land unit may unload on the same turn or later, and may remain on the transport indefinitely.</li>
+<li>They can carry one foot infantry and one any land unit.</li>
+<li>Land unit moves onto a transport in an adjacent sea zone and later moves onto a territory adjacent to the transport. The transport may move at any point in this process. The land unit may unload on the same turn or later, and may remain on the transport indefinitely.</li>
 <li>Land units may load onto one transport from different territories and at different times but a transport may only unload to one territory per player turn, and if it unloads, it may not move any more in that player turn. Land units may not move before they load onto a transport.</li>
-<li>Transportation may also occur with units of allied players, although the process is not as seamless as when the transported units belong to the same player as the transport.</li>
+<li>They can transport allied units as well</li>
 <li>They have no effect at sea battles.</li>
 <br>
 <b>Carriers</b>
@@ -2975,7 +2778,7 @@
 <br>
 <b>Factories</b>
 <br>
-<li>They have no effect at land battles however they can prevent enemy to blitz. They cannot be destroyed. Their base values are 10 times smaller than their territory values which determine their production capacities. 10 Pus has to be spent to repair each of damage.</li>
+<li>They have no effect at land battles besides preventing enemy to blitz. They cannot be destroyed. Their base values are 10 times smaller than their territory values which determine their production capacities. 10 Pus has to be spent to repair each of damage.</li>
 <br>
 <b>Capitals</b>
 <br>
@@ -3232,7 +3035,7 @@
             <td bgcolor="CCCC99"><img src="factory.png"/></td>
             <td bgcolor="CCCC99">Factory</td>
             <td bgcolor="CCCC99" style="text-align: center">Cannot be built</td>
-            <td bgcolor="CCCC99" style="text-align: center">Produce units for original owners 1/10 territory value, can be damaged up to territory value</td>
+            <td bgcolor="CCCC99" style="text-align: center">Produces units for original owners 1/10 territory value, can be damaged up to territory value</td>
          </tr>
 		 <tr>
             <td bgcolor="CCAA77"><img src="trench.png"/></td>
@@ -3247,26 +3050,24 @@
 <div style="text-align: left;" bgcolor="DADADA">        	   	
 					<ul><li>Each territory or sea zone where both the player has combatant units, and any enemy has combatant units, will create a battle that must be resolved. A list of these territories and sea zones will appear on the right side.</li>
 					<li>The current player may resolve these in any order he wishes, but there are some exceptions, such as amphibious invasions and strategic bombing raids, which must be done first, but all battles must be resolved during this stage.</li>
-<li>If a territory contains more than 2 different nations, then only the units owned by the current player are considered to be attacking. Any units which are enemies of the current player are considered to be defending.</li>
-<li>In this way, many nations may defend, but only one nation may attack during each turn.</li>
+<li>Nations can defend together, but only one of them may attack during their turn.</li>
 <li>Each battle proceeds in a series of rounds, until at least one side is destroyed or attacker retreats.</li>
 <li>Each combat round proceeds in a series of sections. All units of both attacker and defender get to fire once per battle round, even if the unit is selected to be a casualty.</li>
 <br>
 <b>Air Warfare</b>
 <br>
 <li>Air battles do occur first which take place during the strategic bombing campaigns only. Defender can decide how many fighters on the territory will intercept including ally fighters. It is the only battle type that last only one round.</li>
-<li>All units except transports have anti-air protections this mean they have 1/6 chance to shot down per air attackers without retaliation which rolls only in the beginning of the battles. More stacks do not increase shot down chances what matter is just amount of attacker air units.</li>       
-<li>Their anti-air protections do not work at defending factories against strategic bombings. Only fighters including the allies ones can do that when they present in the factory zones.</li> 
+<li>All units except transports have anti-air protections this mean they have 1/6 chance to shot down per air attackers without retaliation which rolls only in the beginning of the battles. </li>       
+<li>Their anti-air protections do not work at defending factories against strategic bombings. </li> 
 <li>Players are unable to pick their air casualties during anti-air rollings.</li>
 <br>
 <b>Blockade Zone</b>
 <br>
-<li>Allows naval units (except transport) and fighters to do damage up to the value of land territories surrounding a blockade zone, to the enemy's income after they finish their turn. Each blockade power represents 10-13 PUs income reduction of enemy if they do not sink them in their blockade shores.</li>
+<li>Naval units (except transport) and fighters to do damage up to the value of land territories surrounding a blockade zone, to the enemy's income after they finish their turn. Each blockade power represents 10-13 PUs income reduction of enemy if they do not sink them in their blockade shores.</li>
 <br>
 <b>How Units Fire</b>
 <br>
-<li>Each unit in the game has a certain attack power and defense power (for example, infantry have 1 attack and 2 defense). This means that during battle, their owner will roll 1 die for each infantry they have. If the infantry are attacking, then the owner will score 1 hit for each die that shows a 1. If the infantry are defending, then the owner will score 1 hit for each die that shows a 2 or less (1 or 2). This is called rolling at 2. For example, if you had 3 infantry and 1 tank defending, you would roll 3 at 3, and 1 at 4, because you have 3 infantry defending at 3, and 1 tank defending at 4.
-For each hit scored, the enemy must allocate 1 casualty.</li>
+<li>Each unit in the game has a certain attack power and defense power . For example during the battles, their owner will roll 1 die for each infantry they have. If the infantries are attacking, then the owner will score 1 hit for each die that shows a 1. If the infantries are defending, then the owner will score 1 hit for each die that shows a 3 or less. For each hit scored, the enemy must allocate 1 casualty.</li>
 <br>
 <b>Amphibious Combat</b>
 <br>
@@ -3276,34 +3077,29 @@ For each hit scored, the enemy must allocate 1 casualty.</li>
 <b>Non Combat Move</b>
 <br>
 <li>The current player may move any or all of his units to the full limit of their remaining movement allowance, with certain exceptions.</li>
-<li>Air units must land in this phase. This means that they must end this phase in a territory that was controlled by the current player or an ally at the beginning of this player's turn, or (for fighters only) in a sea zone containing an eligible friendly or allied carrier.</li>
-<li>Land and sea units that participated in any form of combat in this player turn may not move in this phase. Transports that unloaded this turn may not make any further movement.</li>
+<li>Air units must land in this phase to save them considering their remaned movement powers.</li>
+<li>Land and sea units that participated in combat can not move in this phase. Transports that unloaded this turn may not make any further movement.</li>
 <li>Units moving in this phase may not initiate any form of combat, including blitzing. Land and sea units may not enter any territory controlled by an enemy or neutral, or any sea zone containing an enemy or neutral unit.</li>
 <br>
 <b>Placement</b>
 <br>
-<li>Units that were bought during the purchase phase at the beginning of this turn may be placed on the map.</li>
+<li>Units that were bought during the purchase phase may be placed on the map.</li>
 <li>Nations can use only their original factories. No side can use occupied factories and no side can purchase new factory. Strategic bombings reduce their base values temporarily which mean the factory owner can place less or no units in the factory unless decides to pay to repair.</li>
-<li>All units requires 1 base value to be placed.</li>
-<li>Sea units can only be placed in sea zones that are adjacent to factories owned at the beginning of the turn. If purchasing one or more Carrier units and 1-2 Fighter units per carrier, then the fighter may be placed on the carrier in the sea zone.</li> 
-<li>When placing a new carrier, you may move up to 2 fighters from the adjacent factory holding land territory, to the new carrier unit.</li>
+<li>All units require 1 base value to be placed.</li>
+<li>Sea units can only be placed in sea zones that are adjacent to factories owned at the beginning of the turn.  Fighter may be placed on the carriers as well. </li> 
 <li>It is possible to place new units into sea zones controlled by an opposing player. This does not require combat resolution unless the situation persists until the end of the enemy's next movement phase.</li>
 <li>After this phase, units start to reduce nation's incomes per round depends on the upkeep value.</li>
 <li>Newly placed units are fully functional at the end of this phase, meaning that they can be used for defending if attacked during the next player's turn.</li>
 <br>
 <b>End Turn</b>
 <br>
-<li>Counts all of the income from owned territories and give that income to the current player minus losing incomes from blockades.</li>
-<br>
-<b>Dice vs Low Luck</b>
-<br>
-<li>In Dice, one die is rolled for each unit participating in a battle. In Low Luck, all of the attacker's units have their attack powers added together. The total is then divided by the dice sides (6), and if there is any remainder it is rolled for. The defender does the same with the defense powers of all their units.</li>
+<li>Counts all of the income from owned territories and give that income to the current player.</li>
 <br>
 <b>Sources</b>
 <br>
 <li>https://triplea-game.org/files/TripleA_RuleBook.pdf</li>
 <li>https://forums.triplea-game.org/topic/2441/aggression-1941?_=1607590932874</li>
-<li>https://forums.triplea-game.org/topic/2482/ai-reports-based-on-aggression-1941</li>
+<li>https://github.com/triplea-maps/aggression_1941</li>
 <div style="text-align: left;" bgcolor="DADADA">        	   	
 <br>
 <div style="text-align: center;">
