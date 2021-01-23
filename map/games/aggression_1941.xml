@@ -2318,6 +2318,15 @@
 			<option name="victory" value="ALLIES_VICTORY_UNCONDITIONAL"/>
 			<option name="players" value="Russia:England:America:China"/>
 		</attachment>
+<attachment name="conditionAttachmentround20" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="1"/>
+        </attachment>
+        <attachment name="triggerAttachmentround_20" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentround20"/>
+            <option name="notification" value="round20intro"/>
+            <option name="when" value="after:chinesePurchase"/>
+            <option name="players" value="Germany:Russia:Japan:England:Italy:America:China"/>
+        </attachment>
 </attachmentList>
         <initialize>
                 <ownerInitialize>
