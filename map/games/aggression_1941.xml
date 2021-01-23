@@ -759,7 +759,6 @@
         <unitList>
                 <unit name="infantry"/>
                 <unit name="siberian"/>
-                <unit name="tankette"/>
                 <unit name="l.cavalry"/>
                 <unit name="h.cavalry"/>
                 <unit name="artillery"/>
@@ -768,10 +767,8 @@
                 <unit name="bomber"/>
                 <unit name="transport"/>
                 <unit name="boat"/>
-                <unit name="submarine"/>
                 <unit name="destroyer"/>
                 <unit name="cruiser"/>
-                <unit name="l.cruiser"/>
                 <unit name="carrier"/>          
                 <unit name="factory"/>
                 <unit name="suppressed_factory"/>              
@@ -870,10 +867,6 @@
                         <cost resource="PUs" quantity="30" />
                         <result resourceOrUnit="h.cavalry" quantity="1"/>
                 </productionRule>              
-                <productionRule name="buyTankette">
-                        <cost resource="PUs" quantity="40" />
-                        <result resourceOrUnit="tankette" quantity="1"/>
-                </productionRule>
                 <productionRule name="buyArtillery">
                         <cost resource="PUs" quantity="40" />
                         <result resourceOrUnit="artillery" quantity="1"/>
@@ -898,17 +891,9 @@
                         <cost resource="PUs" quantity="35" />
                         <result resourceOrUnit="boat" quantity="1"/>
                 </productionRule>
-                <productionRule name="buySubmarine">
-                        <cost resource="PUs" quantity="35" />
-                        <result resourceOrUnit="submarine" quantity="1"/>
-                </productionRule>
                  <productionRule name="buyDestroyer">
                         <cost resource="PUs" quantity="35" />
                         <result resourceOrUnit="destroyer" quantity="1"/>
-                </productionRule>
-                <productionRule name="buyL.cruiser">
-                        <cost resource="PUs" quantity="30" />
-                        <result resourceOrUnit="l.cruiser" quantity="1"/>
                 </productionRule>
                 <productionRule name="buyCruiser">
                         <cost resource="PUs" quantity="50" />
@@ -944,7 +929,7 @@
                         <frontierRules name="buyFighter"/>
                         <frontierRules name="buyBomber"/>
                         <frontierRules name="buyTransport"/>
-                        <frontierRules name="buySubmarine"/>
+                        <frontierRules name="buyDestroyer"/>
                         <frontierRules name="buyCruiser"/>
                         <frontierRules name="buyCarrier"/>
                         <frontierRules name="buyTrench"/>
@@ -966,7 +951,7 @@
                         <frontierRules name="buyFighter"/>
                         <frontierRules name="buyBomber"/>
                         <frontierRules name="buyTransport"/>
-                        <frontierRules name="buyL.cruiser"/>
+                        <frontierRules name="buyDestroyer"/>
                         <frontierRules name="buyCruiser"/>
                         <frontierRules name="buyCarrier"/>
                         <frontierRules name="buyTrench"/>
@@ -986,7 +971,7 @@
                 <productionFrontier name="productionItaly">
                         <frontierRules name="buyInfantry"/>
                         <frontierRules name="buyArtillery"/>
-                        <frontierRules name="buyTankette"/>
+                        <frontierRules name="buyArmour"/>
                         <frontierRules name="buyFighter"/>
                         <frontierRules name="buyBomber"/>
                         <frontierRules name="buyTransport"/>                   
@@ -1069,15 +1054,6 @@
                          <option name="isAAforCombatOnly" value="true"/> 
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
-                <attachment name="unitAttachment" attachTo="tankette" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-                         <option name="movement" value="2"/>
-                         <option name="transportCost" value="3"/>
-                         <option name="canBlitz" value="true"/>
-                         <option name="attack" value="3"/>
-                         <option name="defense" value="3"/>
-                         <option name="isAAforCombatOnly" value="true"/> 
-                         <option name="createsResourcesList" value="-3:PUs"/>
-                </attachment>
                 <attachment name="unitAttachment" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="1"/>
                          <option name="transportCost" value="3"/>
@@ -1142,15 +1118,6 @@
                          <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
                   </attachment>
-                  <attachment name="unitAttachment" attachTo="submarine" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-                         <option name="movement" value="2"/>
-                         <option name="isSea" value="true"/>   
-                         <option name="attack" value="3"/>
-                         <option name="defense" value="3"/>
-                         <option name="blockade" value="10"/>
-                         <option name="isAAforCombatOnly" value="true"/>
-                         <option name="createsResourcesList" value="-2:PUs"/>
-                  </attachment>
                   <attachment name="unitAttachment" attachTo="destroyer" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
                          <option name="isSea" value="true"/>   
@@ -1160,15 +1127,6 @@
                          <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
-                <attachment name="unitAttachment" attachTo="l.cruiser" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-                         <option name="movement" value="2"/>
-                         <option name="isSea" value="true"/>
-                         <option name="attack" value="2"/>
-                         <option name="defense" value="3"/>
-                         <option name="blockade" value="10"/>
-                         <option name="isAAforCombatOnly" value="true"/>
-                         <option name="createsResourcesList" value="-2:PUs"/>
-                 </attachment>
                  <attachment name="unitAttachment" attachTo="cruiser" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
                          <option name="isSea" value="true"/>
@@ -1176,7 +1134,7 @@
                          <option name="defense" value="4"/>
                          <option name="blockade" value="20"/>
                          <option name="isAAforCombatOnly" value="true"/>
-                         <option name="createsResourcesList" value="-2:PUs"/>
+                         <option name="createsResourcesList" value="-3:PUs"/>
                 </attachment>             
                 <attachment name="unitAttachment" attachTo="carrier" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="carrierCapacity" value="2"/>
@@ -2275,10 +2233,6 @@
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-                   <attachment name="territoryAttachment" attachTo="Sea Zone 2" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
-                    </attachment>
                     <attachment name="canalAttachment" attachTo="Sea Zone 28" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                         <option name="canalName" value="Suez Canal"/>
                         <option name="landTerritories" value="Cairo:Middle East"/>
@@ -2334,7 +2288,6 @@
                         <option name="combatDefenseEffect" value="armour" count="2"/>
                         <option name="combatDefenseEffect" value="fighter" count="2"/>
                         <option name="combatDefenseEffect" value="bomber" count="2"/>
-                        <option name="combatDefenseEffect" value="tankette" count="2"/>
                         <option name="combatDefenseEffect" value="siberian" count="2"/>
                         <option name="combatDefenseEffect" value="l.cavalry" count="2"/>
                         <option name="combatDefenseEffect" value="h.cavalry" count="2"/>
@@ -2495,8 +2448,8 @@
                         <unitPlacement unitType="fighter" territory="S.Norway" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="trench" territory="S.Norway" quantity="2" owner="Germany"/>
                         <unitPlacement unitType="trench" territory="N.Norway" quantity="2" owner="Germany"/>
-                        <unitPlacement unitType="submarine" territory="Sea Zone 12" quantity="1" owner="Germany"/>
-                        <unitPlacement unitType="submarine" territory="Sea Zone 20" quantity="2" owner="Germany"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 12" quantity="1" owner="Germany"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 20" quantity="2" owner="Germany"/>
                         <unitPlacement unitType="transport" territory="Sea Zone 25" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="fighter" territory="Normandy" quantity="1" owner="Germany"/>
                         <unitPlacement unitType="artillery" territory="Normandy" quantity="1" owner="Germany"/>
@@ -2581,7 +2534,7 @@
                         <unitPlacement unitType="infantry" territory="Sea Zone 57" quantity="3" owner="Japan"/>
                         <unitPlacement unitType="artillery" territory="Sea Zone 57" quantity="1" owner="Japan"/>
                         <unitPlacement unitType="transport" territory="Sea Zone 57" quantity="2" owner="Japan"/>
-                        <unitPlacement unitType="l.cruiser" territory="Sea Zone 57" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 57" quantity="1" owner="Japan"/>
                         <unitPlacement unitType="cruiser" territory="Sea Zone 57" quantity="1" owner="Japan"/>
                         <unitPlacement unitType="cruiser" territory="Sea Zone 49" quantity="1" owner="Japan"/>
                         <unitPlacement unitType="fighter" territory="Sea Zone 57" quantity="2" owner="Japan"/>
@@ -2591,7 +2544,7 @@
                         <unitPlacement unitType="fighter" territory="Sea Zone 59" quantity="4" owner="Japan"/>
                         <unitPlacement unitType="infantry" territory="Sea Zone 59" quantity="4" owner="Japan"/>
                         <unitPlacement unitType="transport" territory="Sea Zone 59" quantity="2" owner="Japan"/>
-                        <unitPlacement unitType="l.cruiser" territory="Sea Zone 59" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 59" quantity="1" owner="Japan"/>
                         <unitPlacement unitType="factory" territory="Britain" quantity="1" owner="England"/>
                         <unitPlacement unitType="factory" territory="E.Canada" quantity="1" owner="England"/>
                         <unitPlacement unitType="factory" territory="S.Africa" quantity="1" owner="England"/>
@@ -2641,11 +2594,11 @@
                         <unitPlacement unitType="factory" territory="N.Italy" quantity="1" owner="Italy"/>
                         <unitPlacement unitType="factory" territory="Ethiopia" quantity="1" owner="Italy"/>
                         <unitPlacement unitType="infantry" territory="N.Italy" quantity="2" owner="Italy"/>
-                        <unitPlacement unitType="tankette" territory="N.Italy" quantity="1" owner="Italy"/>
+                        <unitPlacement unitType="armour" territory="N.Italy" quantity="1" owner="Italy"/>
                         <unitPlacement unitType="infantry" territory="S.Italy" quantity="1" owner="Italy"/>
                         <unitPlacement unitType="fighter" territory="S.Italy" quantity="1" owner="Italy"/>
                         <unitPlacement unitType="infantry" territory="Yugoslavia" quantity="2" owner="Italy"/>
-                        <unitPlacement unitType="tankette" territory="Greece" quantity="1" owner="Italy"/>
+                        <unitPlacement unitType="armour" territory="Greece" quantity="1" owner="Italy"/>
                         <unitPlacement unitType="trench" territory="Crete" quantity="2" owner="Italy"/>
                         <unitPlacement unitType="infantry" territory="Libya" quantity="2" owner="Italy"/>
                         <unitPlacement unitType="destroyer" territory="Sea Zone 27" quantity="1" owner="Italy"/>
@@ -3029,50 +2982,38 @@
             <td bgcolor="CCCC99">Blitz</td>
          </tr>
          <tr>
-            <td bgcolor="CCAA77"><img src="tankette.png"/></td>
-            <td bgcolor="CCAA77">Tankette</td>
+            <td bgcolor="CCAA77"><img src="siberian.png"/></td>
+            <td bgcolor="CCAA77">Siberian</td>
             <td bgcolor="CCAA77" style="text-align: center">3</td>
-            <td bgcolor="CCAA77" style="text-align: center">3</td>
-            <td bgcolor="CCAA77" style="text-align: center">2</td>
-            <td bgcolor="CCAA77" style="text-align: center">3 (7.5%)</td>
-            <td bgcolor="CCAA77" style="text-align: center">40</td>
-            <td bgcolor="CCAA77">Italian unit, blitz</td>
-         </tr>
-         <tr>
-            <td bgcolor="CCCC99"><img src="siberian.png"/></td>
-            <td bgcolor="CCCC99">Siberian</td>
-            <td bgcolor="CCCC99" style="text-align: center">3</td>
-            <td bgcolor="CCCC99" style="text-align: center">4</td>
-            <td bgcolor="CCCC99" style="text-align: center">1</td>
-            <td bgcolor="CCCC99" style="text-align: center">2 (7%)</td>
-            <td bgcolor="CCCC99" style="text-align: center">30</td>
-            <td bgcolor="CCCC99">Russian unit, supportable by artillery, can only be bought from Siberia</td>
-         </tr>
-        <tr>
-            <td bgcolor="CCAA77"><img src="l.cavalry.png"/></td>
-            <td bgcolor="CCAA77">Light Cavalry</td>
+            <td bgcolor="CCAA77" style="text-align: center">4</td>
             <td bgcolor="CCAA77" style="text-align: center">1</td>
-            <td bgcolor="CCAA77" style="text-align: center">3</td>
-            <td bgcolor="CCAA77" style="text-align: center">2</td>
-            <td bgcolor="CCAA77" style="text-align: center">2 (10%)</td>
-            <td bgcolor="CCAA77" style="text-align: center">20</td>
-            <td bgcolor="CCAA77">Chinese unit, blitz</td>
+            <td bgcolor="CCAA77" style="text-align: center">2 (7%)</td>
+            <td bgcolor="CCAA77" style="text-align: center">30</td>
+            <td bgcolor="CCAA77">Russian unit, supportable by artillery, can only be bought from Siberia</td>
          </tr>
         <tr>
-            <td bgcolor="CCCC99"><img src="h.cavalry.png"/></td>
-            <td bgcolor="CCCC99">Heavy Cavalry</td>
-            <td bgcolor="CCCC99" style="text-align: center">3</td>
+            <td bgcolor="CCCC99"><img src="l.cavalry.png"/></td>
+            <td bgcolor="CCCC99">Light Cavalry</td>
+            <td bgcolor="CCCC99" style="text-align: center">1</td>
             <td bgcolor="CCCC99" style="text-align: center">3</td>
             <td bgcolor="CCCC99" style="text-align: center">2</td>
-            <td bgcolor="CCCC99" style="text-align: center">2 (7%)</td>
-            <td bgcolor="CCCC99" style="text-align: center">30</td>
+            <td bgcolor="CCCC99" style="text-align: center">2 (10%)</td>
+            <td bgcolor="CCCC99" style="text-align: center">20</td>
             <td bgcolor="CCCC99">Chinese unit, blitz</td>
          </tr>
-</table>
-	  
+        <tr>
+            <td bgcolor="CCAA77"><img src="h.cavalry.png"/></td>
+            <td bgcolor="CCAA77">Heavy Cavalry</td>
+            <td bgcolor="CCAA77" style="text-align: center">3</td>
+            <td bgcolor="CCAA77" style="text-align: center">3</td>
+            <td bgcolor="CCAA77" style="text-align: center">2</td>
+            <td bgcolor="CCAA77" style="text-align: center">2 (7%)</td>
+            <td bgcolor="CCAA77" style="text-align: center">30</td>
+            <td bgcolor="CCAA77">Chinese unit, blitz</td>
+         </tr>
+</table>  
       <br>
-	  <br>
-	  
+	  <br>  
       </table>
       <br>
       <table border="1" bgcolor="EEEEEE" align="center">
@@ -3119,7 +3060,7 @@
             <td bgcolor="CCCC99" style="text-align: center">4</td>
             <td bgcolor="CCCC99" style="text-align: center">2</td>
             <td bgcolor="CCCC99" style="text-align: center">2</td>
-            <td bgcolor="CCCC99" style="text-align: center">2 (4%)</td>
+            <td bgcolor="CCCC99" style="text-align: center">3 (6%)</td>
             <td bgcolor="CCCC99" style="text-align: center">50</td>
             <td bgcolor="CCCC99">-</td>
          </tr>
@@ -3133,28 +3074,6 @@
             <td bgcolor="CCAA77" style="text-align: center">2 (4%)</td>
             <td bgcolor="CCAA77" style="text-align: center">50</td>
             <td bgcolor="CCAA77">Carries two fighters</td>
-         </tr>
-         <tr>
-            <td bgcolor="CCCC99"><img src="submarine.png"/></td>
-            <td bgcolor="CCCC99">Submarine</td>
-            <td bgcolor="CCCC99" style="text-align: center">3</td>
-            <td bgcolor="CCCC99" style="text-align: center">3</td>
-            <td bgcolor="CCCC99" style="text-align: center">2</td>
-            <td bgcolor="CCCC99" style="text-align: center">1</td>
-            <td bgcolor="CCCC99" style="text-align: center">2 (6%)</td>
-            <td bgcolor="CCCC99" style="text-align: center">35</td>
-            <td bgcolor="CCCC99">German unit</td>
-         </tr>
-         <tr>
-            <td bgcolor="CCAA77"><img src="l.cruiser.png"/></td>
-            <td bgcolor="CCAA77">Light Cruiser</td>
-            <td bgcolor="CCAA77" style="text-align: center">2</td>
-            <td bgcolor="CCAA77" style="text-align: center">3</td>
-            <td bgcolor="CCAA77" style="text-align: center">2</td>
-            <td bgcolor="CCAA77" style="text-align: center">1</td>
-            <td bgcolor="CCAA77" style="text-align: center">2 (7%)</td>
-            <td bgcolor="CCAA77" style="text-align: center">30</td>
-            <td bgcolor="CCAA77">Japanese unit</td>
          </tr>
          <tr>
             <td bgcolor="CCCC99"><img src="boat.png"/></td>
