@@ -523,7 +523,7 @@
                 <connection t1="Java" t2="Sea Zone 54"/>
                 <connection t1="S.Guinea" t2="Sea Zone 55"/>
                 <connection t1="W.Australia" t2="Sea Zone 54"/>
-                <connection t1="W.Australia" t2="Sea Zone 55"/>
+                <connection t1="W.Australia" t2="Sea Zone 48"/>
                 <connection t1="Sea Zone 49" t2="Sea Zone 52"/>
                 <connection t1="Sea Zone 49" t2="Sea Zone 51"/>
                 <connection t1="Sea Zone 49" t2="Sea Zone 50"/>
