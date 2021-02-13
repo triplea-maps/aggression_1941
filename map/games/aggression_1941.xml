@@ -2253,7 +2253,7 @@
                          <option name="canalName" value="Panama Canal"/>
                          <option name="landTerritories" value="E.Mexico"/>
                     </attachment> 
-                    <attachment name="canalAttachment" attachTo="Sea Zone 65" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+                    <attachment name="canalAttachment" attachTo="Sea Zone 67" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                           <option name="canalName" value="Panama Canal"/>
                           <option name="landTerritories" value="E.Mexico"/>
                     </attachment>                               
@@ -2281,7 +2281,35 @@
 			<option name="retainCapitalNumber" value="0"/>
 			<option name="retainCapitalProduceNumber" value="0"/>
 		     </attachment>   
-                     <attachment name="territoryEffectAttachment" attachTo="Capital" javaClass="TerritoryEffectAttachment" type="territoryEffect">
+                     <attachment name="objectiveAttachment1" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                        <option name="objectiveValue" value="-250"/>
+                        <option name="alliedOwnershipTerritories" value="E.USA" count="1"/>
+                     </attachment>
+                     <attachment name="objectiveAttachment2" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                        <option name="objectiveValue" value="-100"/>
+                        <option name="alliedOwnershipTerritories" value="Britain" count="1"/>
+                     </attachment>
+                     <attachment name="objectiveAttachment3" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                        <option name="objectiveValue" value="-30"/>
+                        <option name="alliedOwnershipTerritories" value="Moscow" count="1"/>
+                     </attachment>
+                     <attachment name="objectiveAttachment4" attachTo="Japan" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                        <option name="objectiveValue" value="-30"/>
+                        <option name="alliedOwnershipTerritories" value="Sinkiang" count="1"/>
+                     </attachment>
+                     <attachment name="objectiveAttachment5" attachTo="Russia" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                        <option name="objectiveValue" value="-250"/>
+                        <option name="alliedOwnershipTerritories" value="Germany" count="1"/>
+                     </attachment>
+                     <attachment name="objectiveAttachment6" attachTo="America" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                        <option name="objectiveValue" value="-100"/>
+                        <option name="alliedOwnershipTerritories" value="Japan" count="1"/>
+                     </attachment>
+                     <attachment name="objectiveAttachment7" attachTo="England" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                        <option name="objectiveValue" value="-60"/>
+                        <option name="alliedOwnershipTerritories" value="N.Italy" count="1"/>
+                     </attachment>
+  <attachment name="territoryEffectAttachment" attachTo="Capital" javaClass="TerritoryEffectAttachment" type="territoryEffect">
                         <option name="combatDefenseEffect" value="infantry" count="2"/>
                         <option name="combatDefenseEffect" value="trench" count="2"/>
                         <option name="combatDefenseEffect" value="artillery" count="2"/>
@@ -2685,6 +2713,9 @@
                 <property name="Use Triggers" value="true" editable="false">
 			<boolean/>
 		</property>
+                <property name="National Objectives" value="true" editable="false">
+                        <boolean/>
+                </property>
                 <property name="Triggered Victory" value="true" editable="false">
 			<boolean/>
 		</property>
@@ -2941,7 +2972,7 @@
 <br>
 <b>Capitals</b>
 <br>
-<li>They are marked with the flag icons which provides +2 defensive bonus to all units.</li>
+<li>They are marked with the flag icons which provides +2 defensive bonus to all units. Occupiers cannot gain income from these territories.</li>
 <br>
 <b>Purchase</b>
 <br>
