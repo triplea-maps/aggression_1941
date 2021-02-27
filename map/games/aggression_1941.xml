@@ -1021,8 +1021,7 @@
                          <option name="isInfantry" value="true"/>
                          <option name="attack" value="1"/>
                          <option name="defense" value="3"/>
-                         <option name="artillerySupportable" value="true"/>
-                         <option name="isAAforCombatOnly" value="true"/> 
+                         <option name="artillerySupportable" value="true"/>                        
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
                 <attachment name="unitAttachment" attachTo="siberian" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1032,8 +1031,7 @@
                          <option name="attack" value="3"/>
                          <option name="defense" value="4"/>
                          <option name="artillerySupportable" value="true"/>
-                         <option name="unitPlacementOnlyAllowedIn" value="Omsk:Krasnoyarsk:Irkutsk"/>
-                         <option name="isAAforCombatOnly" value="true"/>
+                         <option name="unitPlacementOnlyAllowedIn" value="Omsk:Krasnoyarsk:Irkutsk"/>                         
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>	 
                 <attachment name="unitAttachment" attachTo="l.cavalry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1041,8 +1039,7 @@
                          <option name="transportCost" value="3"/>
                          <option name="canBlitz" value="true"/>
                          <option name="attack" value="1"/>
-                         <option name="defense" value="3"/>
-                         <option name="isAAforCombatOnly" value="true"/>
+                         <option name="defense" value="3"/>                         
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
                 <attachment name="unitAttachment" attachTo="h.cavalry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1050,8 +1047,7 @@
                          <option name="transportCost" value="3"/>
                          <option name="canBlitz" value="true"/>
                          <option name="attack" value="3"/>
-                         <option name="defense" value="3"/>
-                         <option name="isAAforCombatOnly" value="true"/> 
+                         <option name="defense" value="3"/>                         
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
                 <attachment name="unitAttachment" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1059,8 +1055,7 @@
                          <option name="transportCost" value="3"/>
                          <option name="attack" value="3"/>
                          <option name="defense" value="3"/>
-                         <option name="artillery" value="true"/>
-                         <option name="isAAforCombatOnly" value="true"/> 
+                         <option name="artillery" value="true"/>                          
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
                 <attachment name="unitAttachment" attachTo="armour" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1068,8 +1063,7 @@
                          <option name="transportCost" value="3"/>
                          <option name="canBlitz" value="true"/>
                          <option name="attack" value="4"/>
-                         <option name="defense" value="4"/>
-                         <option name="isAAforCombatOnly" value="true"/> 
+                         <option name="defense" value="4"/>                        
                          <option name="createsResourcesList" value="-3:PUs"/>
                 </attachment>                  
                 <attachment name="unitAttachment" attachTo="fighter" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1082,8 +1076,7 @@
                          <option name="canEscort" value="true"/>
                          <option name="airDefense" value="2"/>
                          <option name="airAttack" value="2"/>
-                         <option name="blockade" value="10"/>
-                         <option name="isAAforCombatOnly" value="true"/>
+                         <option name="blockade" value="10"/>                         
                          <option name="createsResourcesList" value="-3:PUs"/>
                 </attachment>                
                 <attachment name="unitAttachment" attachTo="bomber" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1094,8 +1087,7 @@
                          <option name="isStrategicBomber" value="true"/>
                          <option name="canEscort" value="true"/>
                          <option name="airDefense" value="1"/>
-                         <option name="airAttack" value="2"/>
-                         <option name="isAAforCombatOnly" value="true"/>
+                         <option name="airAttack" value="2"/>                       
                          <option name="createsResourcesList" value="-3:PUs"/>
                          <option name="bombingMaxDieSides" value="2"/>
                 </attachment>
@@ -1114,8 +1106,7 @@
                          <option name="defense" value="3"/>
                          <option name="transportCapacity" value="2"/>  
                          <option name="isCombatTransport" value="true"/>
-                         <option name="blockade" value="10"/>
-                         <option name="isAAforCombatOnly" value="true"/>
+                         <option name="blockade" value="10"/>                         
                          <option name="createsResourcesList" value="-2:PUs"/>
                   </attachment>
                   <attachment name="unitAttachment" attachTo="destroyer" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1123,8 +1114,7 @@
                          <option name="isSea" value="true"/>   
                          <option name="attack" value="2"/>
                          <option name="defense" value="3"/>
-                         <option name="blockade" value="10"/>
-                         <option name="isAAforCombatOnly" value="true"/>
+                         <option name="blockade" value="10"/>                         
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
                  <attachment name="unitAttachment" attachTo="cruiser" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1132,8 +1122,7 @@
                          <option name="isSea" value="true"/>
                          <option name="attack" value="4"/>
                          <option name="defense" value="4"/>
-                         <option name="blockade" value="20"/>
-                         <option name="isAAforCombatOnly" value="true"/>
+                         <option name="blockade" value="20"/>                         
                          <option name="createsResourcesList" value="-3:PUs"/>
                 </attachment>             
                 <attachment name="unitAttachment" attachTo="carrier" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1142,8 +1131,7 @@
                          <option name="isSea" value="true"/>   
                          <option name="attack" value="1"/>
                          <option name="defense" value="2"/>
-                         <option name="blockade" value="10"/>
-                         <option name="isAAforCombatOnly" value="true"/> 
+                         <option name="blockade" value="10"/>                          
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>				 
                 <attachment name="unitAttachment" attachTo="factory" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1165,8 +1153,7 @@
                         <option name="isConstruction" value="true"/>
                         <option name="constructionType" value="bunker"/>
                         <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
-                        <option name="maxConstructionsPerTypePerTerr" value="1000"/>
-                        <option name="isAAforCombatOnly" value="true"/> 
+                        <option name="maxConstructionsPerTypePerTerr" value="1000"/>                         
                         <option name="createsResourcesList" value="-1:PUs"/>
                  </attachment>
                     <attachment name="territoryAttachment" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
