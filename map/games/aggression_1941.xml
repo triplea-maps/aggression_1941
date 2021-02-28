@@ -888,7 +888,7 @@
                         <result resourceOrUnit="transport" quantity="1"/>
                 </productionRule>
                 <productionRule name="buyBoat">
-                        <cost resource="PUs" quantity="35" />
+                        <cost resource="PUs" quantity="30" />
                         <result resourceOrUnit="boat" quantity="1"/>
                 </productionRule>
                  <productionRule name="buyDestroyer">
@@ -1021,6 +1021,7 @@
                          <option name="isInfantry" value="true"/>
                          <option name="attack" value="1"/>
                          <option name="defense" value="3"/>
+                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="artillerySupportable" value="true"/>                        
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
@@ -1030,6 +1031,7 @@
                          <option name="isInfantry" value="true"/>
                          <option name="attack" value="3"/>
                          <option name="defense" value="4"/>
+                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="artillerySupportable" value="true"/>
                          <option name="unitPlacementOnlyAllowedIn" value="Omsk:Krasnoyarsk:Irkutsk"/>                         
                          <option name="createsResourcesList" value="-2:PUs"/>
@@ -1040,6 +1042,7 @@
                          <option name="canBlitz" value="true"/>
                          <option name="attack" value="1"/>
                          <option name="defense" value="3"/>                         
+                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
                 <attachment name="unitAttachment" attachTo="h.cavalry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1048,6 +1051,7 @@
                          <option name="canBlitz" value="true"/>
                          <option name="attack" value="3"/>
                          <option name="defense" value="3"/>                         
+                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
                 <attachment name="unitAttachment" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1055,6 +1059,7 @@
                          <option name="transportCost" value="3"/>
                          <option name="attack" value="3"/>
                          <option name="defense" value="3"/>
+                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="artillery" value="true"/>                          
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
@@ -1064,6 +1069,7 @@
                          <option name="canBlitz" value="true"/>
                          <option name="attack" value="4"/>
                          <option name="defense" value="4"/>                        
+                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-3:PUs"/>
                 </attachment>                  
                 <attachment name="unitAttachment" attachTo="fighter" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1072,6 +1078,7 @@
                          <option name="isAir" value="true"/>   
                          <option name="attack" value="3"/>
                          <option name="defense" value="2"/>
+                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="canIntercept" value="true"/>
                          <option name="canEscort" value="true"/>
                          <option name="airDefense" value="2"/>
@@ -1084,6 +1091,7 @@
                          <option name="isAir" value="true"/>
                          <option name="attack" value="2"/>
                          <option name="defense" value="1"/>
+                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="isStrategicBomber" value="true"/>
                          <option name="canEscort" value="true"/>
                          <option name="airDefense" value="1"/>
@@ -1104,6 +1112,7 @@
                          <option name="isSea" value="true"/>
                          <option name="attack" value="2"/>
                          <option name="defense" value="3"/>
+                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="transportCapacity" value="2"/>  
                          <option name="isCombatTransport" value="true"/>
                          <option name="blockade" value="10"/>                         
@@ -1114,6 +1123,7 @@
                          <option name="isSea" value="true"/>   
                          <option name="attack" value="2"/>
                          <option name="defense" value="3"/>
+                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="blockade" value="10"/>                         
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
@@ -1122,6 +1132,7 @@
                          <option name="isSea" value="true"/>
                          <option name="attack" value="4"/>
                          <option name="defense" value="4"/>
+                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="blockade" value="20"/>                         
                          <option name="createsResourcesList" value="-3:PUs"/>
                 </attachment>             
@@ -1131,6 +1142,7 @@
                          <option name="isSea" value="true"/>   
                          <option name="attack" value="1"/>
                          <option name="defense" value="2"/>
+                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="blockade" value="10"/>                          
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>				 
@@ -1149,6 +1161,7 @@
                 </attachment>	
                 <attachment name="unitAttachment" attachTo="trench" javaClass="UnitAttachment" type="unitType">
                         <option name="defense" value="3"/>
+                        <option name="isAAforCombatOnly" value="true"/>
                         <option name="hitPoints" value="1"/>
                         <option name="isConstruction" value="true"/>
                         <option name="constructionType" value="bunker"/>
@@ -3109,8 +3122,8 @@
             <td bgcolor="CCCC99" style="text-align: center">3</td>
             <td bgcolor="CCCC99" style="text-align: center">2</td>
             <td bgcolor="CCCC99" style="text-align: center">1</td>
-            <td bgcolor="CCCC99" style="text-align: center">2 (6%)</td>
-            <td bgcolor="CCCC99" style="text-align: center">35</td>
+            <td bgcolor="CCCC99" style="text-align: center">2 (7%)</td>
+            <td bgcolor="CCCC99" style="text-align: center">30</td>
             <td bgcolor="CCCC99">Russian unit, carries 1 infantry unit</td>
          </tr>
   </table>
