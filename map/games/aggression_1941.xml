@@ -2203,7 +2203,7 @@
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-                    <attachment name="territoryAttachment" attachTo="Sea Zone 23" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="Sea Zone 69" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
@@ -2368,7 +2368,26 @@
                         <option name="when" value="before:germanCombatMove"/>
                         <option name="uses" value="1"/>
                 </attachment>
- </attachmentList>
+                <attachment name="triggerAttachmentTurnOffBlockades" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                        <option name="conditions" value="conditionAttachmentAICompatibility"/>
+                        <option name="territoryAttachmentName" value="TerritoryAttachment" count="territoryAttachment"/>
+                        <option name="territories" value="Sea Zone 4:Sea Zone 11:Sea Zone 12:Sea Zone 37:Sea Zone 7:Sea Zone 21:Sea Zone 24:Sea Zone 28:Sea Zone 44:Sea Zone 49:Sea Zone 60:Sea Zone 62:Sea Zone 55:Sea Zone 68:Sea Zone 70:Sea Zone 69"/>
+                        <option name="territoryProperty" value="blockadeZone" count="false"/>
+                        <option name="when" value="before:germanCombatMove"/>
+                        <option name="uses" value="1"/>
+                </attachment>
+                <attachment name="conditionAttachmentNoUpkeep" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                        <option name="gameProperty" value="No Upkeep"/>
+                </attachment>
+                <attachment name="triggerAttachmentTurnOffUpkeep" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                        <option name="conditions" value="conditionAttachmentNoUpkeep"/>
+                        <option name="unitAttachmentName" value="UnitAttachment" count="unitAttachment"/>
+                        <option name="unitType" value="infantry:artillery:armour:fighter:bomber:transport:destroyer:carrier:siberian:l.cavalry:h.cavalry:cruiser:boat:trench"/>
+                        <option name="unitProperty" value="createsResourcesList" count="-reset-"/>
+                        <option name="when" value="before:germanCombatMove"/>
+                        <option name="uses" value="1"/>
+                </attachment>
+</attachmentList>
         <initialize>
                 <ownerInitialize>
                         <territoryOwner territory="Germany" owner="Germany"/>
@@ -2831,6 +2850,9 @@
                 <property name="AI Compatibility" value="false" editable="true">
                         <boolean/>
                 </property>
+                <property name="No Upkeep" value="false" editable="true">
+                        <boolean/>
+                </property>
                 <property name="maxFactoriesPerTerritory" value="1" editable="false">
 			<number min="1" max="100"/>
 		</property>
@@ -3267,7 +3289,7 @@
 <br>
 <h1 style="text-align: center;font-size:120%;000000"><em>AI Compatibility</em></h1>
 <div style="text-align: left;" bgcolor="DADADA">        	   	
-					<ul><li>This option deactivate bombing, intercept and blockade features. Advisable to use if AI will be involved.</li>
+					<ul><li>This option deactivate bombing, intercept and blockade features. Advisable to use if AI will be involved or the preference is simpler game.</li>
 <br>
 <b>Sources</b>
 <br>
