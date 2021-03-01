@@ -1021,7 +1021,6 @@
                          <option name="isInfantry" value="true"/>
                          <option name="attack" value="1"/>
                          <option name="defense" value="3"/>
-                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="artillerySupportable" value="true"/>                        
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
@@ -1031,7 +1030,6 @@
                          <option name="isInfantry" value="true"/>
                          <option name="attack" value="3"/>
                          <option name="defense" value="4"/>
-                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="artillerySupportable" value="true"/>
                          <option name="unitPlacementOnlyAllowedIn" value="Omsk:Krasnoyarsk:Irkutsk"/>                         
                          <option name="createsResourcesList" value="-2:PUs"/>
@@ -1042,7 +1040,6 @@
                          <option name="canBlitz" value="true"/>
                          <option name="attack" value="1"/>
                          <option name="defense" value="3"/>                         
-                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
                 <attachment name="unitAttachment" attachTo="h.cavalry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1051,7 +1048,6 @@
                          <option name="canBlitz" value="true"/>
                          <option name="attack" value="3"/>
                          <option name="defense" value="3"/>                         
-                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
                 <attachment name="unitAttachment" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1059,7 +1055,6 @@
                          <option name="transportCost" value="3"/>
                          <option name="attack" value="3"/>
                          <option name="defense" value="3"/>
-                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="artillery" value="true"/>                          
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
@@ -1069,34 +1064,30 @@
                          <option name="canBlitz" value="true"/>
                          <option name="attack" value="4"/>
                          <option name="defense" value="4"/>                        
-                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="createsResourcesList" value="-3:PUs"/>
                 </attachment>                  
                 <attachment name="unitAttachment" attachTo="fighter" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="4"/>
                          <option name="carrierCost" value="1"/>
                          <option name="isAir" value="true"/>   
-                         <option name="attack" value="3"/>
+                         <option name="attack" value="2"/>
                          <option name="defense" value="2"/>
-                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="canIntercept" value="true"/>
                          <option name="canEscort" value="true"/>
                          <option name="airDefense" value="2"/>
                          <option name="airAttack" value="2"/>
                          <option name="blockade" value="10"/>                         
-                         <option name="createsResourcesList" value="-3:PUs"/>
+                         <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>                
                 <attachment name="unitAttachment" attachTo="bomber" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="6"/>
                          <option name="isAir" value="true"/>
-                         <option name="attack" value="2"/>
+                         <option name="attack" value="1"/>
                          <option name="defense" value="1"/>
-                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="isStrategicBomber" value="true"/>
                          <option name="canEscort" value="true"/>
-                         <option name="airDefense" value="1"/>
                          <option name="airAttack" value="2"/>                       
-                         <option name="createsResourcesList" value="-3:PUs"/>
+                         <option name="createsResourcesList" value="-2:PUs"/>
                          <option name="bombingMaxDieSides" value="2"/>
                 </attachment>
                 <attachment name="unitAttachment" attachTo="transport" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -1112,7 +1103,6 @@
                          <option name="isSea" value="true"/>
                          <option name="attack" value="2"/>
                          <option name="defense" value="3"/>
-                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="transportCapacity" value="2"/>  
                          <option name="isCombatTransport" value="true"/>
                          <option name="blockade" value="10"/>                         
@@ -1123,7 +1113,6 @@
                          <option name="isSea" value="true"/>   
                          <option name="attack" value="2"/>
                          <option name="defense" value="3"/>
-                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="blockade" value="10"/>                         
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>
@@ -1132,7 +1121,6 @@
                          <option name="isSea" value="true"/>
                          <option name="attack" value="4"/>
                          <option name="defense" value="4"/>
-                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="blockade" value="20"/>                         
                          <option name="createsResourcesList" value="-3:PUs"/>
                 </attachment>             
@@ -1142,7 +1130,6 @@
                          <option name="isSea" value="true"/>   
                          <option name="attack" value="1"/>
                          <option name="defense" value="2"/>
-                         <option name="isAAforCombatOnly" value="true"/>
                          <option name="blockade" value="10"/>                          
                          <option name="createsResourcesList" value="-2:PUs"/>
                 </attachment>				 
@@ -1161,7 +1148,6 @@
                 </attachment>	
                 <attachment name="unitAttachment" attachTo="trench" javaClass="UnitAttachment" type="unitType">
                         <option name="defense" value="3"/>
-                        <option name="isAAforCombatOnly" value="true"/>
                         <option name="hitPoints" value="1"/>
                         <option name="isConstruction" value="true"/>
                         <option name="constructionType" value="bunker"/>
@@ -2309,7 +2295,7 @@
                         <option name="objectiveValue" value="-60"/>
                         <option name="alliedOwnershipTerritories" value="N.Italy" count="1"/>
                      </attachment>
-  <attachment name="territoryEffectAttachment" attachTo="Capital" javaClass="TerritoryEffectAttachment" type="territoryEffect">
+                <attachment name="territoryEffectAttachment" attachTo="Capital" javaClass="TerritoryEffectAttachment" type="territoryEffect">
                         <option name="combatDefenseEffect" value="infantry" count="2"/>
                         <option name="combatDefenseEffect" value="trench" count="2"/>
                         <option name="combatDefenseEffect" value="artillery" count="2"/>
@@ -2346,16 +2332,43 @@
 			<option name="victory" value="ALLIES_VICTORY_UNCONDITIONAL"/>
 			<option name="players" value="Russia:England:America:China"/>
 		</attachment>
-<attachment name="conditionAttachmentround20" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="rounds" value="20"/>
-        </attachment>
-        <attachment name="triggerAttachmentround_20" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentround20"/>
-            <option name="notification" value="round20intro"/>
-            <option name="when" value="after:chinesePurchase"/>
-            <option name="players" value="Germany:Russia:Japan:England:Italy:America:China"/>
-        </attachment>
-</attachmentList>
+                <attachment name="conditionAttachmentround20" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                        <option name="rounds" value="1"/>
+                </attachment>
+                <attachment name="triggerAttachmentround_20" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                        <option name="conditions" value="conditionAttachmentround20"/>
+                        <option name="notification" value="round20intro"/>
+                        <option name="when" value="after:chinesePurchase"/>
+                        <option name="players" value="Germany:Russia:Japan:England:Italy:America:China"/>
+                </attachment>
+                <attachment name="conditionAttachmentAICompatibility" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                        <option name="gameProperty" value="AI Compatibility"/>
+                </attachment>
+                <attachment name="triggerAttachmentTurnOffSBR" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                        <option name="conditions" value="conditionAttachmentAICompatibility"/>
+                        <option name="unitAttachmentName" value="UnitAttachment" count="unitAttachment"/>
+                        <option name="unitType" value="bomber"/>
+                        <option name="unitProperty" value="isStrategicBomber" count="false"/>
+                        <option name="when" value="before:germanCombatMove"/>
+                        <option name="uses" value="1"/>
+                </attachment>
+                <attachment name="triggerAttachmentTurnOffIntercept" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                        <option name="conditions" value="conditionAttachmentAICompatibility"/>
+                        <option name="unitAttachmentName" value="UnitAttachment" count="unitAttachment"/>
+                        <option name="unitType" value="fighter"/>
+                        <option name="unitProperty" value="canIntercept" count="false"/>
+                        <option name="when" value="before:germanCombatMove"/>
+                        <option name="uses" value="1"/>
+                </attachment>
+                <attachment name="triggerAttachmentTurnOffBlockade" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                        <option name="conditions" value="conditionAttachmentAICompatibility"/>
+                        <option name="unitAttachmentName" value="UnitAttachment" count="unitAttachment"/>
+                        <option name="unitType" value="boat:destroyer:cruiser:carrier:fighter"/>
+                        <option name="unitProperty" value="blockade" count="0"/>
+                        <option name="when" value="before:germanCombatMove"/>
+                        <option name="uses" value="1"/>
+                </attachment>
+ </attachmentList>
         <initialize>
                 <ownerInitialize>
                         <territoryOwner territory="Germany" owner="Germany"/>
@@ -2815,6 +2828,9 @@
                 <property name="Use Bombing Max Dice Sides And Bonus" value="true" editable="false">
                         <boolean/>
                 </property>
+                <property name="AI Compatibility" value="false" editable="true">
+                        <boolean/>
+                </property>
                 <property name="maxFactoriesPerTerritory" value="1" editable="false">
 			<number min="1" max="100"/>
 		</property>
@@ -2828,7 +2844,7 @@
 		<br>
 		<b><span style="font-size:300%;color:660000;">AGGRESSION 1941</span></b>
 		<br>
-                <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 19.01.2021</em></h1>
+                <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 01.03.2021</em></h1>
                 <br>
 		<br>Two-sided, turn-based WWII game which loosely based on year of 1941. Victory is achieved with controlling all capitals within 20 rounds otherwise it is considered draw.  
 		<br>
@@ -2958,7 +2974,7 @@
 <li>They can carry one foot infantry and one any land unit.</li>
 <li>Land unit moves onto a transport in an adjacent sea zone and later moves onto a territory adjacent to the transport. The transport may move at any point in this process. The land unit may unload on the same turn or later, and may remain on the transport indefinitely.</li>
 <li>Land units may load onto one transport from different territories and at different times but a transport may only unload to one territory per player turn, and if it unloads, it may not move any more in that player turn. Land units may not move before they load onto a transport.</li>
-<li>They can transport allied units as well</li>
+<li>They can transport allied units as well.</li>
 <li>They have no effect at sea battles.</li>
 <br>
 <b>Carriers</b>
@@ -3149,28 +3165,28 @@
          <tr>
             <td bgcolor="CCCC99"><img src="fighter.png"/></td>
             <td bgcolor="CCCC99">Fighter</td>
-            <td bgcolor="CCCC99" style="text-align: center">3</td>
+            <td bgcolor="CCCC99" style="text-align: center">2</td>
             <td bgcolor="CCCC99" style="text-align: center">2</td>
             <td bgcolor="CCCC99" style="text-align: center">4</td>
             <td bgcolor="CCCC99" style="text-align: center">2</td>
             <td bgcolor="CCCC99" style="text-align: center">2</td>
             <td bgcolor="CCCC99" style="text-align: center">1</td>			
-            <td bgcolor="CCCC99" style="text-align: center">3 (10%)</td>
+            <td bgcolor="CCCC99" style="text-align: center">2 (7%)</td>
             <td bgcolor="CCCC99" style="text-align: center">30</td>
             <td bgcolor="CCCC99">Intercept</td>
          </tr>
          <tr>
             <td bgcolor="CCAA77"><img src="bomber.png"/></td>
             <td bgcolor="CCAA77">Bomber</td>
-            <td bgcolor="CCAA77" style="text-align: center">2</td>
+            <td bgcolor="CCAA77" style="text-align: center">1</td>
             <td bgcolor="CCAA77" style="text-align: center">1</td>
             <td bgcolor="CCAA77" style="text-align: center">6</td>
             <td bgcolor="CCAA77" style="text-align: center">2</td>			
             <td bgcolor="CCAA77" style="text-align: center">-</td>
             <td bgcolor="CCAA77" style="text-align: center">-</td>
-            <td bgcolor="CCAA77" style="text-align: center">3 (7.5%)</td>
+            <td bgcolor="CCAA77" style="text-align: center">2 (5%)</td>
             <td bgcolor="CCAA77" style="text-align: center">40</td>
-            <td bgcolor="CCAA77">Strategic bomber (1-2), cannot land on carrier</td>
+            <td bgcolor="CCAA77">Strategic bomber (1-2), cannot land on carriers</td>
         </tr>
 		 </table>
 		 
@@ -3191,7 +3207,7 @@
             <td bgcolor="CCCC99"><img src="factory.png"/></td>
             <td bgcolor="CCCC99">Factory</td>
             <td bgcolor="CCCC99" style="text-align: center">Cannot be built</td>
-            <td bgcolor="CCCC99" style="text-align: center">Produces units for original owners 1/10 territory value, can be damaged up to territory value</td>
+            <td bgcolor="CCCC99" style="text-align: center">Produces units for original owners 1/10 territory value, can be damaged up to territory value, AA</td>
          </tr>
 		 <tr>
             <td bgcolor="CCAA77"><img src="trench.png"/></td>
@@ -3212,10 +3228,8 @@
 <br>
 <b>Air Warfare</b>
 <br>
-<li>Air battles do occur first which take place during the strategic bombing campaigns only. Defender can decide how many fighters on the territory will intercept including ally fighters. It is the only battle type that last only one round.</li>
-<li>All units except transports have anti-air protections this mean they have 1/6 chance to shot down per air attackers without retaliation which rolls only in the beginning of the battles. </li>       
-<li>Their anti-air protections do not work at defending factories against strategic bombings. </li> 
-<li>Players are unable to pick their air casualties during anti-air rollings.</li>
+<li>Air battles occur first in the strategic bombing campaigns. Defender can decide how many fighters on the territory will intercept including ally fighters. It is the only battle type that last only one round.</li>
+<li>Factories have 1/6 chance randomly to shot down per air attackers without retaliation which rolls only in the beginning of the battles.</li>       
 <br>
 <b>Blockade Zone</b>
 <br>
@@ -3251,10 +3265,13 @@
 <br>
 <li>Counts all of the income from owned territories and give that income to the current player.</li>
 <br>
+<h1 style="text-align: center;font-size:120%;000000"><em>AI Compatibility</em></h1>
+<div style="text-align: left;" bgcolor="DADADA">        	   	
+					<ul><li>This option deactivate bombing, intercept and blockade features. Advisable to use if AI will be involved.</li>
+<br>
 <b>Sources</b>
 <br>
 <li>https://triplea-game.org/files/TripleA_RuleBook.pdf</li>
-<li>https://forums.triplea-game.org/topic/2441/aggression-1941?_=1607590932874</li>
 <li>https://github.com/triplea-maps/aggression_1941</li>
 <div style="text-align: left;" bgcolor="DADADA">        	   	
 <br>
