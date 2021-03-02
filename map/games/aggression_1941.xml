@@ -2360,6 +2360,14 @@
                         <option name="when" value="before:germanCombatMove"/>
                         <option name="uses" value="1"/>
                 </attachment>
+                <attachment name="triggerAttachmentTurnOffAirAttack" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                        <option name="conditions" value="conditionAttachmentAICompatibility"/>
+                        <option name="unitAttachmentName" value="UnitAttachment" count="unitAttachment"/>
+                        <option name="unitType" value="fighter:bomber"/>
+                        <option name="unitProperty" value="airAttack" count="-reset-"/>
+                        <option name="when" value="before:germanCombatMove"/>
+                        <option name="uses" value="1"/>
+                </attachment>
                 <attachment name="triggerAttachmentTurnOffBlockade" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
                         <option name="conditions" value="conditionAttachmentAICompatibility"/>
                         <option name="unitAttachmentName" value="UnitAttachment" count="unitAttachment"/>
