@@ -856,7 +856,7 @@
                         <result resourceOrUnit="infantry" quantity="1"/>
                 </productionRule> 
                 <productionRule name="buySiberian">
-                        <cost resource="PUs" quantity="30" />
+                        <cost resource="PUs" quantity="20" />
                         <result resourceOrUnit="siberian" quantity="1"/>
                 </productionRule>
                 <productionRule name="buyL.cavalry">
@@ -1028,7 +1028,7 @@
                          <option name="movement" value="1"/>
                          <option name="transportCost" value="2"/>
                          <option name="isInfantry" value="true"/>
-                         <option name="attack" value="3"/>
+                         <option name="attack" value="2"/>
                          <option name="defense" value="4"/>
                          <option name="artillerySupportable" value="true"/>
                          <option name="unitPlacementOnlyAllowedIn" value="Omsk:Krasnoyarsk:Irkutsk"/>                         
@@ -1103,7 +1103,7 @@
                          <option name="isSea" value="true"/>
                          <option name="attack" value="2"/>
                          <option name="defense" value="3"/>
-                         <option name="transportCapacity" value="2"/>  
+                         <option name="transportCapacity" value="3"/>  
                          <option name="isCombatTransport" value="true"/>
                          <option name="blockade" value="10"/>                         
                          <option name="createsResourcesList" value="-2:PUs"/>
@@ -3070,11 +3070,11 @@
          <tr>
             <td bgcolor="CCAA77"><img src="siberian.png"/></td>
             <td bgcolor="CCAA77">Siberian</td>
-            <td bgcolor="CCAA77" style="text-align: center">3</td>
+            <td bgcolor="CCAA77" style="text-align: center">2</td>
             <td bgcolor="CCAA77" style="text-align: center">4</td>
             <td bgcolor="CCAA77" style="text-align: center">1</td>
-            <td bgcolor="CCAA77" style="text-align: center">2 (7%)</td>
-            <td bgcolor="CCAA77" style="text-align: center">30</td>
+            <td bgcolor="CCAA77" style="text-align: center">2 (10%)</td>
+            <td bgcolor="CCAA77" style="text-align: center">20</td>
             <td bgcolor="CCAA77">Russian unit, supportable by artillery, can only be bought from Siberia</td>
          </tr>
         <tr>
@@ -3170,7 +3170,7 @@
             <td bgcolor="CCCC99" style="text-align: center">1</td>
             <td bgcolor="CCCC99" style="text-align: center">2 (7%)</td>
             <td bgcolor="CCCC99" style="text-align: center">30</td>
-            <td bgcolor="CCCC99">Russian unit, carries 1 infantry unit</td>
+            <td bgcolor="CCCC99">Russian unit, carries any land unit</td>
          </tr>
   </table>
 
