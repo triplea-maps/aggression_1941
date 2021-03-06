@@ -1075,8 +1075,8 @@
                          <option name="defense" value="2"/>
                          <option name="canIntercept" value="true"/>
                          <option name="canEscort" value="true"/>
-                         <option name="airDefense" value="2"/>
-                         <option name="airAttack" value="2"/>
+                         <option name="airDefense" value="4"/>
+                         <option name="airAttack" value="4"/>
                          <option name="blockade" value="10"/>                         
                          <option name="createsResourcesList" value="-3:PUs"/>
                 </attachment>                
@@ -3234,7 +3234,7 @@
             <th bgcolor="CDBA96">Ability</th>
          </tr>
          <tr>
-            <td bgcolor="CCCC99"><img src="factory.png"/></td>
+            <td bgcolor="CCCC99"><img src="axisfactory.png"/><img src="alliesfactory.png"/></td>
             <td bgcolor="CCCC99">Factory</td>
             <td bgcolor="CCCC99" style="text-align: center">Cannot be built</td>
             <td bgcolor="CCCC99" style="text-align: center">Produces units for original owners 1/10 territory value, can be damaged up to territory value, AA</td>
