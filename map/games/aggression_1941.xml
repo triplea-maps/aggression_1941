@@ -1031,7 +1031,7 @@
                          <option name="attack" value="3"/>
                          <option name="defense" value="4"/>
                          <option name="unitPlacementOnlyAllowedIn" value="Omsk:Krasnoyarsk:Irkutsk"/>                         
-                         <option name="createsResourcesList" value="-2:PUs"/>
+                         <option name="createsResourcesList" value="-1:PUs"/>
                 </attachment>	 
                 <attachment name="unitAttachment" attachTo="l.cavalry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
@@ -3073,7 +3073,7 @@
             <td bgcolor="CCAA77" style="text-align: center">3</td>
             <td bgcolor="CCAA77" style="text-align: center">4</td>
             <td bgcolor="CCAA77" style="text-align: center">1</td>
-            <td bgcolor="CCAA77" style="text-align: center">2 (10%)</td>
+            <td bgcolor="CCAA77" style="text-align: center">2 (5%)</td>
             <td bgcolor="CCAA77" style="text-align: center">20</td>
             <td bgcolor="CCAA77">Russian unit, supportable by artillery, can only be bought from Siberia</td>
          </tr>
