@@ -443,7 +443,6 @@
                 <connection t1="Hawaii" t2="Sea Zone 69"/>
                 <connection t1="Japan" t2="Sea Zone 58"/>
                 <connection t1="Sea Zone 40" t2="Sea Zone 63"/>
-                <connection t1="Sea Zone 40" t2="Sea Zone 69"/>
                 <connection t1="Sea Zone 27" t2="Sea Zone 26"/>
                 <connection t1="S.Italy" t2="Sea Zone 26"/>
                 <connection t1="N.Italy" t2="Sea Zone 26"/>
@@ -2874,9 +2873,9 @@
 		<br>
 		<b><span style="font-size:300%;color:660000;">AGGRESSION 1941</span></b>
 		<br>
-                <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 01.03.2021</em></h1>
+                <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 07.03.2021</em></h1>
                 <br>
-		<br>Two-sided, turn-based WWII game which loosely based on year of 1941. Victory is achieved with controlling all capitals within 20 rounds otherwise it is considered draw.  
+		<br>Two-sided, turn-based WWII game which loosely based on year of 1941. Victory is achieved with controlling all capitals within 20 rounds otherwise it is considered draw. Players are free to extend it up to round 25. 
 		<br>
                 <br>WARNING! The balance hasn't extensively tested yet. Still progressing...
                 <br>
