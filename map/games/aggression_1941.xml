@@ -3037,7 +3037,7 @@
             <th bgcolor="CDBA96">Ability</th>
          </tr>
          <tr>
-            <td bgcolor="CCCC99"><img src="infantry.png"/></td>
+            <td bgcolor="CCCC99"><img src="germaninfantry.png"/><img src="italianinfantry.png"/><img src="japaneseinfantry.png"/><img src="russianinfantry.png"/><img src="englishinfantry.png"/><img src="americaninfantry.png"/></td>
             <td bgcolor="CCCC99">Infantry</td>
             <td bgcolor="CCCC99" style="text-align: center">2</td>
             <td bgcolor="CCCC99" style="text-align: center">3</td>
@@ -3047,7 +3047,7 @@
             <td bgcolor="CCCC99">Supportable by artillery</td>
          </tr>
          <tr>
-            <td bgcolor="CCAA77"><img src="artillery.png"/></td>
+            <td bgcolor="CCAA77"><img src="germanartillery.png"/><img src="italianartillery.png"/><img src="japaneseartillery.png"/><img src="russianartillery.png"/><img src="englishartillery.png"/><img src="americanartillery.png"/></td>
             <td bgcolor="CCAA77">Artillery</td>
             <td bgcolor="CCAA77" style="text-align: center">3</td>
             <td bgcolor="CCAA77" style="text-align: center">3</td>
@@ -3057,7 +3057,7 @@
             <td bgcolor="CCAA77">+1 attack bonus when paired with infantry</td>
          </tr>
          <tr>
-            <td bgcolor="CCCC99"><img src="armour.png"/></td>
+            <td bgcolor="CCCC99"><img src="germanarmour.png"/><img src="italianarmour.png"/><img src="japanesearmour.png"/><img src="russianarmour.png"/><img src="englisharmour.png"/><img src="americanarmour.png"/></td>
             <td bgcolor="CCCC99">Armour</td>
             <td bgcolor="CCCC99" style="text-align: center">4</td>
             <td bgcolor="CCCC99" style="text-align: center">4</td>
@@ -3117,7 +3117,7 @@
             <th bgcolor="CDBA96">Ability</th>
          </tr>
          <tr>
-            <td bgcolor="CCCC99"><img src="transport.png"/></td>
+            <td bgcolor="CCCC99"><img src="germantransport.png"/><img src="italiantransport.png"/><img src="japanesetransport.png"/><img src="englishtransport.png"/><img src="americantransport.png"/></td>
             <td bgcolor="CCCC99">Transport</td>
             <td bgcolor="CCCC99" style="text-align: center">0</td>
             <td bgcolor="CCCC99" style="text-align: center">0</td>
@@ -3128,7 +3128,7 @@
             <td bgcolor="CCCC99">Carries infantry+x gound unit, valuelesss in combat</td>
          </tr>
          <tr>
-            <td bgcolor="CCAA77"><img src="destroyer.png"/></td>
+            <td bgcolor="CCAA77"><img src="germandestroyer.png"/><img src="italiandestroyer.png"/><img src="japanesedestroyer.png"/><img src="englishdestroyer.png"/><img src="americandestroyer.png"/></td>
             <td bgcolor="CCAA77">Destroyer</td>
             <td bgcolor="CCAA77" style="text-align: center">1</td>
             <td bgcolor="CCAA77" style="text-align: center">2</td>
@@ -3139,7 +3139,7 @@
             <td bgcolor="CCAA77">-</td>
          </tr>
          <tr>
-            <td bgcolor="CCCC99"><img src="cruiser.png"/></td>
+            <td bgcolor="CCCC99"><img src="germancruiser.png"/><img src="italiancruiser.png"/><img src="japanesecruiser.png"/><img src="englishcruiser.png"/><img src="americancruiser.png"/></td>
             <td bgcolor="CCCC99">Cruiser</td>
             <td bgcolor="CCCC99" style="text-align: center">3</td>
             <td bgcolor="CCCC99" style="text-align: center">3</td>
@@ -3150,7 +3150,7 @@
             <td bgcolor="CCCC99">-</td>
          </tr>
          <tr>
-            <td bgcolor="CCAA77"><img src="carrier.png"/></td>
+            <td bgcolor="CCAA77"><img src="germancarrier.png"/><img src="italiancarrier.png"/><img src="japanesecarrier.png"/><img src="englishcarrier.png"/><img src="americancarrier.png"/></td>
             <td bgcolor="CCAA77">Carrier</td>
             <td bgcolor="CCAA77" style="text-align: center">1</td>
             <td bgcolor="CCAA77" style="text-align: center">2</td>
@@ -3192,7 +3192,7 @@
             <th bgcolor="CDBA96">Ability</th>
          </tr>
          <tr>
-            <td bgcolor="CCCC99"><img src="fighter.png"/></td>
+            <td bgcolor="CCCC99"><img src="germanfighter.png"/><img src="italianfighter.png"/><img src="japanesefighter.png"/><img src="russianfighter.png"/><img src="englishfighter.png"/><img src="americanfighter.png"/></td>
             <td bgcolor="CCCC99">Fighter</td>
             <td bgcolor="CCCC99" style="text-align: center">2</td>
             <td bgcolor="CCCC99" style="text-align: center">2</td>
@@ -3205,7 +3205,7 @@
             <td bgcolor="CCCC99">Intercept</td>
          </tr>
          <tr>
-            <td bgcolor="CCAA77"><img src="bomber.png"/></td>
+            <td bgcolor="CCAA77"><img src="germanbomber.png"/><img src="italianbomber.png"/><img src="japanesebomber.png"/><img src="russianbomber.png"/><img src="englishbomber.png"/><img src="americanbomber.png"/></td>
             <td bgcolor="CCAA77">Bomber</td>
             <td bgcolor="CCAA77" style="text-align: center">1</td>
             <td bgcolor="CCAA77" style="text-align: center">1</td>
@@ -3239,7 +3239,7 @@
             <td bgcolor="CCCC99" style="text-align: center">Produces units for original owners 1/10 territory value, can be damaged up to territory value, AA</td>
          </tr>
 		 <tr>
-            <td bgcolor="CCAA77"><img src="trench.png"/></td>
+            <td bgcolor="CCAA77"><img src="trench.png"/><img src="trench.png"/></td>
             <td bgcolor="CCAA77">Trench</td>
             <td bgcolor="CCAA77" style="text-align: center">1 can be placed per territory per round</td>
             <td bgcolor="CCAA77" style="text-align: center">3 defense, 1 (3%) upkeep</td>
