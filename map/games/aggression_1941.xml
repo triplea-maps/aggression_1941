@@ -2219,27 +2219,27 @@
                         <option name="production" value="0"/>
 			<option name="blockadeZone" value="true"/>
                     </attachment>
-                    <attachment name="canalAttachment" attachTo="Sea Zone 28" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+                    <attachment name="canalAttachment1" attachTo="Sea Zone 28" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                         <option name="canalName" value="Suez Canal"/>
                         <option name="landTerritories" value="Cairo:Middle East"/>
                     </attachment>  
-                    <attachment name="canalAttachment" attachTo="Sea Zone 41" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+                    <attachment name="canalAttachment1" attachTo="Sea Zone 41" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                         <option name="canalName" value="Suez Canal"/>
                         <option name="landTerritories" value="Cairo:Middle East"/>
                     </attachment>                   
-                    <attachment name="canalAttachment" attachTo="Sea Zone 15" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+                    <attachment name="canalAttachment2" attachTo="Sea Zone 15" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                         <option name="canalName" value="Kiel Canal"/>
                         <option name="landTerritories" value="Germany"/>
                     </attachment>  
-                    <attachment name="canalAttachment" attachTo="Sea Zone 16" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+                    <attachment name="canalAttachment2" attachTo="Sea Zone 16" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                         <option name="canalName" value="Kiel Canal"/>
                         <option name="landTerritories" value="Germany"/>
                     </attachment>
-                    <attachment name="canalAttachment" attachTo="Sea Zone 4" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+                    <attachment name="canalAttachment3" attachTo="Sea Zone 4" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                          <option name="canalName" value="Panama Canal"/>
                          <option name="landTerritories" value="E.Mexico"/>
                     </attachment> 
-                    <attachment name="canalAttachment" attachTo="Sea Zone 67" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+                    <attachment name="canalAttachment3" attachTo="Sea Zone 67" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                           <option name="canalName" value="Panama Canal"/>
                           <option name="landTerritories" value="E.Mexico"/>
                     </attachment>                               
