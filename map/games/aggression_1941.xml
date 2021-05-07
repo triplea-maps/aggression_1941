@@ -782,9 +782,9 @@
                 <delegate name="move" javaClass="games.strategy.triplea.delegate.MoveDelegate" display="Combat Move"/>
                 <delegate name="place" javaClass="games.strategy.triplea.delegate.PlaceDelegate" display="Place Units"/>
                 <delegate name="purchase" javaClass="games.strategy.triplea.delegate.PurchaseDelegate" display="Purchase Units"/>
-		<delegate name="purchaseNoPU" javaClass="games.strategy.triplea.delegate.NoPUPurchaseDelegate" display="Purchase Units"/>
+		        <delegate name="purchaseNoPU" javaClass="games.strategy.triplea.delegate.NoPUPurchaseDelegate" display="Purchase Units"/>
                 <delegate name="endTurn" javaClass="games.strategy.triplea.delegate.EndTurnDelegate" display="Turn Complete"/>
-		<delegate name="endTurnNoPU" javaClass="games.strategy.triplea.delegate.NoPUEndTurnDelegate" display="Turn Complete"/>
+		        <delegate name="endTurnNoPU" javaClass="games.strategy.triplea.delegate.NoPUEndTurnDelegate" display="Turn Complete"/>
                 <delegate name="endRound" javaClass="games.strategy.triplea.delegate.EndRoundDelegate" display="Round Complete"/>
                 <delegate name="placeBid" javaClass="games.strategy.triplea.delegate.BidPlaceDelegate" display="Bid Placement"/>
                 <delegate name="bid" javaClass="games.strategy.triplea.delegate.BidPurchaseDelegate" display="Bid Purchase"/>             
@@ -2266,7 +2266,7 @@
                      <attachment name="playerAttachment" attachTo="Japan" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
 			<option name="retainCapitalNumber" value="0"/>
 			<option name="retainCapitalProduceNumber" value="0"/>
-		     </attachment>   
+		             </attachment>   
                      <attachment name="objectiveAttachment1" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
                         <option name="objectiveValue" value="-250"/>
                         <option name="alliedOwnershipTerritories" value="E.USA" count="1"/>
@@ -2306,7 +2306,7 @@
                         <option name="combatDefenseEffect" value="l.cavalry" count="2"/>
                         <option name="combatDefenseEffect" value="h.cavalry" count="2"/>
                      </attachment>
-                     <attachment name="conditionAttachmentUnconditionalAxisVictory" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachmentUnconditionalAxisVictory" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 			<option name="gameProperty" value="Unconditional Surrender"/>
 			<option name="alliedOwnershipTerritories" value="Germany:N.Italy:Japan:E.USA:Britain:Moscow:Sinkiang" count="7"/>
 		</attachment>
@@ -2314,13 +2314,12 @@
 			<option name="gameProperty" value="Unconditional Surrender"/>
 			<option name="alliedOwnershipTerritories" value="Germany:N.Italy:Japan:E.USA:Britain:Moscow:Sinkiang" count="7"/>
 		</attachment>
-
 		<attachment name="triggerAttachmentUnconditionalAxisVictory" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
 			<option name="conditions" value="conditionAttachmentUnconditionalAxisVictory"/>
 			<option name="when" value="after:germanBattle"/>
 			<option name="when" value="after:japaneseBattle"/>
 			<option name="when" value="after:italianBattle"/>
-                        <option name="victory" value="AXIS_VICTORY_UNCONDITIONAL"/>
+            <option name="victory" value="AXIS_VICTORY_UNCONDITIONAL"/>
 			<option name="players" value="Germany:Japan:Italy"/>
 		</attachment>
 		<attachment name="triggerAttachmentUnconditionalAlliesVictory" attachTo="Russia" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
@@ -2378,6 +2377,7 @@
                 </attachment>
                 <attachment name="triggerAttachmentTurnOffBlockades" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
                         <option name="conditions" value="conditionAttachmentAICompatibility"/>
+                        <option name="territoryAttachmentName" value="TerritoryAttachment" count="territoryAttachment"/>
                         <option name="territoryAttachmentName" value="TerritoryAttachment" count="territoryAttachment"/>
                         <option name="territories" value="Sea Zone 4:Sea Zone 11:Sea Zone 12:Sea Zone 37:Sea Zone 7:Sea Zone 21:Sea Zone 24:Sea Zone 28:Sea Zone 44:Sea Zone 49:Sea Zone 60:Sea Zone 62:Sea Zone 55:Sea Zone 68:Sea Zone 70:Sea Zone 69"/>
                         <option name="territoryProperty" value="blockadeZone" count="false"/>
@@ -2452,7 +2452,7 @@
                         <territoryOwner territory="N.Manchuria" owner="Japan"/>
                         <territoryOwner territory="S.Manchuria" owner="Japan"/>
                         <territoryOwner territory="Indochina" owner="Japan"/>
-			<territoryOwner territory="Shanghai" owner="Japan"/>	
+			            <territoryOwner territory="Shanghai" owner="Japan"/>	
                         <territoryOwner territory="Kwangtung" owner="Japan"/>
                         <territoryOwner territory="Britain" owner="England"/>
                         <territoryOwner territory="W.Canada" owner="England"/>
@@ -2725,7 +2725,7 @@
                </resourceInitialize>
         </initialize>
         <propertyList>
-		<property name="Germany bid" value="0" editable="true">
+		        <property name="Germany bid" value="0" editable="true">
                         <number min="0" max="1000"/>
                 </property>
                 <property name="Russia bid" value="0" editable="true">
@@ -2737,7 +2737,7 @@
                 <property name="England bid" value="0" editable="true">
                         <number min="0" max="1000"/>
                 </property>		
-		<property name="Italy bid" value="0" editable="true">
+		        <property name="Italy bid" value="0" editable="true">
                         <number min="0" max="1000"/>
                 </property>
                 <property name="America bid" value="0" editable="true">
@@ -2746,21 +2746,21 @@
                 <property name="China bid" value="0" editable="true">
                         <number min="0" max="1000"/>
                 </property>          								               			
-		<property name="WW2V3" value="true" editable="false">
+		        <property name="WW2V3" value="true" editable="false">
                         <boolean/>
                 </property>	                
                 <property name="Use Triggers" value="true" editable="false">
-			<boolean/>
-		</property>
+			            <boolean/>
+		        </property>
                 <property name="National Objectives" value="true" editable="false">
                         <boolean/>
                 </property>
                 <property name="Triggered Victory" value="true" editable="false">
-			<boolean/>
-		</property>
-		<property name="Unconditional Surrender" value="true" editable="false">
-			<boolean/>
-		</property>
+			            <boolean/>
+		        </property>
+	         	<property name="Unconditional Surrender" value="true" editable="false">
+			            <boolean/>
+		        </property>
                 <property name="Movement By Territory Restricted" value="true" editable="false">
                 	<boolean/>
                 </property>
@@ -2776,7 +2776,7 @@
                 <property name="Unplaced units live when not placed" value ="true" editable="false">
                         <boolean/>
                 </property>	
-		<property name="Occupied Territories" value="true" editable="false">
+		        <property name="Occupied Territories" value="true" editable="false">
                 	<boolean/>
                 </property>		 
                 <property name="Raids May Be Preceeded By Air Battles" value="true" editable="false">
@@ -2785,49 +2785,40 @@
                 <property name="Damage From Bombing Done To Units Instead Of Territories" value="true" editable="false">
                         <boolean/>
                 </property>
-		<property name="Blitz Through Factories And AA Restricted" value="true" editable="false">
-                	<boolean/>
+		        <property name="Blitz Through Factories And AA Restricted" value="true" editable="false">
+                	    <boolean/>
                 </property>		
-		<property name="Roll AA Individually" value="true" editable="false">
-                        <boolean/>
-                </property>    
-		<property name="Choose AA Casualties" value="false" editable="false">
-                        <boolean/>
-                </property>		
-		<property name="AA Territory Restricted" value="true" editable="false">
-                	<boolean/>
-                </property>
-		<property name="Partial Amphibious Retreat" value="true" editable="false">
+		        <property name="Partial Amphibious Retreat" value="true" editable="false">
                         <boolean/>
                 </property>
-		<property name="Hari-Kari Units" value="true" editable="false">
+		        <property name="Hari-Kari Units" value="true" editable="false">
                 	<boolean/>
                 </property>		
-		<property name="Allied Air Dependents" value="true" editable="false">
-			<boolean/>
-		</property>		
-		<property name="Surviving Air Move To Land" value="true" editable="false">
+		        <property name="Allied Air Dependents" value="true" editable="false">
+		         	<boolean/>
+		        </property>		
+		        <property name="Surviving Air Move To Land" value="true" editable="false">
                         <boolean/>
                 </property>   				
-		<property name="Ignore Transport In Movement" value="true" editable="false">
+		        <property name="Ignore Transport In Movement" value="true" editable="false">
                 	<boolean/>
                 </property> 
                 <property name="Transport Casualties Restricted" value="true" editable="false">
                 	<boolean/>
                 </property>		
-		<property name="Unescorted Transport Dies" value="true" editable="false">
+		        <property name="Unescorted Transport Dies" value="true" editable="false">
                 	<boolean/>
                 </property>		
                 <property name="Unit Placement Restrictions" value="true" editable="false">
                         <boolean/>
                 </property>		 
                 <property name="Previous Units Fight" value="true" editable="false">
-		        <boolean/>
-		</property>		               
+		                <boolean/>
+		        </property>		               
                 <property name="Units Can Be Changed On Capture" value="true" editable="false">
                         <boolean/>
                 </property>		
-		<property name="Produce fighters on carriers" value="true" editable="false">
+		        <property name="Produce fighters on carriers" value="true" editable="false">
                         <boolean/>
                 </property>
                 <property name="Produce new fighters on old carriers" value="true" editable="false">
@@ -2839,17 +2830,17 @@
                 <property name="Land existing fighters on new carriers" value="true" editable="false">
                         <boolean/>
                 </property>
-		<property name="Unit Placement In Enemy Seas" value="true" editable="false">
+		        <property name="Unit Placement In Enemy Seas" value="true" editable="false">
                         <boolean/>
                 </property>
                 <property name="Placement Restricted By Factory" value="true" editable="false">
-                	<boolean/>
+                	    <boolean/>
                 </property>	
                 <property name="Convoy Blockades Roll Dice For Cost" value="true" editable="false">
-			<boolean/>
-		</property>
-		<property name="Damage From Bombing Done To Units Instead Of Territories" value="true" editable="false">
-                	<boolean/>
+			            <boolean/>
+		        </property>
+		        <property name="Damage From Bombing Done To Units Instead Of Territories" value="true" editable="false">
+                	    <boolean/>
                 </property>	
                 <property name="Use Bombing Max Dice Sides And Bonus" value="true" editable="false">
                         <boolean/>
@@ -2861,8 +2852,8 @@
                         <boolean/>
                 </property>
                 <property name="maxFactoriesPerTerritory" value="1" editable="false">
-			<number min="1" max="100"/>
-		</property>
+			    <number min="1" max="100"/>
+		               </property>
                 <property name="mapName" value="aggression_1941" editable="false"/>		
                 <property name="notes">
 		<value><![CDATA[
