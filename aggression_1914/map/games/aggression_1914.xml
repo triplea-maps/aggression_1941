@@ -2727,6 +2727,7 @@
 				<connection t1="Kamina" t2="Lucapa"/>
 				<connection t1="Kamina" t2="Botswana"/>
 				<connection t1="Kamina" t2="Zambia"/>
+				<connection t1="Mbeya" t2="Zambia"/>
 				<connection t1="Kamina" t2="Kindu"/>
 				<connection t1="Kamina" t2="Lodja"/>
 				<connection t1="Kindu" t2="Zambia"/>
