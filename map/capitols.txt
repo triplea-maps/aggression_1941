@@ -1,0 +1,7 @@
+Germany  (2214,753) 
+N.Italy  (2148,981) 
+Japan  (4555,1177) 
+E.USA  (298,1080) 
+Britain  (1894,740) 
+Moscow  (3012,504) 
+Sinkiang  (3569,1030) 
