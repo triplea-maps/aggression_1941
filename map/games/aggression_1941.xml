@@ -1376,8 +1376,8 @@
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
                    <attachment name="territoryAttachment" attachTo="Moscow" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="30"/>
-                        <option name="unitProduction" value="3"/>
+                        <option name="production" value="60"/>
+                        <option name="unitProduction" value="6"/>
                         <option name="capital" value="Russia"/>
                         <option name="territoryEffect" value="Capital"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1470,7 +1470,7 @@
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>                
                     <attachment name="territoryAttachment" attachTo="Caucasus" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="30"/>
+                        <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
@@ -1504,7 +1504,7 @@
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Central Asia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="10"/>
+                        <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
@@ -1570,7 +1570,7 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Bratsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="10"/>
+                        <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
