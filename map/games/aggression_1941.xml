@@ -3,8 +3,26 @@
 <game>
         <info name="Aggression 1941" version="1.1"/>     
         <loader javaClass="games.strategy.triplea.TripleA"/>
-	<triplea minimumVersion="1.9"/> 
-                 <map>  
+	    <triplea minimumVersion="1.9"/> 
+				 <variableList>
+                 <variable name="SZGermanySubs">
+                 <element name="Sea Zone 11"/>
+                 <element name="Sea Zone 12"/>
+				 <element name="Sea Zone 37"/>
+				 <element name="Sea Zone 3"/>
+				 <element name="Sea Zone 4"/>
+				 <element name="Sea Zone 8"/>
+                 <element name="Sea Zone 6"/>
+				 <element name="Sea Zone 7"/>
+				 <element name="Sea Zone 9"/>
+				 <element name="Sea Zone 14"/>
+                 <element name="Sea Zone 20"/>
+				 <element name="Sea Zone 21"/>
+				 <element name="Sea Zone 13"/>
+				 <element name="Sea Zone 15"/>				 				 				
+				 </variable>
+				 </variableList>
+				<map>  
                 <territory name="Sea Zone 12" water="true"/>
                 <territory name="Sea Zone 1" water="true"/>
                 <territory name="Sea Zone 2" water="true"/>
@@ -772,7 +790,8 @@
                 <unit name="factory"/>
                 <unit name="suppressed_factory"/>              
                 <unit name="trench"/>
-        </unitList>
+                <unit name="submarine"/>
+		</unitList>
       <territoryEffectList>
         <territoryEffect name="Capital"/>
       </territoryEffectList>
@@ -804,48 +823,50 @@
                         <step name="americanBidPlace" delegate="placeBid" player="America" maxRunCount="1"/>
                         <step name="chineseBid" delegate="bid" player="China" maxRunCount="1"/>
                         <step name="chineseBidPlace" delegate="placeBid" player="China" maxRunCount="1"/>
-                        <step name="germanCombatMove" delegate="move" player="Germany"/>
-                        <step name="germanBattle" delegate="battle" player="Germany"/>
-                        <step name="germanNonCombatMove" delegate="move" player="Germany" display="Non Combat Move"/>
-                        <step name="germanPurchase" delegate="purchase" player="Germany"/> 
-                        <step name="germanPlace" delegate="place" player="Germany"/>
-                        <step name="germanEndTurn" delegate="endTurn" player="Germany"/>
-                        <step name="russianCombatMove" delegate="move" player="Russia"/>
-                        <step name="russianBattle" delegate="battle" player="Russia"/>
-                        <step name="russianNonCombatMove" delegate="move" player="Russia" display="Non Combat Move"/>
-                        <step name="russianPurchase" delegate="purchase" player="Russia"/>       
-                        <step name="russianPlace" delegate="place" player="Russia"/>
-                        <step name="russianEndTurn" delegate="endTurn" player="Russia"/>                  
-                        <step name="japaneseCombatMove" delegate="move" player="Japan"/>
-                        <step name="japaneseBattle" delegate="battle" player="Japan"/>
-                        <step name="japaneseNonCombatMove" delegate="move" player="Japan" display="Non Combat Move"/>
-                        <step name="japanesePurchase" delegate="purchase" player="Japan"/>
-                        <step name="japanesePlace" delegate="place" player="Japan"/>
-                        <step name="japaneseEndTurn" delegate="endTurn" player="Japan"/>
-                        <step name="britishCombatMove" delegate="move" player="England"/> 
-                        <step name="britishBattle" delegate="battle" player="England"/>
-                        <step name="britishNonCombatMove" delegate="move" player="England" display="Non Combat Move"/>
-                        <step name="britishPurchase" delegate="purchase" player="England"/>
-                        <step name="britishPlace" delegate="place" player="England"/>
-                        <step name="britishEndTurn" delegate="endTurn" player="England"/>
-                        <step name="italianCombatMove" delegate="move" player="Italy"/>
-                        <step name="italianBattle" delegate="battle" player="Italy"/>
-                        <step name="italianNonCombatMove" delegate="move" player="Italy" display="Non Combat Move"/>
-                        <step name="italianPurchase" delegate="purchase" player="Italy"/>
-                        <step name="italianPlace" delegate="place" player="Italy"/>
-                        <step name="italianEndTurn" delegate="endTurn" player="Italy"/>
-                        <step name="americanCombatMove" delegate="move" player="America"/>
-                        <step name="americanBattle" delegate="battle" player="America"/>
-                        <step name="americanNonCombatMove" delegate="move" player="America" display="Non Combat Move"/>
-                        <step name="americanPurchase" delegate="purchase" player="America"/>
-                        <step name="americanPlace" delegate="place" player="America"/>
-                        <step name="americanEndTurn" delegate="endTurn" player="America"/>
-                        <step name="chineseCombatMove" delegate="move" player="China"/>
-                        <step name="chineseBattle" delegate="battle" player="China"/>
-                        <step name="chineseNonCombatMove" delegate="move" player="China" display="Non Combat Move"/>
-                        <step name="chinesePurchase" delegate="purchase" player="China"/>
-                        <step name="chinesePlace" delegate="place" player="China"/>
-                        <step name="chineseEndTurn" delegate="endTurn" player="China"/>
+                        <step name="germanyCombatMove" delegate="move" player="Germany">
+                        <stepProperty name="resetUnitStateAtStart" value="true"/>
+                        </step> 
+                        <step name="germanyBattle" delegate="battle" player="Germany"/>
+                        <step name="germanyNonCombatMove" delegate="move" player="Germany" display="Non Combat Move"/>
+                        <step name="germanyPurchase" delegate="purchase" player="Germany"/> 
+                        <step name="germanyPlace" delegate="place" player="Germany"/>
+                        <step name="germanyEndTurn" delegate="endTurn" player="Germany"/>
+                        <step name="russiaCombatMove" delegate="move" player="Russia"/>
+                        <step name="russiaBattle" delegate="battle" player="Russia"/>
+                        <step name="russiaNonCombatMove" delegate="move" player="Russia" display="Non Combat Move"/>
+                        <step name="russiaPurchase" delegate="purchase" player="Russia"/>       
+                        <step name="russiaPlace" delegate="place" player="Russia"/>
+                        <step name="russiaEndTurn" delegate="endTurn" player="Russia"/>                  
+                        <step name="japanCombatMove" delegate="move" player="Japan"/>
+                        <step name="japanBattle" delegate="battle" player="Japan"/>
+                        <step name="japanNonCombatMove" delegate="move" player="Japan" display="Non Combat Move"/>
+                        <step name="japanPurchase" delegate="purchase" player="Japan"/>
+                        <step name="japanPlace" delegate="place" player="Japan"/>
+                        <step name="japanEndTurn" delegate="endTurn" player="Japan"/>
+                        <step name="englandCombatMove" delegate="move" player="England"/> 
+                        <step name="englandBattle" delegate="battle" player="England"/>
+                        <step name="englandNonCombatMove" delegate="move" player="England" display="Non Combat Move"/>
+                        <step name="englandPurchase" delegate="purchase" player="England"/>
+                        <step name="englandPlace" delegate="place" player="England"/>
+                        <step name="englandEndTurn" delegate="endTurn" player="England"/>
+                        <step name="italyCombatMove" delegate="move" player="Italy"/>
+                        <step name="italyBattle" delegate="battle" player="Italy"/>
+                        <step name="italyNonCombatMove" delegate="move" player="Italy" display="Non Combat Move"/>
+                        <step name="italyPurchase" delegate="purchase" player="Italy"/>
+                        <step name="italyPlace" delegate="place" player="Italy"/>
+                        <step name="italyEndTurn" delegate="endTurn" player="Italy"/>
+                        <step name="americaCombatMove" delegate="move" player="America"/>
+                        <step name="americaBattle" delegate="battle" player="America"/>
+                        <step name="americaNonCombatMove" delegate="move" player="America" display="Non Combat Move"/>
+                        <step name="americaPurchase" delegate="purchase" player="America"/>
+                        <step name="americaPlace" delegate="place" player="America"/>
+                        <step name="americaEndTurn" delegate="endTurn" player="America"/>
+                        <step name="chinaCombatMove" delegate="move" player="China"/>
+                        <step name="chinaBattle" delegate="battle" player="China"/>
+                        <step name="chinaNonCombatMove" delegate="move" player="China" display="Non Combat Move"/>
+                        <step name="chinaPurchase" delegate="purchase" player="China"/>
+                        <step name="chinaPlace" delegate="place" player="China"/>
+                        <step name="chinaEndTurn" delegate="endTurn" player="China"/>
         <step name="endRoundStep" delegate="endRound"/>
              </sequence>
         </gamePlay>
@@ -914,7 +935,11 @@
                         <cost resource="PUs" quantity="35" />
                         <result resourceOrUnit="trench" quantity="1"/>
                 </productionRule>              
-                <repairRule name="repairFactory">
+                <productionRule name="buysubmarine">
+                        <cost resource="PUs" quantity="40"/>
+                        <result resourceOrUnit="submarine" quantity="1"/>
+                </productionRule>
+			    <repairRule name="repairFactory">
                         <cost resource="PUs" quantity="10" />
                         <result resourceOrUnit="factory" quantity="1"/>
                 </repairRule> 
@@ -1146,7 +1171,7 @@
                          <option name="isAA" value="true"/>
                          <option name="maxDamage" value="1"/>
                 </attachment>	
-                <attachment name="unitAttachment" attachTo="trench" javaClass="UnitAttachment" type="unitType">
+                <attachment name="unitAttachment" attachTo="trench" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                         <option name="defense" value="3"/>
                         <option name="hitPoints" value="1"/>
                         <option name="isConstruction" value="true"/>
@@ -1155,7 +1180,28 @@
                         <option name="maxConstructionsPerTypePerTerr" value="1000"/>                         
                         <option name="createsResourcesList" value="-1:PUs"/>
                  </attachment>
-                    <attachment name="territoryAttachment" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                 <attachment name="unitAttachment" attachTo="submarine" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+                         <option name="movement" value="1"/>
+                         <option name="isSea" value="true"/>
+                         <option name="attack" value="2"/>
+                         <option name="defense" value="2"/>
+                         <option name="blockade" value="10"/>
+						 <option name="createsResourcesList" value="-2:PUs"/>
+			     </attachment>
+
+				<attachment name="conditionAttachmentEveryTurn" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                         <option name="rounds" value="1-25"/>
+            </attachment>
+				  			   
+<attachment foreach="$SZGermanySubs$" name="triggerAttachmentSZGermanySubs@SZGermanySubs@" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+<option name="conditions" value="conditionAttachmentEveryTurn"/>
+<option name="placement" value="@SZGermanySubs@:submarine" count="1"/>
+<option name="players" value="Germany"/>
+<option name="chance" value="1:7"/>
+<option name="when" value="before:germanyCombatMove"/>
+</attachment>			     
+				 
+				 <attachment name="territoryAttachment" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="250"/>
                         <option name="unitProduction" value="25"/>
                         <option name="capital" value="Germany"/>
@@ -1290,7 +1336,7 @@
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                    </attachment>
                     <attachment name="territoryAttachment" attachTo="W.Ukraine" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="20"/>
+                        <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
@@ -1424,7 +1470,7 @@
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>                
                     <attachment name="territoryAttachment" attachTo="Caucasus" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="20"/>
+                        <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
@@ -1432,8 +1478,8 @@
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Baku" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="20"/>
-                        <option name="unitProduction" value="2"/>
+                        <option name="production" value="30"/>
+                        <option name="unitProduction" value="3"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
@@ -1474,8 +1520,8 @@
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                    </attachment>
                     <attachment name="territoryAttachment" attachTo="Omsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="20"/>
-                        <option name="unitProduction" value="2"/>
+                        <option name="production" value="60"/>
+                        <option name="unitProduction" value="6"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
@@ -1483,7 +1529,7 @@
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment> 
                     <attachment name="territoryAttachment" attachTo="Novosibirsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="10"/>
+                        <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
@@ -2654,11 +2700,12 @@
                         <unitPlacement unitType="infantry" territory="Victoria" quantity="3" owner="England"/>
                         <unitPlacement unitType="artillery" territory="Victoria" quantity="1" owner="England"/>
                         <unitPlacement unitType="fighter" territory="Victoria" quantity="1" owner="England"/>
-                        <unitPlacement unitType="destroyer" territory="Sea Zone 3" quantity="1" owner="England"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 3" quantity="2" owner="England"/>
                         <unitPlacement unitType="transport" territory="Sea Zone 3" quantity="1" owner="England"/>
                         <unitPlacement unitType="transport" territory="Sea Zone 6" quantity="1" owner="England"/>
                         <unitPlacement unitType="cruiser" territory="Sea Zone 6" quantity="1" owner="England"/>
-                        <unitPlacement unitType="cruiser" territory="Sea Zone 9" quantity="1" owner="England"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 6" quantity="1" owner="England"/>
+						<unitPlacement unitType="cruiser" territory="Sea Zone 9" quantity="1" owner="England"/>
                         <unitPlacement unitType="destroyer" territory="Sea Zone 9" quantity="1" owner="England"/>
                         <unitPlacement unitType="transport" territory="Sea Zone 44" quantity="1" owner="England"/>
                         <unitPlacement unitType="cruiser" territory="Sea Zone 44" quantity="1" owner="England"/>
@@ -2666,7 +2713,7 @@
                         <unitPlacement unitType="fighter" territory="Sea Zone 44" quantity="1" owner="England"/>
                         <unitPlacement unitType="destroyer" territory="Sea Zone 44" quantity="1" owner="England"/>
                         <unitPlacement unitType="transport" territory="Sea Zone 62" quantity="1" owner="England"/>
-                        <unitPlacement unitType="destroyer" territory="Sea Zone 62" quantity="1" owner="England"/>
+                        <unitPlacement unitType="destroyer" territory="Sea Zone 62" quantity="2" owner="England"/>
                         <unitPlacement unitType="factory" territory="N.Italy" quantity="1" owner="Italy"/>
                         <unitPlacement unitType="factory" territory="Ethiopia" quantity="1" owner="Italy"/>
                         <unitPlacement unitType="infantry" territory="N.Italy" quantity="2" owner="Italy"/>
@@ -2761,7 +2808,10 @@
 	         	<property name="Unconditional Surrender" value="true" editable="false">
 			            <boolean/>
 		        </property>
-                <property name="Movement By Territory Restricted" value="true" editable="false">
+                <property name="Sub Control Sea Zone Restricted" value="false" editable="false">
+                        <boolean/>
+                </property>
+			    <property name="Movement By Territory Restricted" value="true" editable="false">
                 	<boolean/>
                 </property>
                 <property name="Production Per X Territories Restricted" value="true" editable="false">
@@ -2864,9 +2914,9 @@
 		<br>
 		<b><span style="font-size:300%;color:660000;">AGGRESSION 1941</span></b>
 		<br>
-                <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 07.03.2021</em></h1>
+                <h1 style="text-align: center;font-size:120%;000000"><em>Last Update: 15.05.2021</em></h1>
                 <br>
-		<br>Two-sided, turn-based WWII game which loosely based on year of 1941. Victory is achieved with controlling all capitals within 20 rounds otherwise it is considered draw. Players are free to extend it up to round 25. 
+		<br>Two-sided, turn-based WWII game which loosely based on year of 1941. Victory is achieved with controlling all capitals within 20 rounds. 
 		<br>
                 <br>WARNING! The balance hasn't extensively tested yet. Still progressing...
                 <br>
@@ -3161,6 +3211,17 @@
             <td bgcolor="CCCC99" style="text-align: center">2 (7%)</td>
             <td bgcolor="CCCC99" style="text-align: center">30</td>
             <td bgcolor="CCCC99">Russian unit, carries any land unit</td>
+         </tr>
+         <tr>
+            <td bgcolor="CCAA77"><img src="submarine.png"/></td>
+            <td bgcolor="CCAA77">Submarine</td>
+            <td bgcolor="CCAA77" style="text-align: center">2</td>
+            <td bgcolor="CCAA77" style="text-align: center">2</td>
+            <td bgcolor="CCAA77" style="text-align: center">1</td>
+            <td bgcolor="CCAA77" style="text-align: center">1</td>
+            <td bgcolor="CCAA77" style="text-align: center">2 (5%)</td>
+            <td bgcolor="CCAA77" style="text-align: center">-</td>
+            <td bgcolor="CCAA77">1/7 chance to be emerge in each sea zone of N.Atlantic every turn.</td>
          </tr>
   </table>
 
