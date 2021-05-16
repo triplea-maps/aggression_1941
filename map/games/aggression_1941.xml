@@ -22,7 +22,7 @@
 				 <element name="Sea Zone 15"/>				 				 				
 				 </variable>
 				 </variableList>
-				<map>  
+				 <map>  
                 <territory name="Sea Zone 12" water="true"/>
                 <territory name="Sea Zone 1" water="true"/>
                 <territory name="Sea Zone 2" water="true"/>
@@ -766,7 +766,7 @@
                 <player name="America" optional="false"/>
                 <player name="China" optional="false"/>
                 <alliance player="Germany" alliance="Axis"/>
-		<alliance player="Italy" alliance="Axis"/>
+		        <alliance player="Italy" alliance="Axis"/>
                 <alliance player="Japan" alliance="Axis"/>
                 <alliance player="England" alliance="Allies"/>
                 <alliance player="Russia" alliance="Allies"/>
@@ -792,9 +792,9 @@
                 <unit name="trench"/>
                 <unit name="submarine"/>
 		</unitList>
-      <territoryEffectList>
+        <territoryEffectList>
         <territoryEffect name="Capital"/>
-      </territoryEffectList>
+        </territoryEffectList>
         <gamePlay>
                 <delegate name="initDelegate" javaClass="games.strategy.triplea.delegate.InitializationDelegate" display="Initializing Delegates"/>
                 <delegate name="battle" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Combat"/>
@@ -809,20 +809,20 @@
                 <delegate name="bid" javaClass="games.strategy.triplea.delegate.BidPurchaseDelegate" display="Bid Purchase"/>             
                 <sequence>
                 <step name="gameInitDelegate" delegate="initDelegate" maxRunCount="1"/>
-                        <step name="germanBid" delegate="bid" player="Germany" maxRunCount="1"/>
-                        <step name="germanBidPlace" delegate="placeBid" player="Germany" maxRunCount="1"/>   
-                        <step name="russianBid" delegate="bid" player="Russia" maxRunCount="1"/>
-                        <step name="russianBidPlace" delegate="placeBid" player="Russia" maxRunCount="1"/>
-                        <step name="japaneseBid" delegate="bid" player="Japan" maxRunCount="1"/>
-                        <step name="japaneseBidPlace" delegate="placeBid" player="Japan" maxRunCount="1"/>
-                        <step name="britishBid" delegate="bid" player="England" maxRunCount="1"/>
-                        <step name="britishBidPlace" delegate="placeBid" player="England" maxRunCount="1"/>
-                        <step name="italianBid" delegate="bid" player="Italy" maxRunCount="1"/>
-                        <step name="italianBidPlace" delegate="placeBid" player="Italy" maxRunCount="1"/>
-                        <step name="americanBid" delegate="bid" player="America" maxRunCount="1"/>
-                        <step name="americanBidPlace" delegate="placeBid" player="America" maxRunCount="1"/>
-                        <step name="chineseBid" delegate="bid" player="China" maxRunCount="1"/>
-                        <step name="chineseBidPlace" delegate="placeBid" player="China" maxRunCount="1"/>
+                        <step name="germanyBid" delegate="bid" player="Germany" maxRunCount="1"/>
+                        <step name="germanyBidPlace" delegate="placeBid" player="Germany" maxRunCount="1"/>   
+                        <step name="russiaBid" delegate="bid" player="Russia" maxRunCount="1"/>
+                        <step name="russiaBidPlace" delegate="placeBid" player="Russia" maxRunCount="1"/>
+                        <step name="japaneBid" delegate="bid" player="Japan" maxRunCount="1"/>
+                        <step name="japaneBidPlace" delegate="placeBid" player="Japan" maxRunCount="1"/>
+                        <step name="englandBid" delegate="bid" player="England" maxRunCount="1"/>
+                        <step name="englandBidPlace" delegate="placeBid" player="England" maxRunCount="1"/>
+                        <step name="italyBid" delegate="bid" player="Italy" maxRunCount="1"/>
+                        <step name="italyBidPlace" delegate="placeBid" player="Italy" maxRunCount="1"/>
+                        <step name="americaBid" delegate="bid" player="America" maxRunCount="1"/>
+                        <step name="americaBidPlace" delegate="placeBid" player="America" maxRunCount="1"/>
+                        <step name="chinaBid" delegate="bid" player="China" maxRunCount="1"/>
+                        <step name="chinaBidPlace" delegate="placeBid" player="China" maxRunCount="1"/>
                         <step name="germanyCombatMove" delegate="move" player="Germany">
                         <stepProperty name="resetUnitStateAtStart" value="true"/>
                         </step> 
@@ -867,7 +867,7 @@
                         <step name="chinaPurchase" delegate="purchase" player="China"/>
                         <step name="chinaPlace" delegate="place" player="China"/>
                         <step name="chinaEndTurn" delegate="endTurn" player="China"/>
-        <step name="endRoundStep" delegate="endRound"/>
+                        <step name="endRoundStep" delegate="endRound"/>
              </sequence>
         </gamePlay>
         <production>
@@ -911,7 +911,7 @@
                         <cost resource="PUs" quantity="30" />
                         <result resourceOrUnit="boat" quantity="1"/>
                 </productionRule>
-                 <productionRule name="buyDestroyer">
+                <productionRule name="buyDestroyer">
                         <cost resource="PUs" quantity="35" />
                         <result resourceOrUnit="destroyer" quantity="1"/>
                 </productionRule>
@@ -944,7 +944,7 @@
                         <result resourceOrUnit="factory" quantity="1"/>
                 </repairRule> 
                 <repairFrontier name="repair">
-                	<repairRules name="repairFactory"/>
+                	    <repairRules name="repairFactory"/>
                 </repairFrontier>
                 <productionFrontier name="productionGermany">
                         <frontierRules name="buyInfantry"/>
@@ -1024,8 +1024,8 @@
                 <playerProduction player="Germany" frontier="productionGermany"/>
                 <playerProduction player="Russia" frontier="productionRussia"/>
                 <playerProduction player="Japan" frontier="productionJapan"/>
-		<playerProduction player="England" frontier="productionEngland"/>
-		<playerProduction player="Italy" frontier="productionItaly"/>
+		        <playerProduction player="England" frontier="productionEngland"/>
+		        <playerProduction player="Italy" frontier="productionItaly"/>
                 <playerProduction player="America" frontier="productionAmerica"/>
                 <playerProduction player="China" frontier="productionChina"/>
                 <playerRepair player="Germany" frontier="repair"/>        
@@ -1033,12 +1033,12 @@
                 <playerRepair player="Japan" frontier="repair"/>
                 <playerRepair player="England" frontier="repair"/>
                 <playerRepair player="Italy" frontier="repair"/>
-		<playerRepair player="America" frontier="repair"/>
+	       	    <playerRepair player="America" frontier="repair"/>
                 <playerRepair player="China" frontier="repair"/>                                                                                     
-        </production> 
+            </production> 
             <technology>
             </technology>
-      <attachmentList>            
+            <attachmentList>            
                 <attachment name="unitAttachment" attachTo="infantry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="1"/>
                          <option name="transportCost" value="2"/>
@@ -1140,7 +1140,7 @@
                          <option name="defense" value="2"/>
                          <option name="blockade" value="10"/>                         
                          <option name="createsResourcesList" value="-2:PUs"/>
-                </attachment>
+                 </attachment>
                  <attachment name="unitAttachment" attachTo="cruiser" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
                          <option name="movement" value="2"/>
                          <option name="isSea" value="true"/>
@@ -1188,19 +1188,16 @@
                          <option name="blockade" value="10"/>
 						 <option name="createsResourcesList" value="-2:PUs"/>
 			     </attachment>
-
-				<attachment name="conditionAttachmentEveryTurn" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-                         <option name="rounds" value="1-25"/>
-            </attachment>
-				  			   
-<attachment foreach="$SZGermanySubs$" name="triggerAttachmentSZGermanySubs@SZGermanySubs@" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-<option name="conditions" value="conditionAttachmentEveryTurn"/>
-<option name="placement" value="@SZGermanySubs@:submarine" count="1"/>
-<option name="players" value="Germany"/>
-<option name="chance" value="1:7"/>
-<option name="when" value="before:germanyCombatMove"/>
-</attachment>			     
-				 
+				 <attachment name="conditionAttachmentEveryTurn" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                         <option name="rounds" value="1-20"/>
+                 </attachment>				  			   
+                 <attachment foreach="$SZGermanySubs$" name="triggerAttachmentSZGermanySubs@SZGermanySubs@" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                         <option name="conditions" value="conditionAttachmentEveryTurn"/>
+                         <option name="placement" value="@SZGermanySubs@:submarine" count="1"/>
+                         <option name="players" value="Germany"/>
+                         <option name="chance" value="1:7"/>
+                         <option name="when" value="before:germanyCombatMove"/>
+                 </attachment>			     				 
 				 <attachment name="territoryAttachment" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="250"/>
                         <option name="unitProduction" value="25"/>
@@ -1236,14 +1233,14 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-                   <attachment name="territoryAttachment" attachTo="Netherlands" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="Netherlands" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                   </attachment>        
+                    </attachment>        
                     <attachment name="territoryAttachment" attachTo="Normandy" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
@@ -1335,7 +1332,7 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                    </attachment>
-                    <attachment name="territoryAttachment" attachTo="W.Ukraine" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                   <attachment name="territoryAttachment" attachTo="W.Ukraine" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
@@ -1375,7 +1372,7 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-                   <attachment name="territoryAttachment" attachTo="Moscow" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="Moscow" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="60"/>
                         <option name="unitProduction" value="6"/>
                         <option name="capital" value="Russia"/>
@@ -1385,7 +1382,7 @@
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                     </attachment>
+                    </attachment>
                     <attachment name="territoryAttachment" attachTo="Karelia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1394,7 +1391,7 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="Arkhangelsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="Arkhangelsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="unitProduction" value="1"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1402,16 +1399,16 @@
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="Bereznik" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="Bereznik" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                     </attachment>
-                      <attachment name="territoryAttachment" attachTo="Leningrad" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="Leningrad" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1419,39 +1416,39 @@
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                      </attachment>
-                     <attachment name="territoryAttachment" attachTo="Vyazma" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="Vyazma" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                     </attachment>  
-                      <attachment name="territoryAttachment" attachTo="Ryazan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>  
+                    <attachment name="territoryAttachment" attachTo="Ryazan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                      </attachment>
-                     <attachment name="territoryAttachment" attachTo="Kaluga" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="Kaluga" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="Tambov" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="Tambov" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                     </attachment>
+                    </attachment>
                     <attachment name="territoryAttachment" attachTo="Rostov" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
@@ -1511,14 +1508,14 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
                     </attachment>
-                   <attachment name="territoryAttachment" attachTo="Yekaterinburg" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="Yekaterinburg" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                   </attachment>
+                    </attachment>
                     <attachment name="territoryAttachment" attachTo="Omsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="60"/>
                         <option name="unitProduction" value="6"/>
@@ -1592,7 +1589,7 @@
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
-                   </attachment>
+                    </attachment>
                     <attachment name="territoryAttachment" attachTo="Irkutsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
@@ -1602,14 +1599,14 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                     </attachment>
-                   <attachment name="territoryAttachment" attachTo="Novaya Zemlya" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="Novaya Zemlya" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="whenCapturedByGoesTo" value="England:Russia"/>
                         <option name="whenCapturedByGoesTo" value="America:Russia"/>
                         <option name="whenCapturedByGoesTo" value="China:Russia"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Germany"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Germany"/>
-                   </attachment>
+                    </attachment>
                     <attachment name="territoryAttachment" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="100"/>
                         <option name="unitProduction" value="10"/>
@@ -1621,113 +1618,113 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="N.Manchuria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="N.Manchuria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="England:China"/>
                         <option name="whenCapturedByGoesTo" value="Russia:China"/>
                         <option name="whenCapturedByGoesTo" value="America:China"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="S.Manchuria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="20"/>
-                        <option name="unitProduction" value="2"/>
-                        <option name="whenCapturedByGoesTo" value="England:China"/>
-                        <option name="whenCapturedByGoesTo" value="Russia:China"/>
-                        <option name="whenCapturedByGoesTo" value="America:China"/>
-                        <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
-                        <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>        
-                     <attachment name="territoryAttachment" attachTo="Indochina" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="S.Manchuria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="unitProduction" value="2"/>
+                        <option name="whenCapturedByGoesTo" value="England:China"/>
+                        <option name="whenCapturedByGoesTo" value="Russia:China"/>
+                        <option name="whenCapturedByGoesTo" value="America:China"/>
+                        <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
+                        <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
+                    </attachment>        
+                    <attachment name="territoryAttachment" attachTo="Indochina" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                        <option name="production" value="20"/>
+                        <option name="unitProduction" value="2"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="Kwangtung" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="Kwangtung" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:China"/>
                         <option name="whenCapturedByGoesTo" value="Russia:China"/>
                         <option name="whenCapturedByGoesTo" value="America:China"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="Shanghai" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="Shanghai" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="England:China"/>
                         <option name="whenCapturedByGoesTo" value="Russia:China"/>
                         <option name="whenCapturedByGoesTo" value="America:China"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="E.Burma" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="E.Burma" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="Sumatra" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="Sumatra" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="Borneo" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="Borneo" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="Celebes" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="Celebes" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="Java" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="Java" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="30"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="W.Guinea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="W.Guinea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="E.Guinea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="E.Guinea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="Solomon" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="Solomon" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
-                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    </attachment>
+                    <attachment name="territoryAttachment" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="100"/>
                         <option name="unitProduction" value="10"/>
                         <option name="capital" value="England"/>                   
@@ -1922,7 +1919,7 @@
                         <option name="whenCapturedByGoesTo" value="Italy:Japan"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Japan"/>
                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="N.Italy" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="N.Italy" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="60"/>
                         <option name="unitProduction" value="6"/>
                         <option name="capital" value="Italy"/>
@@ -1941,14 +1938,14 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-                     <attachment name="territoryAttachment" attachTo="Sicily" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="Sicily" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
-                     </attachment>
+                    </attachment>
                     <attachment name="territoryAttachment" attachTo="Yugoslavia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="20"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
@@ -1973,14 +1970,14 @@
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
                     </attachment>
-                   <attachment name="territoryAttachment" attachTo="Libya" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="Libya" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="5"/>
                         <option name="whenCapturedByGoesTo" value="China:England"/>
                         <option name="whenCapturedByGoesTo" value="Russia:England"/>
                         <option name="whenCapturedByGoesTo" value="America:England"/>
                         <option name="whenCapturedByGoesTo" value="Germany:Italy"/>
                         <option name="whenCapturedByGoesTo" value="Japan:Italy"/>
-                   </attachment>                 
+                    </attachment>                 
                     <attachment name="territoryAttachment" attachTo="Ethiopia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="10"/>
                         <option name="unitProduction" value="1"/>
@@ -2161,7 +2158,7 @@
                     <attachment name="territoryAttachment" attachTo="Afghanistan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
-                     </attachment>
+                    </attachment>
                     <attachment name="territoryAttachment" attachTo="Mozambique" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
@@ -2169,10 +2166,7 @@
                     <attachment name="territoryAttachment" attachTo="Sahara" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
-                    </attachment>
-                    <attachment name="territoryAttachment" attachTo="Siberia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-                        <option name="production" value="0"/>
-                    </attachment>
+                    </attachment>                  
                     <attachment name="territoryAttachment" attachTo="W.Sahara" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
@@ -2201,69 +2195,72 @@
                         <option name="production" value="0"/>
                         <option name="isImpassable" value="true"/>
                     </attachment>
-                    <attachment name="territoryAttachment" attachTo="Sea Zone 60" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="Siberia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+                    </attachment>
+					<attachment name="territoryAttachment" attachTo="Sea Zone 60" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                        <option name="production" value="0"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Sea Zone 4" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>			
                     <attachment name="territoryAttachment" attachTo="Sea Zone 55" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>            
                     <attachment name="territoryAttachment" attachTo="Sea Zone 24" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Sea Zone 21" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Sea Zone 7" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Sea Zone 28" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Sea Zone 62" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Sea Zone 70" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>                    
                     <attachment name="territoryAttachment" attachTo="Sea Zone 68" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Sea Zone 49" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Sea Zone 44" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Sea Zone 69" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+		              	<option name="blockadeZone" value="true"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Sea Zone 12" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>
-                   <attachment name="territoryAttachment" attachTo="Sea Zone 11" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+                    <attachment name="territoryAttachment" attachTo="Sea Zone 11" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>
                     <attachment name="territoryAttachment" attachTo="Sea Zone 37" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
                         <option name="production" value="0"/>
-			<option name="blockadeZone" value="true"/>
+			            <option name="blockadeZone" value="true"/>
                     </attachment>
                     <attachment name="canalAttachment1" attachTo="Sea Zone 28" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
                         <option name="canalName" value="Suez Canal"/>
@@ -2282,66 +2279,66 @@
                         <option name="landTerritories" value="Germany"/>
                     </attachment>
                     <attachment name="canalAttachment3" attachTo="Sea Zone 4" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
-                         <option name="canalName" value="Panama Canal"/>
-                         <option name="landTerritories" value="E.Mexico"/>
+                        <option name="canalName" value="Panama Canal"/>
+                        <option name="landTerritories" value="E.Mexico"/>
                     </attachment> 
                     <attachment name="canalAttachment3" attachTo="Sea Zone 67" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
-                          <option name="canalName" value="Panama Canal"/>
-                          <option name="landTerritories" value="E.Mexico"/>
+                        <option name="canalName" value="Panama Canal"/>
+                        <option name="landTerritories" value="E.Mexico"/>
                     </attachment>                               
-                     <attachment name="playerAttachment" attachTo="Russia" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
-			<option name="retainCapitalNumber" value="0"/>
-			<option name="retainCapitalProduceNumber" value="0"/>
-		     </attachment>
-                     <attachment name="playerAttachment" attachTo="Germany" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
-			<option name="retainCapitalNumber" value="0"/>
-			<option name="retainCapitalProduceNumber" value="0"/>
-		     </attachment>
-                     <attachment name="playerAttachment" attachTo="England" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
-			<option name="retainCapitalNumber" value="0"/>
-			<option name="retainCapitalProduceNumber" value="0"/>
-		     </attachment>
-                     <attachment name="playerAttachment" attachTo="Italy" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
-			<option name="retainCapitalNumber" value="0"/>
-			<option name="retainCapitalProduceNumber" value="0"/>
-		     </attachment>
-                     <attachment name="playerAttachment" attachTo="America" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
-			<option name="retainCapitalNumber" value="0"/>
-			<option name="retainCapitalProduceNumber" value="0"/>
-		     </attachment>
-                     <attachment name="playerAttachment" attachTo="Japan" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
-			<option name="retainCapitalNumber" value="0"/>
-			<option name="retainCapitalProduceNumber" value="0"/>
-		             </attachment>   
-                     <attachment name="objectiveAttachment1" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                    <attachment name="playerAttachment" attachTo="Russia" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
+			            <option name="retainCapitalNumber" value="0"/>
+			            <option name="retainCapitalProduceNumber" value="0"/>
+		            </attachment>
+                        <attachment name="playerAttachment" attachTo="Germany" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
+			            <option name="retainCapitalNumber" value="0"/>
+			            <option name="retainCapitalProduceNumber" value="0"/>
+		            </attachment>
+                        <attachment name="playerAttachment" attachTo="England" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
+			            <option name="retainCapitalNumber" value="0"/>
+			            <option name="retainCapitalProduceNumber" value="0"/>
+		            </attachment>
+                        <attachment name="playerAttachment" attachTo="Italy" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
+			            <option name="retainCapitalNumber" value="0"/>
+			            <option name="retainCapitalProduceNumber" value="0"/>
+		            </attachment>
+                        <attachment name="playerAttachment" attachTo="America" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
+			            <option name="retainCapitalNumber" value="0"/>
+			            <option name="retainCapitalProduceNumber" value="0"/>
+		            </attachment>
+                        <attachment name="playerAttachment" attachTo="Japan" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
+			            <option name="retainCapitalNumber" value="0"/>
+			            <option name="retainCapitalProduceNumber" value="0"/>
+		            </attachment>   
+                        <attachment name="objectiveAttachment1" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
                         <option name="objectiveValue" value="-250"/>
                         <option name="alliedOwnershipTerritories" value="E.USA" count="1"/>
-                     </attachment>
-                     <attachment name="objectiveAttachment2" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                    </attachment>
+                        <attachment name="objectiveAttachment2" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
                         <option name="objectiveValue" value="-100"/>
                         <option name="alliedOwnershipTerritories" value="Britain" count="1"/>
-                     </attachment>
-                     <attachment name="objectiveAttachment3" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                    </attachment>
+                        <attachment name="objectiveAttachment3" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
                         <option name="objectiveValue" value="-30"/>
                         <option name="alliedOwnershipTerritories" value="Moscow" count="1"/>
-                     </attachment>
-                     <attachment name="objectiveAttachment4" attachTo="Japan" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                    </attachment>
+                        <attachment name="objectiveAttachment4" attachTo="Japan" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
                         <option name="objectiveValue" value="-30"/>
                         <option name="alliedOwnershipTerritories" value="Sinkiang" count="1"/>
-                     </attachment>
-                     <attachment name="objectiveAttachment5" attachTo="Russia" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                    </attachment>
+                    <attachment name="objectiveAttachment5" attachTo="Russia" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
                         <option name="objectiveValue" value="-250"/>
                         <option name="alliedOwnershipTerritories" value="Germany" count="1"/>
-                     </attachment>
-                     <attachment name="objectiveAttachment6" attachTo="America" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                    </attachment>
+                    <attachment name="objectiveAttachment6" attachTo="America" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
                         <option name="objectiveValue" value="-100"/>
                         <option name="alliedOwnershipTerritories" value="Japan" count="1"/>
-                     </attachment>
-                     <attachment name="objectiveAttachment7" attachTo="England" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                    </attachment>
+                    <attachment name="objectiveAttachment7" attachTo="England" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
                         <option name="objectiveValue" value="-60"/>
                         <option name="alliedOwnershipTerritories" value="N.Italy" count="1"/>
-                     </attachment>
-                <attachment name="territoryEffectAttachment" attachTo="Capital" javaClass="TerritoryEffectAttachment" type="territoryEffect">
+                    </attachment>
+                    <attachment name="territoryEffectAttachment" attachTo="Capital" javaClass="TerritoryEffectAttachment" type="territoryEffect">
                         <option name="combatDefenseEffect" value="infantry" count="2"/>
                         <option name="combatDefenseEffect" value="trench" count="2"/>
                         <option name="combatDefenseEffect" value="artillery" count="2"/>
@@ -2351,77 +2348,77 @@
                         <option name="combatDefenseEffect" value="siberian" count="2"/>
                         <option name="combatDefenseEffect" value="l.cavalry" count="2"/>
                         <option name="combatDefenseEffect" value="h.cavalry" count="2"/>
-                     </attachment>
-        <attachment name="conditionAttachmentUnconditionalAxisVictory" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-			<option name="gameProperty" value="Unconditional Surrender"/>
-			<option name="alliedOwnershipTerritories" value="Germany:N.Italy:Japan:E.USA:Britain:Moscow:Sinkiang" count="7"/>
-		</attachment>
-		<attachment name="conditionAttachmentUnconditionalAlliesVictory" attachTo="Russia" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-			<option name="gameProperty" value="Unconditional Surrender"/>
-			<option name="alliedOwnershipTerritories" value="Germany:N.Italy:Japan:E.USA:Britain:Moscow:Sinkiang" count="7"/>
-		</attachment>
-		<attachment name="triggerAttachmentUnconditionalAxisVictory" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-			<option name="conditions" value="conditionAttachmentUnconditionalAxisVictory"/>
-			<option name="when" value="after:germanBattle"/>
-			<option name="when" value="after:japaneseBattle"/>
-			<option name="when" value="after:italianBattle"/>
-            <option name="victory" value="AXIS_VICTORY_UNCONDITIONAL"/>
-			<option name="players" value="Germany:Japan:Italy"/>
-		</attachment>
-		<attachment name="triggerAttachmentUnconditionalAlliesVictory" attachTo="Russia" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-			<option name="conditions" value="conditionAttachmentUnconditionalAlliesVictory"/>
-			<option name="when" value="after:russianBattle"/>
-			<option name="when" value="after:britishBattle"/>
-			<option name="when" value="after:americanBattle"/>
-			<option name="when" value="after:chineseBattle"/>
-			<option name="victory" value="ALLIES_VICTORY_UNCONDITIONAL"/>
-			<option name="players" value="Russia:England:America:China"/>
-		</attachment>
-                <attachment name="conditionAttachmentround20" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                    </attachment>
+                    <attachment name="conditionAttachmentUnconditionalAxisVictory" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+			            <option name="gameProperty" value="Unconditional Surrender"/>
+			            <option name="alliedOwnershipTerritories" value="Germany:N.Italy:Japan:E.USA:Britain:Moscow:Sinkiang" count="7"/>
+		            </attachment>
+		            <attachment name="conditionAttachmentUnconditionalAlliesVictory" attachTo="Russia" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+			            <option name="gameProperty" value="Unconditional Surrender"/>
+			            <option name="alliedOwnershipTerritories" value="Germany:N.Italy:Japan:E.USA:Britain:Moscow:Sinkiang" count="7"/>
+		            </attachment>
+		            <attachment name="triggerAttachmentUnconditionalAxisVictory" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+			            <option name="conditions" value="conditionAttachmentUnconditionalAxisVictory"/>
+			            <option name="when" value="after:germanBattle"/>
+			            <option name="when" value="after:japaneseBattle"/>
+			            <option name="when" value="after:italianBattle"/>
+                        <option name="victory" value="AXIS_VICTORY_UNCONDITIONAL"/>
+			            <option name="players" value="Germany:Japan:Italy"/>
+		            </attachment>
+		            <attachment name="triggerAttachmentUnconditionalAlliesVictory" attachTo="Russia" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+			            <option name="conditions" value="conditionAttachmentUnconditionalAlliesVictory"/>
+			            <option name="when" value="after:russianBattle"/>
+		            	<option name="when" value="after:britishBattle"/>
+			            <option name="when" value="after:americanBattle"/>
+			            <option name="when" value="after:chineseBattle"/>
+			            <option name="victory" value="ALLIES_VICTORY_UNCONDITIONAL"/>
+		          	    <option name="players" value="Russia:England:America:China"/>
+		            </attachment>
+                    <attachment name="conditionAttachmentround20" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
                         <option name="rounds" value="20"/>
-                </attachment>
-                <attachment name="triggerAttachmentround_20" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                    </attachment>
+                    <attachment name="triggerAttachmentround_20" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
                         <option name="conditions" value="conditionAttachmentround20"/>
                         <option name="notification" value="round20intro"/>
                         <option name="when" value="after:chinesePurchase"/>
                         <option name="players" value="Germany:Russia:Japan:England:Italy:America:China"/>
-                </attachment>
-                <attachment name="conditionAttachmentAICompatibility" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                    </attachment>
+                    <attachment name="conditionAttachmentAICompatibility" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
                         <option name="gameProperty" value="AI Compatibility"/>
-                </attachment>
-                <attachment name="triggerAttachmentTurnOffSBR" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                    </attachment>
+                    <attachment name="triggerAttachmentTurnOffSBR" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
                         <option name="conditions" value="conditionAttachmentAICompatibility"/>
                         <option name="unitAttachmentName" value="UnitAttachment" count="unitAttachment"/>
                         <option name="unitType" value="bomber"/>
                         <option name="unitProperty" value="isStrategicBomber" count="false"/>
                         <option name="when" value="before:germanCombatMove"/>
                         <option name="uses" value="1"/>
-                </attachment>
-                <attachment name="triggerAttachmentTurnOffIntercept" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                    </attachment>
+                    <attachment name="triggerAttachmentTurnOffIntercept" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
                         <option name="conditions" value="conditionAttachmentAICompatibility"/>
                         <option name="unitAttachmentName" value="UnitAttachment" count="unitAttachment"/>
                         <option name="unitType" value="fighter"/>
                         <option name="unitProperty" value="canIntercept" count="false"/>
                         <option name="when" value="before:germanCombatMove"/>
                         <option name="uses" value="1"/>
-                </attachment>
-                <attachment name="triggerAttachmentTurnOffAirAttack" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                    </attachment>
+                    <attachment name="triggerAttachmentTurnOffAirAttack" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
                         <option name="conditions" value="conditionAttachmentAICompatibility"/>
                         <option name="unitAttachmentName" value="UnitAttachment" count="unitAttachment"/>
                         <option name="unitType" value="fighter:bomber"/>
                         <option name="unitProperty" value="airAttack" count="-reset-"/>
                         <option name="when" value="before:germanCombatMove"/>
                         <option name="uses" value="1"/>
-                </attachment>
-                <attachment name="triggerAttachmentTurnOffBlockade" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                    </attachment>
+                    <attachment name="triggerAttachmentTurnOffBlockade" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
                         <option name="conditions" value="conditionAttachmentAICompatibility"/>
                         <option name="unitAttachmentName" value="UnitAttachment" count="unitAttachment"/>
                         <option name="unitType" value="boat:destroyer:cruiser:carrier:fighter"/>
                         <option name="unitProperty" value="blockade" count="0"/>
                         <option name="when" value="before:germanCombatMove"/>
                         <option name="uses" value="1"/>
-                </attachment>
-                <attachment name="triggerAttachmentTurnOffBlockades" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                    </attachment>
+                    <attachment name="triggerAttachmentTurnOffBlockades" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
                         <option name="conditions" value="conditionAttachmentAICompatibility"/>
                         <option name="territoryAttachmentName" value="TerritoryAttachment" count="territoryAttachment"/>
                         <option name="territoryAttachmentName" value="TerritoryAttachment" count="territoryAttachment"/>
@@ -2429,11 +2426,11 @@
                         <option name="territoryProperty" value="blockadeZone" count="false"/>
                         <option name="when" value="before:germanCombatMove"/>
                         <option name="uses" value="1"/>
-                </attachment>
-                <attachment name="conditionAttachmentNoUpkeep" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+                    </attachment>
+                    <attachment name="conditionAttachmentNoUpkeep" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
                         <option name="gameProperty" value="No Upkeep"/>
-                </attachment>
-                <attachment name="triggerAttachmentTurnOffUpkeep" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+                    </attachment>
+                    <attachment name="triggerAttachmentTurnOffUpkeep" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
                         <option name="conditions" value="conditionAttachmentNoUpkeep"/>
                         <option name="unitAttachmentName" value="UnitAttachment" count="unitAttachment"/>
                         <option name="unitType" value="infantry:artillery:armour:fighter:bomber:transport:destroyer:carrier:siberian:l.cavalry:h.cavalry:cruiser:boat:trench"/>
@@ -2441,8 +2438,8 @@
                         <option name="when" value="before:germanCombatMove"/>
                         <option name="uses" value="1"/>
                 </attachment>
-</attachmentList>
-        <initialize>
+                </attachmentList>
+                <initialize>
                 <ownerInitialize>
                         <territoryOwner territory="Germany" owner="Germany"/>
                         <territoryOwner territory="Denmark" owner="Germany"/>
@@ -2769,9 +2766,9 @@
                         <resourceGiven player="Italy" resource="PUs" quantity="200"/>
                         <resourceGiven player="America" resource="PUs" quantity="400"/>
                         <resourceGiven player="China" resource="PUs" quantity="100"/>                                                        
-               </resourceInitialize>
-        </initialize>
-        <propertyList>
+                </resourceInitialize>
+                </initialize>
+                <propertyList>
 		        <property name="Germany bid" value="0" editable="true">
                         <number min="0" max="1000"/>
                 </property>
@@ -2812,22 +2809,22 @@
                         <boolean/>
                 </property>
 			    <property name="Movement By Territory Restricted" value="true" editable="false">
-                	<boolean/>
+                	    <boolean/>
                 </property>
                 <property name="Production Per X Territories Restricted" value="true" editable="false">
-                	<boolean/>
+                	    <boolean/>
                 </property>
                 <property name="Unit Placement Per Territory Restricted" value="true" editable="false">
-                	<boolean/>
+                	    <boolean/>
                 </property>
                 <property name="Place in Any Territory" value="true" editable="false">
-                	<boolean/>
+                	    <boolean/>
                 </property>
                 <property name="Unplaced units live when not placed" value ="true" editable="false">
                         <boolean/>
                 </property>	
 		        <property name="Occupied Territories" value="true" editable="false">
-                	<boolean/>
+                	    <boolean/>
                 </property>		 
                 <property name="Raids May Be Preceeded By Air Battles" value="true" editable="false">
                         <boolean/>
@@ -2842,22 +2839,22 @@
                         <boolean/>
                 </property>
 		        <property name="Hari-Kari Units" value="true" editable="false">
-                	<boolean/>
+                	    <boolean/>
                 </property>		
 		        <property name="Allied Air Dependents" value="true" editable="false">
-		         	<boolean/>
+		         	    <boolean/>
 		        </property>		
 		        <property name="Surviving Air Move To Land" value="true" editable="false">
                         <boolean/>
                 </property>   				
 		        <property name="Ignore Transport In Movement" value="true" editable="false">
-                	<boolean/>
+                	    <boolean/>
                 </property> 
                 <property name="Transport Casualties Restricted" value="true" editable="false">
-                	<boolean/>
+                	    <boolean/>
                 </property>		
 		        <property name="Unescorted Transport Dies" value="true" editable="false">
-                	<boolean/>
+                	    <boolean/>
                 </property>		
                 <property name="Unit Placement Restrictions" value="true" editable="false">
                         <boolean/>
