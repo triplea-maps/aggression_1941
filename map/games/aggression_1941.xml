@@ -311,7 +311,8 @@
                 <connection t1="Sea Zone 3" t2="Sea Zone 8"/>
                 <connection t1="Sea Zone 3" t2="Sea Zone 9"/>
                 <connection t1="Sea Zone 3" t2="Sea Zone 7"/>
-                <connection t1="Sea Zone 3" t2="Sea Zone 6"/>
+                <connection t1="Sea Zone 14" t2="Sea Zone 7"/>
+				<connection t1="Sea Zone 3" t2="Sea Zone 6"/>
                 <connection t1="Sea Zone 13" t2="Sea Zone 6"/>
                 <connection t1="Sea Zone 14" t2="Sea Zone 6"/>
                 <connection t1="Britain" t2="Sea Zone 6"/>
@@ -2655,7 +2656,7 @@
                         <unitPlacement unitType="transport" territory="Sea Zone 57" quantity="2" owner="Japan"/>
                         <unitPlacement unitType="destroyer" territory="Sea Zone 57" quantity="1" owner="Japan"/>
                         <unitPlacement unitType="cruiser" territory="Sea Zone 57" quantity="1" owner="Japan"/>
-                        <unitPlacement unitType="cruiser" territory="Sea Zone 49" quantity="1" owner="Japan"/>
+                        <unitPlacement unitType="cruiser" territory="Sea Zone 50" quantity="1" owner="Japan"/>
                         <unitPlacement unitType="fighter" territory="Sea Zone 57" quantity="2" owner="Japan"/>
                         <unitPlacement unitType="carrier" territory="Sea Zone 57" quantity="1" owner="Japan"/>
                         <unitPlacement unitType="transport" territory="Sea Zone 56" quantity="1" owner="Japan"/>
@@ -2971,19 +2972,19 @@
             <th bgcolor="CDBA96">Information</th>
          </tr>
          <tr>
-            <td bgcolor="CCCC99"><img src="Kiel_Canal_Notes.png"/></td>
+            <td bgcolor="CCCC99"><img src="Kiel.png"/></td>
             <td bgcolor="CCCC99">Kiel Canal</td>
             <td bgcolor="CCCC99" style="text-align: center">Germany</td>
             <td bgcolor="CCCC99" style="text-align: center">Whoever controls "Germany" territory at the start of the turn can and their allies move their naval units throuh the route.</td>
          </tr>
          <tr>
-            <td bgcolor="CCAA77"><img src="Panama_Canal_Notes.png"/></td>
+            <td bgcolor="CCAA77"><img src="Panama.png"/></td>
             <td bgcolor="CCAA77">Panama Canal</td>
             <td bgcolor="CCAA77" style="text-align: center">E.Mexico</td>
             <td bgcolor="CCAA77" style="text-align: center">Whoever controls "E.Mexico" territory at the start of the turn can and their allies move their naval units throuh the route.</td>
          </tr> 
          <tr>
-            <td bgcolor="CCCC99"><img src="Suez_Canal_Notes.png"/></td>
+            <td bgcolor="CCCC99"><img src="Suez.png"/></td>
             <td bgcolor="CCCC99">Suez Canal</td>
             <td bgcolor="CCCC99" style="text-align: center">Cairo and Middle East</td>
             <td bgcolor="CCCC99" style="text-align: center">Whoever controls both Cairo and Middle East at the start of the turn can and their allies move their naval units through the route. If these territories are controlled by opposite alliances at the start of the turn, canal is closed to all naval units.</td>
