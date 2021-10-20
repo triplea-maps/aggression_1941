@@ -1179,7 +1179,7 @@
                         <option name="constructionType" value="bunker"/>
                         <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
                         <option name="maxConstructionsPerTypePerTerr" value="1000"/>                         
-                        <option name="unitPlacementOnlyAllowedIn" value="Germany:N.Italy:Ethiopia:Japan:Indochina:Sinkiang:Leningrad:Sevastopol:Arkhangelsk:Moscow:Stalingrad:Baku:Omsk:Krasnoyarsk:Irkutsk:E.Canada:Britain:S.Africa:Cairo:W.India:E.India:Victoria:W.Australia:Queensland:Hawaii:E.USA:W.USA"/>
+                        <option name="unitPlacementOnlyAllowedIn" value="Germany:Bordeaux:Romania:Finland:N.Italy:Ethiopia:Japan:Indochina:S.Manchuria:Leningrad:Sevastopol:Arkhangelsk:Moscow:Stalingrad:Baku:Omsk:Krasnoyarsk:Irkutsk:E.Canada:Britain:S.Africa:Cairo:W.India:E.India:Victoria:W.Australia:Queensland:Hawaii:E.USA:W.USA:Sinkiang"/>
 						<option name="createsResourcesList" value="-1:PUs"/>
                  </attachment>
                  <attachment name="unitAttachment" attachTo="submarine" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
